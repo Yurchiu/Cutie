@@ -1,0 +1,114 @@
+<div class="toolbar">
+  <div class="toolbar-tab-page">
+    <div class="tb-tabTitle">
+     <ul>
+       <li class="tb-current"><i class="fa fa-random" aria-hidden="true"></i></li>
+       <li><i class="fa fa-refresh" aria-hidden="true"></i></li>
+       <li><i class="fa fa-circle-o-notch" aria-hidden="true"></i></li>
+     </ul>
+    </div>
+    <div class="tb-tabContent">
+      <div>
+<!--  1-tab  -->
+<div class="title"><%= __('Toolbar.Random.title') %><span class="sidetitle"><%= __('Toolbar.Random.subtitle') %></span></div>
+<div class="item no-lrpadding">
+	<%- list_posts({
+		orderby: 'random',
+		style: 'block',
+		separator: '<!--<hr class="separator" />-->',
+		amount: theme.toolbar_amount,
+		transform(str) {
+    		return '<div class="title_fa"><i class="fa fa-file-text-o fa-border" aria-hidden="true" style="height: 30px;border: none;"></i><div class="title">'+str+'</div></div>';
+  		}
+}) %></div>
+<!--  END 1-tab  -->
+      </div>
+      <div class="tb-hide">
+<!--  2-tab  -->
+<div class="title"><%= __('Toolbar.Refresh.title') %><span class="sidetitle"><%= __('Toolbar.Refresh.subtitle') %></span></div>
+<div class="item no-lrpadding">
+	<%- list_posts({
+		orderby: 'updated',
+		style: 'block',
+		separator: '<!--<hr class="separator" />-->',
+		amount: theme.toolbar_amount,
+		transform(str) {
+    		return '<div class="title_fa"><i class="fa fa-file-text-o fa-border" aria-hidden="true" style="height: 30px;border: none;"></i><div class="title">'+str+'</div></div>';
+  		}
+	}) %>
+</div>
+<!--  END 2-tab  -->
+      </div>
+      <div class="tb-hide">
+<!--  3-tab  -->
+  <div class="title"><%= __('Toolbar.Another.title') %><a href="javascript:document.body.contentEditable='true';document.designMode='on';void(0);" title="<%= __('Toolbar.Another.coloregg') %>" target="_self" class="sidetitle"><%= __('Toolbar.Another.subtitle') %></a></div>
+  <div style="height: 10px;"></div>
+  <div class="item">
+    <div id="displaytime"><script type="text/javascript" src="/js/displaytime.js"></script></div>
+    <div id="timeprogress"></div>
+	<script>
+		var myDate = new Date();
+		var hours=myDate.getHours();
+		var minutes=myDate.getMinutes();
+		minutes=hours*60+minutes;
+		var pro=minutes/14.4;
+		var innerhtml="<div class=\"progress-con\"><div class=\"progress\" title=\"<%= __('Progress') %>"+pro.toFixed(2)+"%\"style=\"width: "+pro+"%; background-color: #4caf50; color: #fff;\">"+pro.toFixed(0)+"%</div></div>";
+		document.getElementById("timeprogress").innerHTML = innerhtml;
+	</script>
+  </div>
+  <div class="item">
+    <div id="hitokoto"><%= _p('hitokoto',config.author) %></div>
+    <script>
+    fetch('https://v1.hitokoto.cn')
+      .then(function (res){
+        return res.json();
+      })
+      .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = '\t' + data.hitokoto + '\n' +'\n' +'from ' + data.from ;
+      })
+      .catch(function (err) {
+        console.error(err);
+      })
+    </script>
+  </div>
+<!--  END 3-tab  -->
+      </div>
+    </div>
+  </div>
+  <div class="item">
+  	<div class="title"><%= __('Info.name') %></div>
+    <div class="list-group">
+  	  <div class="list-group-item"><div><i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i>&nbsp;<%= __('Info.count') %></div><div class="badge"><%= site.posts.length %></div></div>
+  	  <div class="list-group-item"><div><i class="fa fa-refresh fa-fw" aria-hidden="true"></i>&nbsp;<%= __('Info.update') %></div><div class="badge"><%= date(page.updated, "MM-DD") %></div></div>
+  	  <div class="list-group-item"><div><i class="fa fa-user-o fa-fw" aria-hidden="true"></i>&nbsp;<%= __('Info.author') %></div><div class="badge"><%= config.author %></div></div>
+  	  <div class="list-group-item"><div><i class="fa fa-font fa-fw" aria-hidden="true"></i>&nbsp;<%= __('Info.words') %></div><div class="badge"><%= totalcount(site) %><!--npm i hexo-wordcount --save--></span></div></div>
+    </div>
+  </div>
+  <% if(toc(page.content,{list_number: false})){ %><!-- 标签可能太多，影响目录 -->
+    <div class="post-toc">
+    	<div class="title"><%= __('Post_Toc') %></div>
+    	<div class="post-toc-inner"><%- toc(page.content,{list_number: false,max_depth: page.tocd?page.tocd:3}) %></div>
+    </div>
+  <% }else{ %>
+    <div class="item">
+      <div class="title"><%= __('Tag_Cloud') %></div>
+      <div class="toolbar-tag-cloud"><%- tagcloud({min_font: theme.tag_cloud.font.from, max_font: theme.tag_cloud.font.to, amount: 200, color: true, start_color: theme.tag_cloud.color.from,  end_color: theme.tag_cloud.color.to}) %></div>
+    </div>
+  <% } %> 
+  <script>
+    $(function(){
+      var ali = $('.tb-tabTitle>ul>li');
+      var aDiv = $('.tb-tabContent>div');
+      var timeId = null;
+      ali.click(function(){
+        var _this = $(this);
+        timeId = setTimeout(function(){
+          _this.addClass('tb-current').siblings().removeClass('tb-current');
+          var index = _this.index();
+          aDiv.eq(index).show().siblings().hide();
+        });
+      });
+  });
+  </script>
+</div> 

@@ -1,0 +1,30 @@
+$pc_pe_dividing_1                          = unit(hexo-config('responsive.dividing_1'),px);
+$pc_pe_dividing_2                          = unit(hexo-config('responsive.dividing_2'),px);
+$pc_pe_dividing_3                          = unit(hexo-config('responsive.dividing_3'),px);
+$max-z-index                               = 1919810;
+$min-z-index                               = 10;
+$post-z-index                              = 30;
+$sidebar-z-index                           = 40;
+$sidebar-footer-z-index                    = 30;
+$toolbar-z-index                           = 20;
+$topbar-z-index                            = 50;
+$swal2-z-index                             = 90;
+
+@import "_variable/width/main";
+@import "_variable/font-size/main";
+
+if hexo-config('color_schemes') == "white"
+	@import "_variable/colors/white";
+else if hexo-config('color_schemes') == "trans"
+	@import "_variable/colors/trans";
+else if hexo-config('color_schemes') == "night"
+	@import "_variable/colors/night";
+else if hexo-config('color_schemes') == "none"
+	var donothing
+else
+	@import "_variable/colors/std";
+
+if hexo-config('spacial') == "grayscale"
+	@import "_variable/spacial/grayscale";
+else if hexo-config('spacial') == "invert"
+	@import "_variable/spacial/invert";

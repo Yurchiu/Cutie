@@ -1,0 +1,35 @@
+<div class="comments">
+	<% if(page.discomments){ %>
+      <%= __('Comments.Unable') %>
+	<% }else if(theme.comments.livere.enable) { %>
+        <script type="text/javascript">
+          (function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+            if (typeof LivereTower === 'function') { return; }
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+            e.parentNode.insertBefore(j, e);
+          })(document, 'script');
+        </script>
+        <div id="lv-container" data-id="city" data-uid="<%= theme.comments.livere_uid %>"></div>
+    <% }else if(theme.comments.gitalk.enable) { %>
+        <div id="gitalk-container"></div>
+        <script>
+          var gitalk = new Gitalk({
+                        clientID: <%-theme.comments.gitalk.clientID%>,
+                        clientSecret: <%-theme.comments.gitalk.clientSecret%>,
+                        repo: <%-theme.comments.gitalk.repo%>,
+                        owner: <%-theme.comments.gitalk.owner%>,
+                        admin: <%-theme.comments.gitalk.admin%>,
+                        id: location.pathname,
+                        language: '<%-config.language%>',
+                        proxy: <%-theme.comments.gitalk.proxy%>,
+                        distractionFreeMode: false
+                      });
+          gitalk.render('gitalk-container');
+        </script>
+    <% }else{ %>
+    	<%= _p('Comments.Unopen',config.author) %>
+    <% } %>
+</div>

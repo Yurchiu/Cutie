@@ -1,0 +1,85 @@
+Paginator:
+  Prev: 上一页
+  Next: 下一页
+  None: 没有了
+
+Menu:
+  Home: 首页
+  Archives: 归档
+  Tags: 标签
+  Categories: 分类
+  About: 关于
+  Message_board: 留言
+  Links: 链接
+  Projects: 项目
+  Say: 吐槽
+  
+Search: 搜索
+Search_text: 输入关键词搜索...
+
+Topbar: 吐槽
+
+Posts:
+  Top: 置顶
+  Password: 加密
+  Share: 分享到
+  Author: 本文作者： 
+  Link: 本文链接： 
+  Copyright: 版权声明： 
+  Refresh: 最后更新： 
+
+Archives:
+  Categories: 分类“%s”下有以下文章。
+  Tags: 标签“%s”下有以下文章。 
+  Archives: 目前共有 %d 篇文章。 继续努力。
+  Dates: 以下文章写于这个日期。
+  ShowDates: 展示日期
+
+Categories: 目前共有 %d 个分类。
+
+Tags: 目前共有 %d 个标签。
+
+Comments:
+  Unable: 本页面并未开启评论功能哦！
+  Unopen: '%s 并未使用评论功能哦！'
+
+Pages: 第 %d 页
+
+Sidebar_list: 导航
+
+Toolbar:
+  Random:
+    title: 随机文章
+    subtitle: 回味旧文
+  Refresh:
+    title: 最近更新
+    subtitle: 旧文更新
+  Another:
+    title: 其他物件
+    subtitle: 杂物收纳
+    coloregg: 彩蛋：点击我，可以编辑本页面！
+
+hitokoto: '%s 说，除了她以外的人都很强！嘤嘤嘤~~'
+
+Info:
+  name: 博客信息
+  count: 文章数目
+  update: 最近更新
+  author: 本站作者
+  words: 本站字数
+
+Post_Toc: 文章目录
+
+Tag_Cloud: 标签云
+
+Progress: '时间已过去了 '
+
+B2D: 顶部
+
+Collection: 收藏
+
+Hide: 隐藏左右两栏
+
+Show: 展示左右两栏
+
+NoTitle: 无标题

@@ -1,0 +1,160 @@
+/*  表格  */
+
+table {
+	padding: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin: auto;
+}
+table tr {
+	border-top: 1px solid #ccc;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+}
+table tr th {
+	font-weight: bold;
+	border: 1px solid #ccc;
+	text-align: left;
+	margin: 0;
+	padding: 6px 13px;
+	color: #fff;
+	background-color: #5db084;
+}
+table tr th:first-child,
+table tr th:last-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+table tr td {
+	border: 1px solid #ddd;
+	text-align: left;
+	margin: 0;
+	padding: 6px 13px;
+}
+table tr td:first-child,
+table tr td:last-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+table tr:nth-child(2n) {
+	background-color: #e3f1ea;
+}
+table tr:nth-child(1) th {
+	color: #eee;
+	border: 1px solid #009688;
+	background-color: #009688;
+}
+
+/*  引用  */
+
+blockquote {
+    padding-left: 9px;
+    margin: 1em 3em 1em 2em;
+    font-weight: 400;
+    border-left: 4px solid rgba(0, 0, 0, .12);
+    background-color: $blockquote-color;
+    word-break: break-all;
+    font-family: Georgia,KaiTi;
+}
+
+@media screen and (max-width: $pc_pe_dividing_3) {
+    blockquote {
+    	margin-block-start: 1em;
+    	margin-block-end: 1em;
+    	margin-inline-start: 10px;
+    	margin-inline-end: 10px;
+    }
+}
+
+/*  图片  */
+
+img {
+	  display: block;
+    margin: auto;
+    opacity: 1;
+}
+
+/*  链接  */
+
+a {
+    word-break: break-all;
+    text-decoration: none;
+	  color: $a-color;
+    &:hover {
+        transition: 0.6s all;
+    }
+}
+
+/* 列表 */
+
+@media screen and (max-width: $pc_pe_dividing_3) {
+    ol,ul {
+    	padding-inline-start: 15px;
+    }
+}
+
+/*  分鸽线  */
+
+hr {
+	  border-style: solid;
+    border-color: $hr-color;
+	  border-width: .1px;
+	  margin: 10px;
+}
+
+/*  防止溢出  */
+
+img,figure,canvas,iframe,video{
+	max-height: 100%;
+	max-width: 100%;
+	overflow: auto;
+}
+
+pre,code {
+	background-color: #eee;
+	border-radius: 2px;
+	border: 2px solid #ddd;
+	padding: 0px 3px;
+	margin: auto;
+	overflow: auto;
+	line-height: 120%;
+	letter-spacing: 0;
+	font-family: hexo-config('mono_font_name');
+}
+
+/*  提示框  */
+
+fieldset {
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: .3em;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+fieldset >legend {
+    background-color: #eb5055;
+    color: #fff;
+    border-radius: .2em;
+    padding: .2em .5em;
+    font-size: 20px;
+}
+
+/*  展开折叠  */
+
+summary:focus {
+    outline-style: none;
+}
+
+summary:hover {
+    background-color: #eee;
+}
+
+details >summary {
+	margin: 10px 0;
+	border-radius: 25px;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px;
+    border-style: none;
+    cursor: pointer;
+}

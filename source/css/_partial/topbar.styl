@@ -1,0 +1,61 @@
+.topbar {
+	background-color: $topbar-bg-color;
+	box-shadow: 0 0 5px $topbar-shadow-color;
+	padding: 12px;
+	position: sticky;
+	top: 0;
+	z-index: $topbar-z-index;
+	display: flex;
+	justify-content: space-between;
+
+	.topbar-title { font-weight: 700; }
+	.topbar-menu { display: none; }
+    a { color: $topbar-link-color; }
+
+    .search {
+	   	display: flex;
+	   	align-items: stretch;
+	    margin-right: 35%;
+	    	
+	    .input,.submit {
+	    	border: none;
+	        outline: none;
+	        padding: 7px 12px;
+	        font-size: 12px;
+	        border-radius: 50px;
+	        box-shadow: 0 1px 3px #ddd;
+	        line-height: 12px;
+	    }
+	    .input {
+	        border-top-right-radius: 0;
+	        border-bottom-right-radius: 0;
+	    }
+	    .submit {
+	        background-color: #fff;
+	        border-top-left-radius: 0;
+	        border-bottom-left-radius: 0;
+	        cursor: pointer;
+	    }
+	}
+
+	.topbar-title,.topbar-comments,.topbar-menu { 
+        font-size: $topbar-fs;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+.github-corner>svg {
+	z-index: -99999;
+}
+
+@media screen and (max-width: $pc_pe_dividing_3) {
+	.topbar {
+		.topbar-menu {
+			display: block !important;
+		}
+   		.search {
+    	    display: none !important;
+    	}
+	}
+}

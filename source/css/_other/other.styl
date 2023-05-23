@@ -1,0 +1,343 @@
+/*  反转彩蛋  */
+.reverse-coloregg {  
+	-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);  
+	-moz-transform: matrix(-1, 0, 0, 1, 0, 0);  
+	transform: matrix(-1, 0, 0, 1, 0, 0);  
+	-o-transform: skew(0deg, 180deg) scale(-1, 1);
+}
+/*本部分代码来自 https://mkblog.cn/1469/*/
+
+/*  黑幕  */
+
+.text-shady,.text-blur,.text-invsb {
+	transition: 0.6s all;
+	&:hover {transition: 0.6s all;}
+}
+
+.text-black,.text-shady {
+	color: #000;
+	background-color: #000;
+}
+
+.text-shady:hover {color: #fff;}
+
+.text-blur {
+	filter: blur(4px);
+	&:hover {filter: blur(0);}
+}
+
+.text-invsb {
+	opacity: 0;
+	&:hover {opacity: 1;}
+}
+
+/*  警告条  */
+
+.text-alert {
+	padding: .6em .9em;
+	border-radius: .3em;
+	margin: 1em auto;
+	line-height: 1.6em;
+	display: block;
+	background-color: #ddd;
+	color: #999;
+}
+.text-alert a {
+	color: inherit !important;
+	border-color: inherit !important;
+}
+.text-alert a:hover{opacity:.5;}
+
+.text-alert.fa:before{margin-right:.3em;} /* For http://www.fontawesome.com.cn/ */
+
+.text-alert.success {
+	background-color: #dff0d8;
+	color: #3c763d;
+}
+.text-alert.info {
+	background-color: #d9edf7;
+	color: #31708f;
+}
+.text-alert.warning {
+	background-color: #fcf8e3;
+	color: #8a6d3b;
+}
+.text-alert.danger {
+	background-color: #f2dede;
+	color: #a94442;
+}
+
+/*  展开折叠-2  */
+
+.text-collapse {
+    margin: 2px;
+}
+.text-collapse .col-title {
+    border-radius: 25px;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.text-collapse .col-text {
+    display: none;
+    margin-top: 10px;
+}
+.text-collapse .col-title:hover + .col-text {
+	display: block;
+}
+.text-collapse .col-title:hover {
+	background-color: #eee;
+}
+
+/*  滚动条美化  */
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: $scrollbar-bg-color;
+	z-index: $max-z-index;
+}
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+	background-color: $scrollbar-bg-color;
+	z-index: $max-z-index;
+}
+::-webkit-scrollbar-thumb {
+	background-color: $scrollbar-color;
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+	border-radius: 10px;
+	z-index: $max-z-index;
+}
+
+/*  标签页  */
+
+.tab-page {
+	box-shadow: 0px 0px 15px #ddd;
+	border-radius: 10px;
+
+	.hide {display: none;}
+	.tabTitle >ul {
+		overflow: hidden;
+		padding: 0px;
+		margin: 0px;
+		list-style-type: none;
+		display: flex;
+		justify-content: space-around;
+	}
+	.tabTitle >ul >li {
+		height: 20px; 
+		font-size: 20px;
+		padding: 20px 10px;
+		line-height: 30px; 
+		cursor: pointer;
+		text-align: center;
+	}
+	.current {border-bottom: 1px solid $toolbar-tab-page-current-border-bottom-color;}
+	.tabContent >div {
+		border-top: 1px solid $toolbar-tab-page-tabContent-border-top-color;
+		padding: 15px;
+		padding-bottom: 25px;
+		overflow: auto;
+	}
+}
+
+/* need js:
+
+$(function(){
+      var ali = $('.tb-tabTitle>ul>li');
+      var aDiv = $('.tb-tabContent>div');
+      var timeId = null;
+      ali.click(function(){
+        var _this = $(this);
+        timeId = setTimeout(function(){
+          _this.addClass('tb-current').siblings().removeClass('tb-current');
+          var index = _this.index();
+          aDiv.eq(index).show().siblings().hide();
+        });
+      });
+  });
+
+*/
+
+/*  注解文字  */
+
+.text-comments {
+	color: $text-color;
+	font-size: 8px;
+	font-weight: 500;
+}
+
+/*  进度条  */
+
+.progress-con {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+
+    .progress {
+    	text-align: right;
+    	line-height: 25px;
+    	color: white;
+    	border-radius: 5px;
+	}
+}
+
+/* 时间线 */
+
+.timeline 
+{
+	position: relative;
+	font-size: 20px;
+	list-style: none;
+	padding-left: 1.2em !important;
+	margin-left: .3em !important;
+	border-left: .2em solid $timeline-line-color;
+	color: $text-color !important;
+	
+	a {
+		color: $post-text-link-color !important;
+
+		&:hover {
+			color: $post-text-link-hover-color !important;
+		}
+	}
+}
+
+.timeline b {
+	font-size: 18px;
+	font-weight: normal;
+	display: block;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: $timeline-b-color;
+}
+
+.timeline b::after {
+	content: '';
+	position: absolute;
+	top: .38em;
+	left: -2em;
+	width: .8em;
+	height: .8em;
+	border-radius: 50%;
+	background-color: $timeline-circle-bg-color;
+	border: .14em solid $timeline-circle-color;
+	box-shadow: m.15em .15em 0 rgba(255,255,255,1),-0.15em -0.15em 0 rgba(255,255,255,1);
+}
+
+.timeline li {
+	list-style: none;
+	line-height: 100%;
+}
+
+.timeline li:hover b::after {
+	border-color: $timeline-hover-b-color;
+
+}
+
+.timeline li:hover b {
+	color: $timeline-hover-b-color;
+}
+
+/* SweetAlert 优先级更改 */
+
+.swal2-container {
+	z-index: $swal2-z-index !important;
+}
+
+/* 头像 */
+
+.avatar {
+	border-radius: 50%;
+   	height: 70%;
+   	width: 70%;
+   	display: block;
+   	margin: auto;
+}
+
+.bounce:hover {
+	-webkit-animation:bounce 1s .1s ease both;
+	-moz-animation:bounce 1s .1s ease both;
+}
+
+.avatar-container {
+	padding: 10%;
+	padding-top: 35px;
+	padding-bottom: 15px;
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-transform:scale(1)
+	}
+	10%, 20% {
+		-webkit-transform:scale(0.8) rotate(-2deg)
+	}
+	30%, 50%, 70%, 90% {
+		-webkit-transform:scale(1.1) rotate(2deg)
+	}
+	40%, 60%, 80% {
+		-webkit-transform:scale(1.1) rotate(-2deg)
+	}
+	100% {
+		-webkit-transform:scale(1) rotate(0)
+	}
+}
+
+.showtoolbar,.hidetoolbar {
+	cursor: pointer;
+}
+
+/*Button*/
+
+.btn {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	-moz-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	-ms-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	display: inline-block;
+	height: 2.75em;
+	line-height: 2.75em;
+	padding: 0 1.5em;
+	background-color: transparent;
+	border-radius: 4px;
+	border: solid 1px #c8cccf;
+	color: #414f57 !important;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.btn:hover {
+	border-color: #ff7496;
+	color: #ff7496 !important;
+}
+
+.btn.fit {
+	display: block;
+	width: 100%;
+	margin: 0 0 0.75em 0;
+}
+
+.btn.small {
+	font-size: 0.8em;
+}
+
+.btn.big {
+	font-size: 1.35em;
+}
+
+.btn.disabled {
+	-moz-pointer-events: none;
+	-webkit-pointer-events: none;
+	-ms-pointer-events: none;
+	pointer-events: none;
+	opacity: 0.5;
+}

@@ -1,0 +1,219 @@
+#! ---------------------------------------------------------------
+#! WARNING THIS YAML
+#! IS IN CHINESE!
+#! ---------------------------------------------------------------
+
+
+
+# I 侧边栏菜单
+#
+# 不要在链接里加入根目录。例如，`http://test.com/path/to/pages`，你应当填写 `path/to/pages`。
+# 如果链接失效，试着去掉 `index.html`。
+# 如果要增加新的页面，可以仿照格式继续填写，并在 language 下增加它的页面名称。
+# 记得到第二部分去填写它的 icon。
+
+Menu:
+  Home: index.html
+  Archives: archives/index.html
+  Tags: tags/index.html
+  Categories: categories/index.html
+  About: somepage/about/index.html
+  Message_board: somepage/chat/index.html
+  Links: somepage/link/index.html
+  Projects: somepage/projects/index.html
+
+# 顶部栏也可以放一个页面。
+Topbar: somepage/say/index.html
+
+
+
+# II 菜单图标
+#
+# 使用 fontawesome 图标。链接：http://www.fontawesome.com.cn。
+
+icon:
+  Home: fa-home
+  Archives: fa-tasks
+  Tags: fa-tags
+  Categories: fa-th-large
+  About: fa-user-o
+  Message_board: fa-commenting-o
+  Links: fa-link
+  Projects: fa-cog
+  Topbar: fa-bell-o
+
+
+
+# III 评论
+#
+# 评论功能在不包含 "discomments: true" 的页面开启。
+# 支持两个评论系统。
+
+comments:
+  # LiveRe（来必力）评论系统
+  # 从这里得到你的 uid。
+  # https://livere.com/insight/myCode
+  livere:
+    enable: false
+    uid: MTAyMC80Njg5MS8yMzM5Mg==
+
+  # Gitalk 评论系统
+  # https://github.com/gitalk/gitalk
+  gitalk:
+    enable: true
+    clientID: "'1c64f04731dad7dcc928'"
+    clientSecret: "'576bde3af3744ef3d054d3b293d0a0c1fce5087f'"
+    repo: "'no-code'"
+    owner: "'yz-hs'"
+    admin: "['yz-hs']"
+    proxy: "'https://o.cieu.tk/https://github.com/login/oauth/access_token'"
+
+
+
+# IV 自适应
+#
+# 根据设定的宽度（单位为 px）改变显示方式。
+
+responsive:
+  dividing_1: 1170
+  dividing_2: 990
+  # 这里隐去工具栏。
+  dividing_3: 770
+  # 这里隐去侧边栏。
+
+
+
+# V 首页提示
+#
+# 以下是预设：
+# <i class="fa fa-volume-up" aria-hidden="true"></i> 欢迎来到 cieu 的博客！希望我们能相互交流，共同进步～
+
+site_warning:
+  enable: root   # 可以取这些值：none | root | all。默认值是 none。
+  text: "<i class='fa fa-volume-up' aria-hidden='true'></i> 改 ID 了。由 cieu 变更为 Yurchiu。"
+  type: warning  # 可以取这些值：danger | warning | info | success。默认值是 default（灰色）。
+  bgcolor:       # 确有必要，可设置背景颜色。
+  color:         # 确有必要，可设置文本颜色。
+
+
+
+# VI 版权信息
+
+footer:          # 页脚版权信息。
+  left: '©2019-2023 <a href="https://github.com/yz-hs">Yurchiu</a>. All rights reserved.'
+  right: 'Theme <a href="https://github.com/yz-hs/cutie">Cutie</a>, by Yurchiu.'
+
+copyright:       # 文末版权信息。
+  enable: post   # 可以取这些值：all | post | disable。默认值是 disable。
+                 # all: 在每个页面末尾显示。
+                 # post: 只在每个博文末尾显示。
+                
+  statement: '本博客所有文章除特别声明外，均允许规范转载。转载请注明出处！'
+
+
+
+# VII 博文摘要
+#
+# 在首页文章卡片中的摘要信息。
+
+post_excerpt:
+  mode: excerpt         # 可以取这些值：excerpt | noexcerpt。默认值是 excerpt。
+                        # excerpt: 如果博文源文件中含有 "<!--more-->"，将会将它前面的内容作为摘要。
+                        # noexcerpt: 所有文章被认为没有摘要。
+
+  ifdefault: false      # 大前提：博文源文件中不含有 "<!--more-->"。
+                        # ture：展示 "post_default_excerpt" 内容。
+                        # false：展示博文的一部分。
+
+  display: html         # 可以取这些值：html | text。默认值是 text。
+                        # html: 仅当博文源文件中含有 "<!--more-->" 时，保留 html 标签。
+                        # text: 任何情况下不保留 html 标签。
+
+  post_default_excerpt: '<i class="fa fa-warning" aria-hidden="true"></i> 本文章无可提供的摘要 qwq。可能 Yurchiu 太懒了，或不适合做摘要。'
+  length_excerpt: 150   # 当展示博文的一部分时，展示的文本字符数。默认是 30。
+
+  # 注意：如果一篇博文源文件中不含有 "<!--more-->"，而 display 值为 html 时，则效果与 "display: text" 相同。 
+
+
+
+# VIII 标签云
+
+tag_cloud:
+  color:               # 颜色渐变范围
+    from: "#fff"       # night: #aaa
+    to: "#fff"         # not-night: #fff
+  font:                # 字体渐变范围（单位 px）
+    from: 14
+    to: 14
+
+
+
+# IX 字体
+#
+# 字体，每空仅能填一种
+# https://fonts.googleapis.com/css?family=...
+
+# 主体字体（用于请求）
+font: Montserrat # Saira Monda Montserrat
+# 主体字体的实际名字（用于设值）
+font_name: Montserrat
+# 等宽字体，代码片段使用（用于请求）
+mono_font: Roboto+Mono
+# 等宽字体的实际名字（用于设值）
+mono_font_name: "Roboto Mono"
+
+
+
+# X 杂项
+
+# 网站标题
+title: Yurchiu's Blog
+
+# 自我简述
+short_des: "An AFO whker"
+
+# 头像
+avatar:
+  url: /img/new-avatar.jpg
+
+# 彩蛋
+colored_eggs:
+  # 可以取这些值：santa | natsuki | none，默认值是 none。
+  type: natsuki
+  width: 140px                      # 人物大小，仅对 natsuki 有用。
+  time: 0.55s                       # 动画时间，仅对 natsuki 有用。
+  bezier: cubic-bezier(0, 0, 0, 1)  # 贝塞尔曲线，仅对 natsuki 有用。
+                                    # 对于 natsuki，可以在 source 文件夹中的 img 文件夹更改图片。
+  reverse: false                    # 网页反转（只转一次）。
+
+
+# 配色
+# 可以取这些值：std | white | trans | night | none，默认值是 std。"none" 非常特殊。
+color_schemes: std
+
+# 特殊效果
+# 可以取这些值：none | grayscale | invert，默认值是 none。
+spacial: none
+
+# 背景图片地址
+bg-url: /img/new-bgp.jpg  # night-bgp.png
+
+# 时间格式
+# http://momentjs.cn/docs/#/parsing/string-format/
+time_format: "YYYY-MM-DD, HH:mm:ss"
+
+# 透明度，取值区间为 [0,1] 间的实数。
+opacity: 1
+
+# 图片崩掉后，会用它替换。
+img_default: /img/error.jpg
+
+# toolbar 文章显示个数。
+toolbar_amount: 7
+
+
+
+#! ---------------------------------------------------------------
+#! DO NOT EDIT THE FOLLOWING SETTINGS
+#! UNLESS YOU KNOW WHAT YOU ARE DOING
+#! ---------------------------------------------------------------

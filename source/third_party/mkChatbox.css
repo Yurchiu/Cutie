@@ -1,0 +1,148 @@
+/**
+ * 孟坤html聊天框架 v1.0.0 (https://mkblog.cn)
+ * Copyright 2011-2016 mengkunsoft, Inc.
+ * Licensed under MIT 
+ */
+ 
+.mk-chat-box{
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    font-size:16px;
+    width: 100%;
+    padding: 0;
+    position:relative;
+    overflow-x: hidden;
+}
+
+.mk-chat-box .msg{ /*消息主体*/
+    margin: 4px 6px;
+    position: relative; /*兼容IE*/
+    min-height: 40px;
+    border: 0;
+}
+.mk-chat-box .right{
+    text-align: right;
+    margin-left: 64px;
+}
+.mk-chat-box .left{
+    text-align: left;
+    margin-right: 64px;
+}
+
+.mk-chat-box img.head{ /*头像*/
+    width: 32px;
+    height: 32px;
+    top: 8px;
+    position: absolute;
+    -moz-border-radius: 100%; /* Firefox */
+    -webkit-border-radius: 100%; /* Safari Chrome */
+    border-radius: 100%;
+    border: 1px solid #cbe5c8;
+    -moz-user-select: none; /*禁止用户选中*/
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mk-chat-box .right img.head{
+    right: 0;
+}
+.mk-chat-box .left img.head{
+    left: 0;
+}
+
+.mk-chat-box .name{    /*昵称显示区域*/
+    color: #8b8b8b;
+    font-size: 12px;
+    display: block;
+    line-height: 18px;
+}
+.mk-chat-box .right .name{
+    margin: 0 48px 2px 0;
+}
+.mk-chat-box .left .name{
+    margin: 0 0 2px 48px;
+}
+
+.mk-chat-box .content{  /*消息内容区域*/
+    word-break: break-all;
+    word-wrap: break-word;/*支持IE，chrome，FF*/
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px;
+    line-height: 18px;
+    -moz-border-radius: 6px; /* Firefox */
+    -webkit-border-radius: 6px; /* Safari ? Chrome */
+    border-radius: 6px;
+    min-width: 9px;     /*防止出现空白消息变形*/
+    min-height: 18px;
+}
+.mk-chat-box .content img{  /*消息内容区域图片*/
+    width: 100%;
+    *:width: auto;      /*低版本的IE*/
+    *:max-width: 100%;
+    height: auto;
+}
+.mk-chat-box .content a{  /*消息内容区域超链接*/
+    color: #0072C1;
+    margin: 0 5px;
+    cursor: hand;
+}
+.mk-chat-box .right .content{
+    margin: 0 48px 0 0;
+    border: 1px solid #78cdf8;
+    background: #78cdf8;
+}
+.mk-chat-box .left .content{
+    margin: 0 0 0 48px;
+    border: 1px solid #CDD7E2;
+    background: #CDD7E2;
+}
+
+.mk-chat-box .content:after{   /*消息尖角*/
+    content: "";
+    position: absolute;
+    border-bottom: 8px solid rgba(255, 255, 255, 0);
+}
+.mk-chat-box .right .content:after{
+    right: -12px;
+    top: 8px;
+    border-left: 12px solid #78cdf8;
+}
+.mk-chat-box .left .content:after{
+    left: -12px;
+    top: 8px;
+    border-right: 12px solid #cdd7e2;
+}
+.mk-chat-box .tips{ /*系统提示?*/
+    margin: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+.mk-chat-box .tips span{
+    display: inline-block;
+    padding: 0 4px;
+    background-color: #cccccc;
+    color: #ffffff;
+    -moz-border-radius: 6px; /* Firefox */
+    -webkit-border-radius: 6px; /* Safari Chrome */
+    border-radius: 6px;
+}
+.mk-chat-box .tips .tips-primary{
+    background-color: #428bca;
+}
+.mk-chat-box .tips .tips-success{
+    background-color: #5cb85c;
+}
+.mk-chat-box .tips .tips-info{
+    background-color: #5bc0de;
+}
+.mk-chat-box .tips .tips-warning{
+    background-color: #f0ad4e;
+}
+.mk-chat-box .tips .tips-danger{
+    background-color: #d9534f;
+}

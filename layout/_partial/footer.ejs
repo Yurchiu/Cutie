@@ -1,0 +1,69 @@
+<div class="footer">
+  <p class="text-left"><%- theme.footer.left %></p>
+  <p class="text-right"><%- theme.footer.right %></p>
+</div>
+
+
+<!-- 
+!#                                                 #!
+!#                     Chores                      #!
+!#                                                 #!
+-->
+
+
+<%- partial('./animation') %>
+<script>MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},svg: {fontCache: 'global'}};</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-svg-full.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css">
+<script type="text/javascript" src="/js/binft.js"></script> 
+<script type="text/javascript" src="/js/chaffle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.all.min.js"></script>
+<script src="https://cdn.staticfile.org/sketch.js/1.0/sketch.min.js"></script>
+<script src="/js/initialization.js"></script>
+<script src="/js/SmoothScroll.js"></script>
+<script src="/js/core.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<% if(theme.colored_eggs.reverse) { %>
+  <script>
+    $(document).ready(function(){Fool();});
+    $(document).on('pjax:complete', function(){Fool();});
+  </script>
+<% } %>
+
+
+<!-- 
+!#                                                 #!
+!#                     Effects                     #!
+!#                                                 #!
+-->
+
+<!-- 根据需要取消注释 -->
+
+<!--<canvas id="shuicheCanvas" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647;pointer-events:none;" width="1920" height="431"></canvas>
+<script src="/js/mouse.js"></script>
+<script type="text/javascript">$.shuicheMouse({type:11,color:"rgba(187,67,128,1)"})</script> 鼠标粒子-->
+
+<script type="text/javascript" src="/js/ctitle.js"></script> <!--标题改动-->
+
+<script type="text/javascript" src="/js/clicklove.js"></script> <!--点击爱心-->
+
+<script type="text/javascript" src="/js/colored-egg.js"></script> <!--控制台输出彩蛋-->
+
+<!--<script type="text/javascript" src="/js/snow.js"></script> 前景下雪  注：与“点击烟花”冲突-->
+
+<!--<script type="text/javascript" src="/js/snow-2.js"></script> 前景下雪——样式二（其实这个版本飘什么都行）-->
+
+<!--<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 99999;pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="/js/firework.js"></script> 点击烟花 -->
+
+<!--<div id="clickCanvas" style=" position: fixed;left: 0;top: 0;z-index: 99999;pointer-events: none;"></div>
+<script type="text/javascript" src="/js/clickple.js"></script> 点击烟花2 -->
+
+<!--<script type="text/javascript" src="/js/values.js"></script> 点击社会主义核心价值观 -->
+
+<!--<script type="text/javascript" src="/js/particle.js"></script>  背景粒子 -->
+
+<!--<script type="text/javascript" src="/js/sakura.js"></script> 前景樱花 -->

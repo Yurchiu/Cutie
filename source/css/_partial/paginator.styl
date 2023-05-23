@@ -1,0 +1,24 @@
+.paginator {
+	padding: 70px 0;
+    text-align: center;
+    background-color: $paginator-padding-color;
+
+    .page-number,.space,.prev,.next {
+    	border: 1px solid $paginator-border-color;
+    	padding: 10px;
+    	margin: 2px;
+    	background-color: $paginator-bg-color;
+    	border-radius: 5px 5px 5px 5px;
+        color: $paginator-color;
+    }
+
+    .page-number:hover,.prev:hover,.next:hover {
+        color: $paginator-hover-color;
+        background-color: $paginator-hover-bg-color;
+    }
+
+    .current,.current:hover {
+        color: $paginator-current-color;
+    	background-color: $paginator-current-bg-color;
+    }
+}

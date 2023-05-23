@@ -6,7 +6,7 @@
 
 This is the version 2.0 of theme cieuka.
 
-**It is not in my working stack. I will get down to it in summer vacation.**
+**I am not working on it. I will get down to it in summer vacation.**
 
 In order to learn relevant knowledge and make a good-looking theme, I made this. The layout of the theme is mainly based on [handsome](https://www.ihewro.com/archives/489/), a typecho theme. Most of the codes were originally programmed by me, while the rest were from the Internet.
 
@@ -30,7 +30,7 @@ Then, you need to read some documents (under `/path-to-the-theme/_doc`) to furth
 
 ## Maintainers
 
-@[cieu](https://github.com/yz-hs)
+@[Yurchiu](https://github.com/yz-hs)
 
 ## Contributing
 

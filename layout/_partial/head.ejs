@@ -1,0 +1,33 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="msvalidate.01" content="A7B4DB5A7BF5E5C6E52E34BB024D6319" />
+  <meta name="description" content="<%- config.description %>">
+  <meta http-equiv='content-language' content='zh-cn'>
+  <title>
+  	<% if (page.current>1) { %>
+  	    <%= _p('Pages',page.current) %> |
+  	<% } %>
+
+    <% if(page.title){ %>
+  		<%= page.title %> |
+  	<% }else if(page.category){ %>
+  		<%= __('Menu.Categories') %> <%= page.category %> |
+  	<% }else if (page.tag) { %>
+  	  <%= __('Menu.Tags') %> <%= page.tag %> |
+  	<% }else if (page.archive) { %>
+  	  <%= __('Menu.Archives') %> |
+  	<% }else{} %>
+
+  	<%= config.title %>
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=<%- theme.font %>" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=<%- theme.mono_font %>" rel="stylesheet">
+</head>

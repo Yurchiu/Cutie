@@ -1,0 +1,9 @@
+<div class="header">
+	<h1 class="title"><%= __('Menu.Tags') %></h1>
+	<div class="meta"><%= _p('Tags',site.tags.length) %></div>
+</div>
+<div class="post-text tags">
+	<% site.tags.each(function (tag) { %>
+    	<a href="/tags/<%= tag.name %>"><i class="fa fa-tag fa-fw" aria-hidden="true"></i> <%= tag.name %></a>
+	<% }) %>
+</div>

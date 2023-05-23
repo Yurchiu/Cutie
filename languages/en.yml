@@ -1,0 +1,85 @@
+Paginator:
+  Prev: Prev
+  Next: Next
+  None: None
+
+Menu:
+  Home: Home
+  Archives: Archives
+  Tags: Tags
+  Categories: Categories
+  About: About
+  Message_board: MsgBoard
+  Links: Links
+  Projects: Projects
+  Say: Say
+
+Search: Search
+Search_text: Enter keywords to search for ...
+
+Topbar: Complain
+
+Posts:
+  Top: Pinned
+  Password: Encrypted
+  Share: Share to
+  Author: The author： 
+  Link: The link： 
+  Copyright: Copyright： 
+  Refresh: Last updated： 
+
+Archives:
+  Categories: There are the following articles under the category "%s".
+  Tags: There are the following articles with the tag "%s".
+  Archives: There are currently %d articles. Keep working hard.
+  Dates: There are the following articles which were written on this date.
+  ShowDates: Show dates
+
+Categories: There are currently %d categories.
+
+Tags: There are currently %d tags.
+
+Comments:
+  Unable: Comments are not enabled on this page!
+  Unopen: '%s does not enabled the comments!'
+
+Pages: Page %d
+
+Sidebar_list: Navigate
+
+Toolbar:
+  Random:
+    title: Random
+    subtitle: Recalling.
+  Refresh:
+    title: Updates
+    subtitle: Refreshing.
+  Another:
+    title: Something
+    subtitle: Interesting.
+    coloregg: Click me to edit this page!
+
+hitokoto: '%s said that everyone except her is strong!'
+
+Info:
+  name: Blog Information
+  count: Posts Cnt
+  update: Latest Upd
+  author: Blog Auth
+  words: Words Cnt
+
+Post_Toc: Table of Contents
+
+Tag_Cloud: Tag Cloud
+
+Progress: 'Time has passed by '
+
+B2D: Top
+
+Collection: Note
+
+Hide: Hide sidebars
+
+Show: Show sidebars
+
+NoTitie: 'No Title'
