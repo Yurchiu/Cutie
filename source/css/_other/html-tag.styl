@@ -78,12 +78,12 @@ img {
 /*  链接  */
 
 a {
-    word-break: break-all;
-    text-decoration: none;
-	  color: $a-color;
-    &:hover {
-        transition: 0.6s all;
-    }
+	word-break: break-all;
+	text-decoration: none;
+	color: $a-color;
+	&:hover {
+		transition: 0.6s all;
+	}
 }
 
 /* 列表 */
@@ -97,10 +97,11 @@ a {
 /*  分鸽线  */
 
 hr {
-	  border-style: solid;
-    border-color: $hr-color;
-	  border-width: .1px;
-	  margin: 10px;
+	border-style: solid;
+	border-color: $hr-color;
+	border-width: .1px;
+	margin: 10px;
+	opacity: 1;
 }
 
 /*  防止溢出  */
@@ -112,15 +113,16 @@ img,figure,canvas,iframe,video{
 }
 
 pre,code {
+	line-height: 120%;
+	letter-spacing: 0;
+	font-family: hexo-config('mono_font_name');
+}
+
+code {
 	background-color: #eee;
 	border-radius: 2px;
 	border: 2px solid #ddd;
 	padding: 0px 3px;
-	margin: auto;
-	overflow: auto;
-	line-height: 120%;
-	letter-spacing: 0;
-	font-family: hexo-config('mono_font_name');
 }
 
 /*  提示框  */
@@ -128,8 +130,7 @@ pre,code {
 fieldset {
     border: 2px solid rgb(221, 221, 221);
     border-radius: .3em;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
 }
 fieldset >legend {
     background-color: #eb5055;
@@ -137,6 +138,8 @@ fieldset >legend {
     border-radius: .2em;
     padding: .2em .5em;
     font-size: 20px;
+    float: none;
+    width: auto;
 }
 
 /*  展开折叠  */

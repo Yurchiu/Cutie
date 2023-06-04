@@ -16,7 +16,7 @@
 		<i class="fa fa-bars" aria-hidden="true"></i>
 	</a>
 	<a href="/" class="topbar-title">
-		<i class="fa fa-home" aria-hidden="true"></i> <%= theme.title %>
+		<i class="fa fa-home" aria-hidden="true"></i> <%= config.title %>
 	</a>
 
 	<div class="search">
@@ -31,7 +31,9 @@
     	}
 	</script>
 
-	<a href="<%- url_for(theme.Topbar) %>" class="topbar-comments">
-		<i class="fa <%= theme.icon.Topbar %>" aria-hidden="true"></i>
-	</a>	
+	<% if(theme.Topbar){ %>
+		<a href="<%- url_for(theme.Topbar) %>" class="topbar-comments">
+			<i class="fa <%= theme.icon.Topbar %>" aria-hidden="true"></i>
+		</a>
+	<% } %>	
 </div>

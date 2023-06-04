@@ -2,6 +2,8 @@
 
 ![](https://yz-hs.github.io/img/intro4.jpg)
 
+Here is the [Chinese version](https://github.com/yz-hs/Cutie/blob/main/_doc/readme.md). Chinese version is not identical to this.
+
 ## Background
 
 This is the version 2.0 of theme cieuka.
@@ -23,6 +25,8 @@ git clone https://github.com/yz-hs/cutie.git
 Firstly, you need to set the value of `theme` in the blog configuration file (`/path-to-your-blog/_config.yml`) to `cutie` to enable this theme.
 
 Then, you need to read some documents (under `/path-to-the-theme/_doc`) to further configure the theme and learn more about this theme. Most of them are in Chinese.
+
+**This topic relies on some plug-ins. Please be sure to read the document `/_doc/front-matter.md` first.**
 
 ## Demo
 

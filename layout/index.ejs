@@ -1,5 +1,5 @@
 <div class="header">
-	<h1 class="title"><%= theme.title %></h1>
+	<h1 class="title"><%= config.title %></h1>
 	<div class="meta"><%= config.subtitle %></div>
 </div>
 <% page.posts.each(function (post) { %>
@@ -12,13 +12,13 @@
 		">
 			<div class="inner" style="<%if(post.color){%>color:#<%-post.color%><%}%>">
 				<h2 class="title">
-				<a href="<%- url_for(post.path) %>" title="<%= post.title %>"><% if(post.title){ %><%= post.title %><% }else{ %><%= __('NoTitle') %><% } %></a>
+				<a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= post.title %>"><% if(post.title){ %><%= post.title %><% }else{ %><%= __('NoTitle') %><% } %></a>
 				</h2>
 	<% }else{ %>
 		<div class="post-item" style="<%if(post.color){%>color:#<%-post.color%><%}%>"><div>
 		<% if(post.disfa){ %>
 			<h2 class="title">
-				<a href="<%- url_for(post.path) %>" title="<%= post.title %>"><% if(post.title){ %><%= post.title %><% }else{ %><%= __('NoTitle') %><% } %></a>
+				<a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= post.title %>"><% if(post.title){ %><%= post.title %><% }else{ %><%= __('NoTitle') %><% } %></a>
 			</h2>
 		<% }else{ %>
 			<div class="title_fa">
@@ -27,7 +27,7 @@
 			<% }else{ %>
 			  	<i class="fa fa-file-text-o fa-2x fa-border fa-fw" aria-hidden="true"></i>
 			<% } %>
-				<a class="title" href="<%- url_for(post.path) %>" title="<%= post.title %>"><% if(post.title){ %><%= post.title %><% }else{ %><%= __('NoTitle') %><% } %></a>
+				<a class="title" href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= post.title %>"><% if(post.title){ %><%= post.title %><% }else{ %><%= __('NoTitle') %><% } %></a>
 			</div>
 		<% } %>
 	<% } %>

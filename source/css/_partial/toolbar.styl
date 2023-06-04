@@ -69,31 +69,15 @@
 		}
 	}
 
-	.toolbar-tab-page {
-		.tb-hide {display: none;}
-		.tb-tabTitle >ul {
-			overflow: hidden;
-			padding: 0px;
-			margin: 0px;
-			list-style-type: none;
-			display: flex;
-			justify-content: space-around;
-		}
+	.tab-page {
+		box-shadow: none;
+
 		.tb-tabTitle >ul >li {
-			height: 20px; 
-			font-size: $fa-fs;
-			padding: 20px 15px;
-			cursor: pointer;
-			text-align: center;
-			align-items: center;
-		}
-		.tb-current {
-			border-bottom: 2px solid $toolbar-tab-page-current-border-bottom-color;
+			height: auto;
 		}
 		.tb-tabContent .title_fa {
 			display: table;
 			width: 100%;
-			box-sizing: border-box;
 			padding: 10px 5px;
 			border-radius: 10px;
 			transition: 0.6s all;
@@ -106,12 +90,6 @@
 				padding-left: 12px;
 				width: 100%;
 			}
-		}
-		.tb-tabContent >div {
-			border-top: 1px solid $toolbar-tab-page-tabContent-border-top-color;
-			padding: 15px;
-			padding-bottom: 25px;
-			overflow: auto;
 		}
 		.sidetitle {
 			color: $toolbar-tab-page-sidetitle-color !important;
@@ -146,11 +124,7 @@
  		justify-content: space-between;
 
  		.badge {
-			padding: 0 6px;
-			color: $toolbar-list-group-item-badge-color;
 			background-color: $toolbar-list-group-item-badge-bg-color;
-			border-radius: 8px;
-			font-size: $mini-fs;
  		}
 	}
 	.list-group-item:first-child {

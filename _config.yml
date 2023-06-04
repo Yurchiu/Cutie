@@ -9,9 +9,10 @@
 #
 # 不要在链接里加入根目录。例如，`http://test.com/path/to/pages`，你应当填写 `path/to/pages`。
 # 如果链接失效，试着去掉 `index.html`。
-# 如果要增加新的页面，可以仿照格式继续填写，并在 language 下增加它的页面名称。
 # 记得到第二部分去填写它的 icon。
+# 所有内容都是可选的。如果要增加新的页面，可以仿照格式继续填写，并在 language 下增加它的页面名称。
 
+# Menu 内的内容会显示在侧边栏。
 Menu:
   Home: index.html
   Archives: archives/index.html
@@ -22,8 +23,11 @@ Menu:
   Links: somepage/link/index.html
   Projects: somepage/projects/index.html
 
-# 顶部栏也可以放一个页面。
+# 顶部栏也可以放一个页面。可选。
 Topbar: somepage/say/index.html
+
+# 搜索页面的链接。
+Search: somepage/search/index.html
 
 
 
@@ -41,6 +45,7 @@ icon:
   Links: fa-link
   Projects: fa-cog
   Topbar: fa-bell-o
+  Search: fa-search
 
 
 
@@ -55,18 +60,18 @@ comments:
   # https://livere.com/insight/myCode
   livere:
     enable: false
-    uid: 
+    uid: MTAyMC80Njg5MS8yMzM5Mg==
 
   # Gitalk 评论系统
   # https://github.com/gitalk/gitalk
   gitalk:
     enable: true
-    clientID: "''"
-    clientSecret: "''"
-    repo: "''"
-    owner: "''"
-    admin: "['']"
-    proxy: "''"
+    clientID: "'1c64f04731dad7dcc928'"
+    clientSecret: "'576bde3af3744ef3d054d3b293d0a0c1fce5087f'"
+    repo: "'no-code'"
+    owner: "'yz-hs'"
+    admin: "['yz-hs']"
+    proxy: "'https://o.cieu.tk/https://github.com/login/oauth/access_token'"
 
 
 
@@ -166,9 +171,6 @@ mono_font_name: "Roboto Mono"
 
 # X 杂项
 
-# 网站标题
-title: Yurchiu's Blog
-
 # 自我简述
 short_des: "An AFO whker"
 
@@ -217,3 +219,25 @@ toolbar_amount: 7
 #! DO NOT EDIT THE FOLLOWING SETTINGS
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
 #! ---------------------------------------------------------------
+
+
+
+# 本主题使用的 CDN。
+cdn:
+  css:
+    katex: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css
+    gitalk: https://unpkg.com/gitalk/dist/gitalk.css
+    googlefont: https://fonts.googleapis.com
+    highlight: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css
+    fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css
+    bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css
+  js:
+    mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-svg-full.min.js
+    jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
+    anime: https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js
+    pjax: https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js
+    gitalk: https://unpkg.com/gitalk/dist/gitalk.min.js
+    highlight: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js
+    sweetalert2: https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.all.min.js
+    sketch: https://cdn.staticfile.org/sketch.js/1.0/sketch.min.js
+    bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js

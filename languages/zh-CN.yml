@@ -13,7 +13,8 @@ Menu:
   Links: 链接
   Projects: 项目
   Say: 吐槽
-  
+
+In_Search: 站内搜索
 Search: 搜索
 Search_text: 输入关键词搜索...
 
@@ -65,7 +66,6 @@ Info:
   name: 博客信息
   count: 文章数目
   update: 最近更新
-  author: 本站作者
   words: 本站字数
 
 Post_Toc: 文章目录
@@ -75,8 +75,6 @@ Tag_Cloud: 标签云
 Progress: '时间已过去了 '
 
 B2D: 顶部
-
-Collection: 收藏
 
 Hide: 隐藏左右两栏
 

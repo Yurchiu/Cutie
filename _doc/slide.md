@@ -1,4 +1,4 @@
-# Simple PPT `by cieu`
+# Simple PPT `by Yurchiu`
 
 这是一个以 markdown 为基础的，致力于更方便快捷地生成演示文档的工具。
 
@@ -34,32 +34,14 @@ skip_render:
 
 第一种，可以通过引用链接的方式。推荐（因为 `iframe` 太小了）。强烈建议全屏演示。使用键盘左右键或鼠标点击左下角或右下角翻页。更多功能，见文档。
 
-第二种，你可以通过 `iframe` 展示你的 PPT。比较好的长宽比是 `608:350`。上面已经演示过了。为了调整显示字体的大小，需要加 `js` 代码：
+第二种，你可以通过 `iframe` 展示你的 PPT。比较好的长宽比是 `608:350`。建议的模板：
 
-
-```javascript
-function change()
-{
-    var len=document.querySelector("#ppt1");
-    var width=parseFloat(window.getComputedStyle(len, null).getPropertyValue('width'));
-    len.style.height=width*0.5757+"px";
-    
-    window.frames['ppt1'].location.reload();
-    var width_srceen = screen.width;
-    var new_window_width = $(window.frames['ppt1']).width();
-    var multiple =new_window_width/width_srceen;
-    let block=window.frames['ppt1'].document.querySelectorAll(":not(.poser)");
-    
-	for (var i = 0; i < block.length; i++) {
-		var style = parseFloat(window.getComputedStyle(block[i], null).getPropertyValue('font-size'));
-	    var hi = style * multiple;
-	    block[i].style.fontSize=hi+"px";
-        
-		style = parseFloat(window.getComputedStyle(block[i], null).getPropertyValue('padding'));
-	    hi = style * multiple;
-	    block[i].style.padding=hi+"px";
-	}
-}
+```markdown
+[源文档链接](../ppt/xxx)。
+<hr />
+<iframe src="../ppt/xxx" width=100% frameborder="0" id="ppttest" name="ppttest" onload="changeppt('ppttest')"></iframe>
+<hr />
+<button class="btn fit" onclick="recoverppt('ppttest')">点我重置 PPT</button>
 ```
 
 ## Note

@@ -13,17 +13,19 @@
 
 <%- partial('./animation') %>
 <script>MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},svg: {fontCache: 'global'}};</script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-svg-full.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css">
-<script type="text/javascript" src="/js/binft.js"></script> 
+<script type="text/javascript" id="MathJax-script" async src="<%= theme.cdn.js.mathjax %>"></script>
+<link rel="stylesheet" href="<%= theme.cdn.css.fontawesome %>">
+<link rel="stylesheet" href="<%= theme.cdn.css.highlight %>">
+<link rel="stylesheet" href="<%= theme.cdn.css.bootstrap %>">
+<script type="text/javascript" src="/js/core/binft.js"></script> 
 <script type="text/javascript" src="/js/chaffle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.all.min.js"></script>
-<script src="https://cdn.staticfile.org/sketch.js/1.0/sketch.min.js"></script>
-<script src="/js/initialization.js"></script>
-<script src="/js/SmoothScroll.js"></script>
-<script src="/js/core.js"></script>
+<script src="<%= theme.cdn.js.highlight %>"></script>
+<script src="<%= theme.cdn.js.sweetalert2 %>"></script>
+<script src="<%= theme.cdn.js.sketch %>"></script>
+<script src="<%= theme.cdn.js.bootstrap %>"></script>
+<script src="/js/core/initialization.js"></script>
+<script src="/js/core/colored-egg.js"></script>
+<script src="/js/core/main.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 
 <% if(theme.colored_eggs.reverse) { %>
@@ -49,8 +51,6 @@
 <script type="text/javascript" src="/js/ctitle.js"></script> <!--标题改动-->
 
 <script type="text/javascript" src="/js/clicklove.js"></script> <!--点击爱心-->
-
-<script type="text/javascript" src="/js/colored-egg.js"></script> <!--控制台输出彩蛋-->
 
 <!--<script type="text/javascript" src="/js/snow.js"></script> 前景下雪  注：与“点击烟花”冲突-->
 

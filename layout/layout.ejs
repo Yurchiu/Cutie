@@ -8,7 +8,7 @@
 		<div class="article">
    			<div class="article-cell-body post">
    				<% if((theme.site_warning.enable=="all")||((theme.site_warning.enable=="root" && url_for(path)==config.root))){ %>
-						<div title="Close" class="text-alert <%= theme.site_warning.type %>" id="front-alert" onclick="$('#front-alert').hide()" style="cursor: pointer; padding: 15px; margin: 0px; border-radius: 0px;<% if(theme.site_warning.bgcolor){ %>background-color: #<%- theme.site_warning.bgcolor %> <% } %> <% if(theme.site_warning.color){ %>color: #<%- theme.site_warning.color %> <% } %> "><%- theme.site_warning.text %></div>
+						<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close" class="text-alert <%= theme.site_warning.type %>" id="front-alert" onclick="$('#front-alert').hide()" style="cursor: pointer; padding: 15px; margin: 0px; border-radius: 0px;<% if(theme.site_warning.bgcolor){ %>background-color: #<%- theme.site_warning.bgcolor %> <% } %> <% if(theme.site_warning.color){ %>color: #<%- theme.site_warning.color %> <% } %> "><%- theme.site_warning.text %></div>
 					<% } %>
     			<%- body %>
     			<div class="avatar-container" style="padding: 50px;">

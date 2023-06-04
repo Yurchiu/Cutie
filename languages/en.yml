@@ -14,6 +14,7 @@ Menu:
   Projects: Projects
   Say: Say
 
+In_Search: In-Site Search
 Search: Search
 Search_text: Enter keywords to search for ...
 
@@ -63,10 +64,9 @@ hitokoto: '%s said that everyone except her is strong!'
 
 Info:
   name: Blog Information
-  count: Posts Cnt
-  update: Latest Upd
-  author: Blog Auth
-  words: Words Cnt
+  count: Posts
+  update: Update
+  words: Words
 
 Post_Toc: Table of Contents
 
@@ -75,8 +75,6 @@ Tag_Cloud: Tag Cloud
 Progress: 'Time has passed by '
 
 B2D: Top
-
-Collection: Note
 
 Hide: Hide sidebars
 

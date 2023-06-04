@@ -22,12 +22,13 @@
 
   	<%= config.title %>
   </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=<%- theme.font %>" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=<%- theme.mono_font %>" rel="stylesheet">
+  <link rel="stylesheet" href="<%- theme.cdn.css.katex %>">
+  <script src="<%- theme.cdn.js.jquery %>"></script>
+  <script src="<%- theme.cdn.js.anime %>"></script>
+  <script src="<%- theme.cdn.js.pjax %>"></script>
+  <link rel="stylesheet" href="<%- theme.cdn.css.gitalk %>">
+  <script src="<%- theme.cdn.js.gitalk %>"></script>
+  <script src="/js/core/search.js"></script>
+  <link href="<%- theme.cdn.css.googlefont %>/css?family=<%- theme.font %>" rel="stylesheet">
+  <link href="<%- theme.cdn.css.googlefont %>/css?family=<%- theme.mono_font %>" rel="stylesheet">
 </head>

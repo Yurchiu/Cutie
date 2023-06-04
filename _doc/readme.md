@@ -6,6 +6,8 @@
 
 Cutie 是一个 hexo 主题，是 [cieuka](https://github.com/yz-hs/cieuka) 的进阶版。本主题由 [cieu](https://github.com/yz-hs/) 制作，外观借鉴了 [handsome](https://www.ihewro.com/archives/489/) 主题，部分代码借鉴自 [mkBlog](https://mkblog.cn/)。本主题可在 [Github](https://github.com/yz-hs/Cutie) 获取。具体使用方法，可在 `/path-to-theme/_doc` 中查看。
 
+本主题依赖一些插件。请务必先看文档 `front-matter.md`。
+
 **若有 Bug 可 Issue、PR 或在 <https://yz-hs.github.io/somepage/chat/> 评论。**
 
 <!--more-->

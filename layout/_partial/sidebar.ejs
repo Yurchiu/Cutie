@@ -50,7 +50,7 @@
   		<a href="/atom.xml"><i class="fa fa-feed" aria-hidden="true"></i><div class="mini-text">RSS</div></a>
   	</div>
   	<div class="item">
-  		<a href="javascript:(function(){window.open(&quot;<%= config.url %>&quot;)})()" onclick="swal.fire('Tip','Please drag the icon to the bookmarks bar.','warning');return false;"><i class="fa fa-bookmark-o" aria-hidden="true"></i><div class="mini-text"><%= __('Collection') %></div></a>
+  		<a href="<%= url_for(theme.Search) %>"><i class="fa <%= theme.icon.Search %>" aria-hidden="true"></i><div class="mini-text"><%= __('Search') %></div></a>
   	</div>
   </div>
 </div>
