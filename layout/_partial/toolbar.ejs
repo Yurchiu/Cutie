@@ -52,7 +52,7 @@
 		var minutes=myDate.getMinutes();
 		minutes=hours*60+minutes;
 		var pro=minutes/14.4;
-		var innerhtml="<div class=\"progress\" style='height: 20px'><div class=\"progress-bar\" title=\"<%= __('Progress') %>"+pro.toFixed(2)+"%\"style=\"width: "+pro+"%; background-color: #4caf50; color: #fff;\">"+pro.toFixed(0)+"%</div></div>";
+		var innerhtml="<div class=\"progress\" style='height: 20px'><div data-bs-toggle='tooltip' class=\"progress-bar\" title=\"<%= __('Progress') %>"+pro.toFixed(2)+"%\"style=\"width: "+pro+"%; background-color: #4caf50; color: #fff;\">"+pro.toFixed(0)+"%</div></div>";
 		document.getElementById("timeprogress").innerHTML = innerhtml;
 	</script>
   </div>

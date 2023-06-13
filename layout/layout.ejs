@@ -7,9 +7,18 @@
 		<%- partial('_partial/sidebar') %>
 		<div class="article">
    			<div class="article-cell-body post">
-   				<% if((theme.site_warning.enable=="all")||((theme.site_warning.enable=="root" && url_for(path)==config.root))){ %>
-						<div data-bs-toggle="tooltip" data-bs-placement="bottom" title="Close" class="text-alert <%= theme.site_warning.type %>" id="front-alert" onclick="$('#front-alert').hide()" style="cursor: pointer; padding: 15px; margin: 0px; border-radius: 0px;<% if(theme.site_warning.bgcolor){ %>background-color: #<%- theme.site_warning.bgcolor %> <% } %> <% if(theme.site_warning.color){ %>color: #<%- theme.site_warning.color %> <% } %> "><%- theme.site_warning.text %></div>
-					<% } %>
+  				<% if((theme.site_warning.enable=="all")||((theme.site_warning.enable=="root" && url_for(path)==config.root))){ %>
+					<div class="alert alert-<%= theme.site_warning.type %> alert-dismissible fade show" style=" margin: 0;
+                            <% if(theme.site_warning.bgcolor){ %>
+                                background-color: #<%- theme.site_warning.bgcolor %> 
+                            <% } %> 
+                            <% if(theme.site_warning.color){ %>
+                                color: #<%- theme.site_warning.color %>
+                            <% } %> ">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <%- theme.site_warning.text %>
+                    </div>
+				<% } %>
     			<%- body %>
     			<div class="avatar-container" style="padding: 50px;">
   					<img src="<%= theme.avatar.url %>" class="avatar bounce" style="height: 12%; width: 12%;"/>

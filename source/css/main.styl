@@ -12,9 +12,10 @@ body {
   	margin: 0 auto;
 	box-shadow: 0 0 40px $body-shadow-color;
 	height: auto;
-	width: $pc_pe_dividing_1;
+	width: $dividing-1;
 	line-height: 140%;
 	letter-spacing: 1.3px;
+    overflow-y: auto;
 }
 
 *::selection {
@@ -40,7 +41,7 @@ body {
 	border-color: $fa-border-color !important;
 }
 
-@media screen and (max-width: $pc_pe_dividing_1) {
+@media screen and (max-width: $dividing-1) {
     .article {
     	margin-left: $dis-sidebar-2;
     	width: $article-width-2;
@@ -48,11 +49,11 @@ body {
     }
     
     body {
-    	width: $pc_pe_dividing_2;
+    	width: $dividing-2;
     }
 }
 
-@media screen and (max-width: $pc_pe_dividing_2) {
+@media screen and (max-width: $dividing-2) {
     .article {
         margin-left: $dis-sidebar-3;
         width: $article-width-3;
@@ -62,11 +63,11 @@ body {
     	display: block;
     }
 	body {
-    	width: $pc_pe_dividing_3;
+    	width: $dividing-3;
 	}
 }
 
-@media screen and (max-width: $pc_pe_dividing_3) {
+@media screen and (max-width: $dividing-3) {
     .article {
         margin: auto;
         width: $article-width-4;
