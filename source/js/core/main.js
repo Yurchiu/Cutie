@@ -1,3 +1,26 @@
+function getQueryString(name) {
+  const url_string = window.location.href;
+  const url = new URL(url_string);
+  return url.searchParams.get(name);
+}
+//getQueryString
+
+function Savedata(key, data) {  
+    key = 'Yurchiu_' + key;  
+    data = JSON.stringify(data);  
+    if (window.localStorage) {  
+        localStorage.setItem(key, data);  
+    }  
+}   
+function Readdata(key) {  
+    if (!window.localStorage) return '';  
+    key = 'Yurchiu_' + key;  
+    return JSON.parse(localStorage.getItem(key));  
+}
+//Cookie
+
+//-------------------------main-------------------------//
+
 function hidetoolbar()
 {
   $(".toolbar").hide();
@@ -52,19 +75,7 @@ function Fool()
         }, 10000);
     } 
 }
-function Savedata(key, data) {  
-    key = 'yz_' + key;  
-    data = JSON.stringify(data);  
-    if (window.localStorage) {  
-        localStorage.setItem(key, data);  
-    }  
-}   
-function Readdata(key) {  
-    if (!window.localStorage) return '';  
-    key = 'yz_' + key;  
-    return JSON.parse(localStorage.getItem(key));  
-}
-//April-Fool && Cookie
+//April-Fool
 
 function santacoloredegg() {
   $(".santa").attr("onclick","santaremove()");
@@ -83,8 +94,3 @@ function topbartoggle() {
   $('.natsuki-container').toggleClass('appear');
 }
 //hide
-
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})

@@ -34,6 +34,13 @@ function initialization()
     MathJax.typeset();
 
     document.querySelectorAll('pre code').forEach((block) => {hljs.highlightBlock(block);});
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)});
+    $(".tooltip").hide();
+
+    $("#siteLoading").hide();
 }
 
 $(document).ready(function(){initialization();});

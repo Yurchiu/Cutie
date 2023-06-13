@@ -12,25 +12,12 @@
 @media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}
 </style>
 <div class="topbar">
-	<a onclick="topbartoggle()" class="topbar-menu">
+	<a onclick="topbartoggle()" class="topbar-menu" style="cursor: pointer;">
 		<i class="fa fa-bars" aria-hidden="true"></i>
 	</a>
 	<a href="/" class="topbar-title">
 		<i class="fa fa-home" aria-hidden="true"></i> <%= config.title %>
 	</a>
-
-	<div class="search">
-		<input class="input" id="sch" placeholder="<%= __('Search_text') %>"></input>
-		<button class="submit" onclick="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
-	</div>
-
-	<script>
-		function search(){
-      	  	var x=document.getElementById("sch");
-        	window.open('https://cn.bing.com/search?q='+x.value+'+site%3A<%- config.url %>');
-    	}
-	</script>
-
 	<% if(theme.Topbar){ %>
 		<a href="<%- url_for(theme.Topbar) %>" class="topbar-comments">
 			<i class="fa <%= theme.icon.Topbar %>" aria-hidden="true"></i>
