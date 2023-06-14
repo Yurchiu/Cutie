@@ -1,6 +1,6 @@
 # Theme Cutie
 
-![](https://yz-hs.github.io/img/intro4.jpg)
+![](https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/intro4.jpg)
 
 Here is the [Chinese version](https://yz-hs.github.io/39e4c172e542/). Chinese version is not identical to this.
 

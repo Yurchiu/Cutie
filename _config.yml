@@ -171,6 +171,9 @@ mono_font_name: "Roboto Mono"
 
 # X 杂项
 
+# 图片加速 CDN，可选
+imgcdn: # https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
+
 # 自我简述
 short_des: "An AFO whker"
 
@@ -198,7 +201,7 @@ color_schemes: std
 spacial: none
 
 # 背景图片地址
-bg-url: /img/new-bgp.jpg  # night-bgp.png
+bg_url: /img/new-bgp.jpg  # night-bgp.png
 
 # 时间格式
 # http://momentjs.cn/docs/#/parsing/string-format/

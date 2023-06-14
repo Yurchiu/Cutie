@@ -4,7 +4,7 @@
 </div>
 <% page.posts.each(function (post) { %>
 	<% if(post.bgimg){ %>
-		<div class="post-bgimg-item" style="background-image: url(<%= post.bgimg %>);
+		<div class="post-bgimg-item" style="background-image: url(<%= theme.imgcdn %><%= post.bgimg %>);
 		height: 
 			<% if(post.height){ %>
 				<%- post.height %>
