@@ -1,7 +1,7 @@
 .toolbar {
 	z-index: $toolbar-z-index;
-	border-left: 1px solid $toolbar-border-color;
-	background-color: $toolbar-bg-color;
+	border-left: 1px solid var(--toolbar-border-color);
+	background-color: var(--toolbar-bg-color);
 	width: $toolbar-width-1;
 	height: 100%;
 	display: table-cell;
@@ -11,7 +11,7 @@
 		padding: 12px;
 
 		.separator {
-			border-color: $toolbar-bg-color;
+			border-color: var(--toolbar-bg-color);
 			margin: 8px;
 		}
 	}
@@ -39,9 +39,9 @@
   			display: block;
   			padding: 6px;
   			margin-bottom: -1px;
- 			background-color: $toolbar-post-toc-bg-color;
- 			color: $toolbar-post-toc-color;
- 			border: 1px solid $toolbar-post-toc-border-color;
+ 			background-color: var(--toolbar-post-toc-bg-color);
+ 			color: var(--toolbar-post-toc-color);
+ 			border: 1px solid var(--toolbar-post-toc-border-color);
 
  			span {
  				word-wrap: break-word;
@@ -64,7 +64,7 @@
 			margin: 2px; 
 			padding: 3px 6px;
 			border-radius: 8px; 
-			background-color: $toolbar-tag-cloud-bg-color;
+			background-color: var(--toolbar-tag-cloud-bg-color);
 			font-weight: 1000;
 		}
 	}
@@ -81,7 +81,7 @@
 			padding: 10px 5px;
 			border-radius: 10px;
 			transition: 0.6s all;
-			&:hover {box-shadow: 0px 0px 15px $post-item-hover-shadow-color;}
+			&:hover {box-shadow: 0px 0px 15px var(--post-item-hover-shadow-color);}
 			.title,i {
 				display: table-cell;
 				vertical-align: middle;
@@ -92,17 +92,17 @@
 			}
 		}
 		.sidetitle {
-			color: $toolbar-tab-page-sidetitle-color !important;
+			color: var(--toolbar-tab-page-sidetitle-color) !important;
 			font-size: $mini-fs;
 			font-weight: 500;
 		}
 		.fa-border {
-			border-color: $toolbar-fa-border-color !important;
+			border-color: var(--toolbar-fa-border-color) !important;
 		}
 	}
 
 	.item .title,.toolbar-tab-page .title,.post-toc .title {
-		color: $toolbar-title-color !important;
+		color: var(--toolbar-title-color) !important;
 		font-weight: 500;
 	}
 
@@ -117,14 +117,14 @@
 
 	.list-group-item {
   		padding: 9px 13px;
- 		background-color: $toolbar-list-group-item-bg-color;
- 		color: $toolbar-list-group-item-color;
- 		border: 1px solid $toolbar-list-group-item-border-color;
+ 		background-color: var(--toolbar-list-group-item-bg-color);
+ 		color: var(--toolbar-list-group-item-color);
+ 		border: 1px solid var(--toolbar-list-group-item-border-color);
  		display: flex;
  		justify-content: space-between;
 
  		.badge {
-			background-color: $toolbar-list-group-item-badge-bg-color;
+			background-color: var(--toolbar-list-group-item-badge-bg-color);
  		}
 	}
 	.list-group-item:first-child {

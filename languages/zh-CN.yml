@@ -11,7 +11,7 @@ Menu:
   About: 关于
   Message_board: 留言
   Links: 链接
-  Projects: 项目
+  Settings: 设置
   Say: 吐槽
 
 Out_Search: 站外搜索
@@ -81,3 +81,9 @@ Hide: 隐藏左右两栏
 Show: 展示左右两栏
 
 NoTitle: 无标题
+
+Settings:
+  Cookie: 使用设置页面，即意味着您已同意本博客 Cookie 的使用。 
+  Help: 设置完成后，刷新页面即可生效。
+  Color: 配色设置(4)
+  Special: 特殊效果(3)

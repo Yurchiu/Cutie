@@ -1,0 +1,25 @@
+<div class="header">
+  	<h1 class="title">
+  	    <%= __('Menu.Settings') %>
+  	</h1>
+  	<div class="meta">
+  	    <%= __('Settings.Help') %>
+  	</div>
+</div>
+<div class="post-text">
+	<p><%= __('Settings.Cookie') %></p>
+	<h1><%= __('Settings.Color') %></h1>
+	<div class="btn-group">
+    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','1')">None</button>
+    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','2')">Standard</button>
+    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','3')">White</button>
+    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','4')">Night</button>
+    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','5')"></button>
+  	</div>
+  	<h1><%= __('Settings.Special') %></h1>
+	<div class="btn-group">
+    	<button type="button" class="btn btn-secondary" onclick="Savedata('special','1')">None</button>
+    	<button type="button" class="btn btn-secondary" onclick="Savedata('special','2')">Gray</button>
+    	<button type="button" class="btn btn-secondary" onclick="Savedata('special','3')">Invert</button>
+  	</div>
+</div>

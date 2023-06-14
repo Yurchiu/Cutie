@@ -53,7 +53,7 @@ blockquote {
     margin: 1em 3em 1em 2em;
     font-weight: 400;
     border-left: 4px solid rgba(0, 0, 0, .12);
-    background-color: $blockquote-color;
+    background-color: var(--blockquote-color);
     word-break: break-all;
     font-family: Georgia,KaiTi;
 }
@@ -70,7 +70,7 @@ blockquote {
 /*  图片  */
 
 img {
-	  display: block;
+	display: block;
     margin: auto;
     opacity: 1;
 }
@@ -80,7 +80,7 @@ img {
 a {
 	word-break: break-all;
 	text-decoration: none;
-	color: $a-color;
+	color: var(--a-color);
 	&:hover {
 		transition: 0.6s all;
 	}
@@ -98,7 +98,7 @@ a {
 
 hr {
 	border-style: solid;
-	border-color: $hr-color;
+	border-color: var(--hr-color);
 	border-width: .1px;
 	margin: 10px;
 	opacity: 1;

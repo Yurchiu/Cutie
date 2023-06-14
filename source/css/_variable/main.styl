@@ -12,19 +12,3 @@ $swal2-z-index                             = 90;
 
 @import "_variable/width/main";
 @import "_variable/font-size/main";
-
-if hexo-config('color_schemes') == "white"
-	@import "_variable/colors/white";
-else if hexo-config('color_schemes') == "trans"
-	@import "_variable/colors/trans";
-else if hexo-config('color_schemes') == "night"
-	@import "_variable/colors/night";
-else if hexo-config('color_schemes') == "none"
-	var donothing
-else
-	@import "_variable/colors/std";
-
-if hexo-config('spacial') == "grayscale"
-	@import "_variable/spacial/grayscale";
-else if hexo-config('spacial') == "invert"
-	@import "_variable/spacial/invert";

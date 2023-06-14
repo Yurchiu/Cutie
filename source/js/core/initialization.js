@@ -31,8 +31,6 @@ function initialization()
 
     $('img').attr("onerror","this.src='<%= theme.img_default %>';this.onerror=null");
 
-    MathJax.typeset();
-
     document.querySelectorAll('pre code').forEach((block) => {hljs.highlightBlock(block);});
 
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -41,8 +39,11 @@ function initialization()
     $(".tooltip").hide();
 
     $("#siteLoading").hide();
+
+    colorSetting();
+    specialSetting();
 }
 
 $(document).ready(function(){initialization();});
 $(document).pjax('a[target!=_blank][pjax!="no"]', '#pjax', {fragment:'#pjax', timeout:6000});
-$(document).on('pjax:complete', function(){initialization();});
+$(document).on('pjax:complete', function(){initialization();MathJax.typeset();});

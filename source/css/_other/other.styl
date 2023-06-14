@@ -35,17 +35,17 @@
 
 ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: $scrollbar-bg-color;
+	background-color: var(--scrollbar-bg-color);
 	z-index: $max-z-index;
 }
 ::-webkit-scrollbar {
 	width: 10px;
 	height: 10px;
-	background-color: $scrollbar-bg-color;
+	background-color: var(--scrollbar-bg-color);
 	z-index: $max-z-index;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: $scrollbar-color;
+	background-color: var(--scrollbar-color);
 	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
 	border-radius: 10px;
 	z-index: $max-z-index;
@@ -73,9 +73,9 @@
 		cursor: pointer;
 		text-align: center;
 	}
-	.current {border-bottom: 1px solid $toolbar-tab-page-current-border-bottom-color;}
+	.current {border-bottom: 1px solid var(--toolbar-tab-page-current-border-bottom-color);}
 	.tabContent >div {
-		border-top: 1px solid $toolbar-tab-page-tabContent-border-top-color;
+		border-top: 1px solid var(--toolbar-tab-page-tabContent-border-top-color);
 		padding: 15px;
 		padding-bottom: 25px;
 		overflow: auto;
@@ -103,7 +103,7 @@ $(function(){
 /*  注解文字  */
 
 .text-comments {
-	color: $text-color;
+	color: var(--text-color);
 	font-size: 8px;
 	font-weight: 500;
 }
@@ -117,14 +117,14 @@ $(function(){
 	list-style: none;
 	padding-left: 1.2em !important;
 	margin-left: .3em !important;
-	border-left: .2em solid $timeline-line-color;
-	color: $text-color !important;
+	border-left: .2em solid var(--timeline-line-color);
+	color: var(--text-color) !important;
 	
 	a {
-		color: $post-text-link-color !important;
+		color: var(--post-text-link-color) !important;
 
 		&:hover {
-			color: $post-text-link-hover-color !important;
+			color: var(--post-text-link-hover-color) !important;
 		}
 	}
 }
@@ -136,20 +136,19 @@ $(function(){
 	position: relative;
 	margin-top: 20px;
 	margin-bottom: 10px;
-	color: $timeline-b-color;
+	color: var(--timeline-b-color);
 }
 
 .timeline b::after {
 	content: '';
 	position: absolute;
 	top: .38em;
-	left: -2em;
+	left: -1.84em;
 	width: .8em;
 	height: .8em;
 	border-radius: 50%;
-	background-color: $timeline-circle-bg-color;
-	border: .14em solid $timeline-circle-color;
-	box-shadow: m.15em .15em 0 rgba(255,255,255,1),-0.15em -0.15em 0 rgba(255,255,255,1);
+	background-color: var(--timeline-circle-bg-color);
+	border: .14em solid var(--timeline-circle-color);
 }
 
 .timeline li {
@@ -158,12 +157,12 @@ $(function(){
 }
 
 .timeline li:hover b::after {
-	border-color: $timeline-hover-b-color;
+	border-color: var(--timeline-hover-b-color);
 
 }
 
 .timeline li:hover b {
-	color: $timeline-hover-b-color;
+	color: var(--timeline-hover-b-color);
 }
 
 /* SweetAlert 优先级更改 */

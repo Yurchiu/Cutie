@@ -11,7 +11,7 @@ Menu:
   About: About
   Message_board: MsgBoard
   Links: Links
-  Projects: Projects
+  Settings: Settings
   Say: Say
 
 Out_Search: Out-Site Search
@@ -81,3 +81,9 @@ Hide: Hide sidebars
 Show: Show sidebars
 
 NoTitie: 'No Title'
+
+Settings:
+  Cookie: Using the settings page means that you have agreed to the use of Cookie in this blog.
+  Help: After the setting is completed, refreshing the page will take effect.
+  Color: Color Schemes Settings (4)
+  Special: Special effects (3)

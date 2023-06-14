@@ -94,3 +94,41 @@ function topbartoggle() {
   $('.natsuki-container').toggleClass('appear');
 }
 //hide
+
+
+function AprilHair() {
+    /***
+      * 愚人节彩蛋 - 你屏幕上有根毛
+      * 出处：https://www.baidu.com/s?ie=UTF-8&wd=%E6%84%9A%E4%BA%BA%E8%8A%82
+      * 整理：mengkun https://mkblog.cn/
+      */
+    var bottom = Math.floor(60 * Math.random()),
+        right = Math.floor(50 * Math.random()),
+        rotate = Math.floor(360 * Math.random());
+    var foolsEgg = document.createElement("img");
+    foolsEgg.src = "/img/hair.png";
+    foolsEgg.style.position = "fixed"; 
+    foolsEgg.style.bottom = "".concat(bottom, "%");
+    foolsEgg.style.right = "".concat(right, "%"); 
+    foolsEgg.style.zIndex = "9999"; 
+    foolsEgg.style.pointerEvents = "none";
+    foolsEgg.style.width = "40%";
+    foolsEgg.style.maxWidth = "190px";
+    foolsEgg.style.transform = "".concat("rotate(", rotate, "deg)"); 
+    document.body.append(foolsEgg);
+}
+
+function colorSetting () {
+    type = Readdata("color");
+    if(type==2) $("html").addClass("color-std");
+    else if(type==3) $("html").addClass("color-white");
+    else if(type==4) $("html").addClass("color-night");
+    else if(type==5) $("html").addClass("color-trans");
+}
+
+function specialSetting () {
+    type = Readdata("special");
+    if(type==2) $("html").addClass("grayscale");
+    else if(type==3) $("html").addClass("invert");
+
+}

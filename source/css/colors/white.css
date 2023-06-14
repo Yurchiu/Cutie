@@ -1,0 +1,114 @@
+/*
+white 配色
+
+灰白为主色调。
+相对于 std 配色，去除大部分 border。
+*/
+
+.color-white {
+
+--text-color                                                     : #555;
+
+--siteloading-bg-color                                           : rgba(256,256,256,.7);
+--scrollbar-bg-color                                             : #f5f5f5;
+--scrollbar-color                                                : #ff8282;
+--body-shadow-color                                              : rgba(0, 0, 0, 0.3);
+
+--blockquote-color                                               : #fff;
+--a-color                                                        : #777;
+--hr-color                                                       : #dfdfdf;
+--h-bg-color                                                     : rgba(189,202,219,.3);
+--h-cross-color                                                  : #ff8282;
+
+--toolbar-fa-border-color                                        : #fff;
+
+--selection-color                                                : #fff;
+--selection-bg-color                                             : #ddd;
+
+--category-list-count-badge-color                                : #fff;
+--category-list-count-badge-bg-color                             : #ee82ee;
+
+--comments-bg-color                                              : #fff;
+--comments-border-color                                          : #fff;
+
+--footer-bg-color                                                : #e0e0e0;
+--footer-border-color                                            : #e0e0e0;
+--footer-color                                                   : #555;
+
+--paginator-padding-color                                        : #eee;
+--paginator-border-color                                         : #eee;
+--paginator-bg-color                                             : #fff;
+--paginator-color                                                : #777;
+--paginator-hover-color                                          : #777;
+--paginator-hover-bg-color                                       : #dedede;
+--paginator-current-color                                        : #fff;
+--paginator-current-bg-color                                     : #000;
+
+--post-bg-color                                                  : #eee;
+--post-header-bg-color                                           : #fafafa;
+--post-header-border-bottom-color                                : #fff;
+--post-header-title-color                                        : #000;
+--post-meta-color                                                : #98a6ad;
+--post-breadcrumb-bg-color                                       : #fff;
+--post-breadcrumb-border-color                                   : #fff;
+--post-text-bg-color                                             : #fff;
+--post-text-border-color                                         : #eee;
+--post-text-link-color                                           : #777;
+--post-text-link-hover-color                                     : #222;
+--post-prev-bg-color                                             : #fff;
+--post-prev-border-color                                         : #fff;
+--post-prev-color                                                : #555;
+--post-next-bg-color                                             : #fff;
+--post-next-border-color                                         : #fff;
+--post-next-color                                                : #555;
+--post-item-bg-color                                             : #fff;
+--post-item-border-color                                         : #fff;
+--post-item-meta-color                                           : #98a6ad;
+--post-item-shadow-color                                         : #ccc;
+--post-item-hover-shadow-color                                   : #aaa;
+--post-item-bottom-shadow-color                                  : rgba(0,0,0,.7);
+
+--sidebar-border-color                                           : #fafafa;
+--sidebar-bg-color                                               : #fafafa;
+--sidebar-footer-border-color                                    : #fff;
+--sidebar-footer-bg-color                                        : #fff;
+--sidebar-footer-color                                           : #555;
+--sidebar-text-mini-text-color                                   : #98a6ad;
+--sidebar-list-group-item-bg-color                               : #fafafa;
+--sidebar-list-group-item-color                                  : #777;
+--sidebar-list-group-item-hover-color                            : #777;
+--sidebar-list-group-item-hover-bg-color                         : #e6e6e6;
+--sidebar-list-group-item-current-color                          : #777;
+--sidebar-list-group-item-current-bg-color                       : #e6e6e6;
+--sidebar-badge-color                                            : #fff;
+--sidebar-badge-bg-color                                         : #ee82ee;
+
+--toolbar-border-color                                           : #fafafa;
+--toolbar-bg-color                                               : #fafafa;
+--toolbar-title-color                                            : #555;
+--toolbar-post-toc-bg-color                                      : #fff;
+--toolbar-post-toc-color                                         : #fff;
+--toolbar-post-toc-border-color                                  : #ddd;
+--toolbar-tab-page-tabContent-border-top-color                   : #ddd;
+--toolbar-tab-page-sidetitle-color                               : #98a6ad;
+--toolbar-tab-page-current-border-bottom-color                   : #333;
+--toolbar-list-group-item-bg-color                               : #fff;
+--toolbar-list-group-item-color                                  : #777;
+--toolbar-list-group-item-border-color                           : #eee;
+--toolbar-list-group-item-badge-color                            : #fff;
+--toolbar-list-group-item-badge-bg-color                         : #ee82ee;
+--toolbar-tag-cloud-bg-color                                     : #ddd;
+
+--topbar-bg-color                                                : #fcfcfc;
+--topbar-link-color                                              : #777;
+--topbar-shadow-color                                            : #ccc;
+
+--fa-border-color                                                : #eee;
+
+--timeline-b-color                                               : #909399;
+--timeline-hover-b-color                                         : #eb5055;
+--timeline-circle-color                                          : #ccc;
+--timeline-line-color                                            : #eee;
+--timeline-circle-bg-color                                       : #fff;
+
+}

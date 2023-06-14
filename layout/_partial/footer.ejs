@@ -12,7 +12,6 @@
 
 
 <%- partial('./animation') %>
-<script>MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},svg: {fontCache: 'global'}};</script>
 <script type="text/javascript" src="/js/core/binft.js"></script> 
 <script type="text/javascript" src="/js/chaffle.min.js"></script>
 <script src="<%= theme.cdn.js.highlight %>"></script>
@@ -23,11 +22,24 @@
 <script src="/js/core/colored-egg.js"></script>
 
 <% if(theme.colored_eggs.reverse) { %>
-  <script>
-    $(document).ready(function(){Fool();});
-    $(document).on('pjax:complete', function(){Fool();});
-  </script>
+	<script>
+		$(document).ready(function(){Fool();});
+		$(document).on('pjax:complete', function(){Fool();});
+	</script>
+<% }if(theme.colored_eggs.hair) { %>
+	<script>AprilHair();</script>
+<% }if(theme.special){ %>
+	<script>if(!Readdata("special")) $("html").addClass("<%= theme.special %>");</script>
 <% } %>
+
+<script>
+	if(!Readdata("color")) $("html").addClass("color-<%= theme.color_schemes %>");
+</script>
+
+<script id="MathJax-script" async src="<%= theme.cdn.js.mathjax %>"></script>
+<script>
+	MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},svg: {fontCache: 'global'}};
+</script>
 
 
 <!-- 

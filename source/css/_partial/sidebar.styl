@@ -4,8 +4,8 @@
 	width: $sidebar-width-1;
 	height: 100%;
 	z-index: $sidebar-z-index;
-	background-color: $sidebar-bg-color;
-	border-right: 1px solid $sidebar-border-color;
+	background-color: var(--sidebar-bg-color);
+	border-right: 1px solid var(--sidebar-border-color);
 	box-sizing: border-box;
 	transition: 0.6s all;
 
@@ -23,22 +23,22 @@
 		position: fixed;
 		width: $sidebar-width-1;
 		bottom: 0px;
-		background-color: $sidebar-footer-bg-color;
+		background-color: var(--sidebar-footer-bg-color);
 		padding: 10px 0px;
 		display: flex;
 		justify-content: space-around;
-		border: 1px solid $sidebar-footer-border-color;
+		border: 1px solid var(--sidebar-footer-border-color);
 		box-sizing: border-box;
 		z-index: $sidebar-footer-z-index;
 		.item { 
 			text-align: center;
 			cursor: pointer;
 		}
-		*,.mini-text { color: $sidebar-footer-color;}
+		*,.mini-text { color: var(--sidebar-footer-color);}
 	}
 
 	.mini-text {
-		color: $sidebar-text-mini-text-color;
+		color: var(--sidebar-text-mini-text-color);
 		font-size: $mini-fs;
 		font-weight: 500;
 	}
@@ -47,26 +47,26 @@
 		border-radius: 10px;
   		padding: 10px 15px;
   		transition: 0.6s all;
- 		background-color: $sidebar-list-group-item-bg-color;
- 		color: $sidebar-list-group-item-color;
+ 		background-color: var(--sidebar-list-group-item-bg-color);
+ 		color: var(--sidebar-list-group-item-color);
  		display: flex;
  		justify-content: space-between;
   	}
 
   	.list-group-item {
   		&:hover,&:focus {
-    		color: $sidebar-list-group-item-hover-color;
-    		background-color: $sidebar-list-group-item-hover-bg-color;
+    		color: var(--sidebar-list-group-item-hover-color);
+    		background-color: var(--sidebar-list-group-item-hover-bg-color);
   		}
   	}
 
 	.list-group-item-current {
-  		color: $sidebar-list-group-item-current-color;
-    	background-color: $sidebar-list-group-item-current-bg-color;
+  		color: var(--sidebar-list-group-item-current-color);
+    	background-color: var(--sidebar-list-group-item-current-bg-color);
   	}
 
 	.badge {
-		background-color: $sidebar-badge-bg-color;
+		background-color: var(--sidebar-badge-bg-color);
 	}
 }
 

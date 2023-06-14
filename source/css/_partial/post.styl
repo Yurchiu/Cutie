@@ -1,6 +1,6 @@
 .post {
 	z-index: $post-z-index;
-	background-color: $post-bg-color;
+	background-color: var(--post-bg-color);
 	font-size: $text-fs;
 	line-height: 160%;
 
@@ -25,12 +25,12 @@
 	}
 
 	.header {
-		background-color: $post-header-bg-color;
+		background-color: var(--post-header-bg-color);
 		padding: 25px;
-		border-bottom: 1px solid $post-header-border-bottom-color;
+		border-bottom: 1px solid var(--post-header-border-bottom-color);
 		.title {
 			font-size: $header-title-fs !important;
-			color: $post-header-title-color;
+			color: var(--post-header-title-color);
 			margin: 3px;
 		}
 	}
@@ -44,20 +44,20 @@
 
 	.post-item {
 		padding: 30px;
-		background-color: $post-item-bg-color;
-		border: 1px solid $post-item-border-color;
-		box-shadow: 0px 0px 15px $post-item-shadow-color;
+		background-color: var(--post-item-bg-color);
+		border: 1px solid var(--post-item-border-color);
+		box-shadow: 0px 0px 15px var(--post-item-shadow-color);
 		display: block;
 		
 		.title {font-size: $card-title-fs !important;}
 
-		&:hover {box-shadow: 0px 0px 15px $post-item-hover-shadow-color;}
+		&:hover {box-shadow: 0px 0px 15px var(--post-item-hover-shadow-color);}
 	}
 
 	.post-bgimg-item {
 		position: relative;
 		background-size: cover;
-		box-shadow: 0px 0px 15px $post-item-shadow-color;
+		box-shadow: 0px 0px 15px var(--post-item-shadow-color);
 		display: block;
 		color: #fff;
 
@@ -65,7 +65,7 @@
 			position: absolute;
 			bottom: 0; left: 0; right: 0;
 			padding: 30px;
-			background: linear-gradient(180deg,transparent,$post-item-bottom-shadow-color);
+			background: linear-gradient(180deg,transparent,var(--post-item-bottom-shadow-color));
 			border-radius: 7px;
 
 			a{ color: inherit; }
@@ -79,10 +79,10 @@
 			}
 
 			blockquote {background-color: rgba(0,0,0,0);}
-			code {color: $text-color;}
+			code {color: var(--text-color);}
 		}
 
-		&:hover {box-shadow: 0px 0px 15px $post-item-hover-shadow-color;}
+		&:hover {box-shadow: 0px 0px 15px var(--post-item-hover-shadow-color);}
 	}
 
 	.post-item,.post-bgimg-item,.header {
@@ -98,7 +98,7 @@
 	.post-item,.header {
 		.meta {
 			padding: 3px;
-			color: $post-meta-color;
+			color: var(--post-meta-color);
 			font-size: $card-subtitle-fs;
 			font-weight: 500;
 		}
@@ -115,12 +115,12 @@
 	.excerpt {
 		word-wrap: break-word;
 		a {
-  			color: $post-text-link-color;
-  			border-bottom: 1px solid $post-text-link-color;
+  			color: var(--post-text-link-color);
+  			border-bottom: 1px solid var(--post-text-link-color);
 		}
 		a:hover {
-  			color: $post-text-link-hover-color;
-  			border-bottom: 1px solid $post-text-link-hover-color;
+  			color: var(--post-text-link-hover-color);
+  			border-bottom: 1px solid var(--post-text-link-hover-color);
 		}
 		h1,h2,h3,h4,h5,h6 {
 			font-size: $text-fs;
@@ -128,12 +128,12 @@
 			display: inline;
 			&:after {content: "。";}
 		}
-		img {box-shadow: 0px 0px 25px $post-item-hover-shadow-color;}
+		img {box-shadow: 0px 0px 25px var(--post-item-hover-shadow-color);}
 	}
 
 	.breadcrumb {
-		background-color: $post-breadcrumb-bg-color;
-		border: 1px solid $post-breadcrumb-border-color;
+		background-color: var(--post-breadcrumb-bg-color);
+		border: 1px solid var(--post-breadcrumb-border-color);
 		padding: 10px;
 		display: flex;
 		justify-content: space-between;
@@ -152,23 +152,23 @@
 	}
 
 	.post-text {
-		background-color: $post-text-bg-color;
-		border: 1px solid $post-text-border-color;
+		background-color: var(--post-text-bg-color);
+		border: 1px solid var(--post-text-border-color);
 		padding: 30px;
 
 		a {
-  			color: $post-text-link-color;
-  			border-bottom: 1px solid $post-text-link-color;
+  			color: var(--post-text-link-color);
+  			border-bottom: 1px solid var(--post-text-link-color);
 		}
 		a:hover {
-  			color: $post-text-link-hover-color;
-  			border-bottom: 1px solid $post-text-link-hover-color;
+  			color: var(--post-text-link-hover-color);
+  			border-bottom: 1px solid var(--post-text-link-hover-color);
 		}
 		p {white-space: pre-wrap;}
 
 		h1,h2,h3,h4,h5,h6 {
 			line-height: 100%;
-			background: linear-gradient(to bottom,transparent 60%,$h-bg-color 0) no-repeat;
+			background: linear-gradient(to bottom,transparent 60%,var(--h-bg-color) 0) no-repeat;
 			display: table;
     		font-weight: 500;
     		margin: 30px;
@@ -176,7 +176,7 @@
 
     		&:before {
     			content: '# ';
-    			color: $h-cross-color;
+    			color: var(--h-cross-color);
     		}
 		}
 
@@ -187,12 +187,12 @@
 		h5 {font-size: $h5-fs;}
 		h6 {font-size: $h6-fs;}
 
-		img {box-shadow: 0px 0px 25px $post-item-hover-shadow-color;}
+		img {box-shadow: 0px 0px 25px var(--post-item-hover-shadow-color);}
 	}
 
 	.end-post-meta {
 		padding: 3px;
-		color: $post-meta-color;
+		color: var(--post-meta-color);
 		font-size: $card-subtitle-fs;
 		font-weight: 500;
 		
@@ -204,7 +204,7 @@
 	}
 
 	.end-post-meta >span >a {
-		color: $post-meta-color;
+		color: var(--post-meta-color);
 	}
 
 	.prevnext {
@@ -215,21 +215,21 @@
 			padding: 10px 15px;
 		}
 		.prev {
-			border: 1px solid $post-prev-border-color;
-			background-color: $post-prev-bg-color;
-			color: $post-prev-color;
+			border: 1px solid var(--post-prev-border-color);
+			background-color: var(--post-prev-bg-color);
+			color: var(--post-prev-color);
 		}
 		.next {
-			border: 1px solid $post-next-border-color;
-			background-color: $post-next-bg-color;
-			color: $post-next-color;
+			border: 1px solid var(--post-next-border-color);
+			background-color: var(--post-next-bg-color);
+			color: var(--post-next-color);
 		}
 		a {display: block;}
 	}
 
 	.comments {
-		background-color: $comments-bg-color;
-		border: 1px solid $comments-border-color;
+		background-color: var(--comments-bg-color);
+		border: 1px solid var(--comments-border-color);
 		padding: 30px;
 	}
 }
