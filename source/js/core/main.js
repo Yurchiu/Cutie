@@ -34,7 +34,7 @@ function hidetoolbar()
 
 function showtoolbar()
 {
-  $(".toolbar").show();
+  if(Readdata("toolbar")==2) $(".toolbar").show();
   $(".sidebar").show();
   $(".hidetoolbar").show();
   $(".showtoolbar").hide();
@@ -70,7 +70,6 @@ function Fool()
     document.body.classList.add('reverse-coloregg');
     window.setTimeout(function () {
         Savedata("fool", "fool");
-        swal.fire("提示","你可以正常访问 Blog 啦！你还可以通过删除 Cookie 再体验一次！呵呵^_^");
         document.body.classList.remove('reverse-coloregg');  
         }, 10000);
     } 
@@ -80,12 +79,14 @@ function Fool()
 function santacoloredegg() {
   $(".santa").attr("onclick","santaremove()");
   $(".santa-body").attr("style","font-size: 500px;");
-  swal.fire("注意","由于你触碰了圣诞老人，他快气炸了！\n若再触碰，他就会炸的 qwq！");
 }
 function santaremove() {
-  document.getElementById("santa-colored-egg").innerHTML = "";
-  swal.fire("注意","圣诞老人已气炸。 R.I.P.");
+  $("#santa-colored-egg").hide();
 }
+function natsukiremove() {
+  $(".natsuki-container").hide();
+}
+
 //santa
 
 function topbartoggle() {
@@ -130,5 +131,4 @@ function specialSetting () {
     type = Readdata("special");
     if(type==2) $("html").addClass("grayscale");
     else if(type==3) $("html").addClass("invert");
-
 }

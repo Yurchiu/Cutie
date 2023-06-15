@@ -42,8 +42,24 @@ function initialization()
 
     colorSetting();
     specialSetting();
+
+    if(Readdata("toolbar")==1) $(".toolbar").hide();
+    if(Readdata("removevr")==1) {santaremove();natsukiremove();}
+    if(Readdata("stretch")==1)
+    {
+        $("body").css("width","100%");
+        $(".article").addClass("article-stretch");
+    }
 }
 
-$(document).ready(function(){initialization();});
+$(document).ready(function()
+    {
+        initialization();
+        if(Readdata("hair")==1) AprilHair();
+    });
 $(document).pjax('a[target!=_blank][pjax!="no"]', '#pjax', {fragment:'#pjax', timeout:6000});
-$(document).on('pjax:complete', function(){initialization();MathJax.typeset();});
+$(document).on('pjax:complete', function()
+    {
+        initialization();
+        MathJax.typeset();
+    });

@@ -70,42 +70,29 @@
 	}
 }
 
+.fake-sidebar {
+	width: $sidebar-width-1;
+	height: 100%;
+}
+
 @media screen and (max-width: $dividing-1) {
-    .sidebar {
-        width: $sidebar-width-2;
-        .sidebar-footer {
-        	width: $sidebar-width-2;
-        }
-    }
+    .sidebar,.fake-sidebar {width: $sidebar-width-2;}
+    .sidebar-footer {width: $sidebar-width-2;}
 }
 
 @media screen and (max-width: $dividing-2) {
-    .sidebar {
-        width: $sidebar-width-3;
-        .sidebar-footer {
-        	width: $sidebar-width-3;
-        }
-    }
+    .sidebar,.fake-sidebar {width: $sidebar-width-3;}
+    .sidebar-footer {width: $sidebar-width-3;}
 }
 
 @media screen and (max-width: $dividing-3) {
-    .sidebar {
+    .sidebar,.fake-sidebar {
         float: left;
     	width: $sidebar-width-4;
    		margin-left: $-sidebar-width-4;
-
-    	.search {
-    		display: flex !important;
-    	}
     }
     .sidebar-display {
     	margin-left: 0;
-    }
-    .hide {
-    	display: none;
-    }
-    .appear,.search-text {
-    	display: block !important;
     }
 }
 

@@ -8,18 +8,69 @@
 </div>
 <div class="post-text">
 	<p><%= __('Settings.Cookie') %></p>
-	<h1><%= __('Settings.Color') %></h1>
-	<div class="btn-group">
-    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','1')">None</button>
-    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','2')">Standard</button>
-    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','3')">White</button>
-    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','4')">Night</button>
-    	<button type="button" class="btn btn-secondary" onclick="Savedata('color','5')"></button>
-  	</div>
-  	<h1><%= __('Settings.Special') %></h1>
-	<div class="btn-group">
-    	<button type="button" class="btn btn-secondary" onclick="Savedata('special','1')">None</button>
-    	<button type="button" class="btn btn-secondary" onclick="Savedata('special','2')">Gray</button>
-    	<button type="button" class="btn btn-secondary" onclick="Savedata('special','3')">Invert</button>
-  	</div>
+	<table>
+		<tr>
+			<th colspan="2">Items</th>
+			<th>Options</th>
+		</tr>
+		<tr>
+			<td colspan="2"><%= __('Settings.Color') %></td>
+			<td>
+				<div class="btn-group">
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','1')">None</button>
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','2')">Standard</button>
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','3')">White</button>
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','4')">Night</button>
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','5')"></button>
+  				</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><%= __('Settings.Special') %></td>
+			<td>
+				<div class="btn-group">
+    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','1')">None</button>
+    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','2')">Gray</button>
+    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','3')">Invert</button>
+  				</div>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4"><%= __('Settings.Others') %></td>
+			<td>ToolBar Hide</td>
+			<td>
+				<div class="btn-group">
+    				<button type="button" class="btn btn-success" onclick="Savedata('toolbar','1')">Enable</button>
+    				<button type="button" class="btn btn-success" onclick="Savedata('toolbar','2')">Disable</button>
+  				</div>
+			</td>
+		</tr>
+		<tr>
+			<td>April Hair</td>
+			<td>
+				<div class="btn-group">
+    				<button type="button" class="btn btn-dark" onclick="Savedata('hair','1')">Enable</button>
+    				<button type="button" class="btn btn-dark" onclick="Savedata('hair','2')">Disable</button>
+  				</div>
+			</td>
+		</tr>
+	  	<tr>
+		  	<td>Remove 看板娘</td>
+  			<td>
+  				<div class="btn-group">
+    				<button type="button" class="btn btn-danger" onclick="Savedata('removevr','1')">Enable</button>
+    				<button type="button" class="btn btn-danger" onclick="Savedata('removevr','2')">Disable</button>
+  				</div>
+  			</td>
+  		</tr>
+  		<tr>
+		  	<td>Page stretching</td>
+  			<td>
+  				<div class="btn-group">
+    				<button type="button" class="btn btn-warning" onclick="Savedata('stretch','1')">Enable</button>
+    				<button type="button" class="btn btn-warning" onclick="Savedata('stretch','2')">Disable</button>
+  				</div>
+  			</td>
+  		</tr>
+  	</table>
 </div>

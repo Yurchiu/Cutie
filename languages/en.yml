@@ -85,5 +85,6 @@ NoTitie: 'No Title'
 Settings:
   Cookie: Using the settings page means that you have agreed to the use of Cookie in this blog.
   Help: After the setting is completed, refreshing the page will take effect.
-  Color: Color Schemes Settings (4)
-  Special: Special effects (3)
+  Color: Color Schemes Settings
+  Special: Special Effects
+  Others: Others

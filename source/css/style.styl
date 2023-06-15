@@ -23,7 +23,6 @@ body {
 	width: $dividing-1;
 	line-height: 140%;
 	letter-spacing: 1.3px;
-    overflow-y: auto;
 }
 
 *::selection {
@@ -32,47 +31,38 @@ body {
 }
 
 .article {
-	margin-left: $dis-sidebar-1;
 	width: $article-width-1;
 	min-height: 800px;
-	display: table;
 	table-layout: fixed;
+    display: table;
 	background-color: var(--post-bg-color);
 }
 
-.article-cell-body {
-	display: table-cell;
+.vertical {
 	vertical-align: top;
+    display: table-cell;
 }
 
 .fa-border {
 	border-color: var(--fa-border-color) !important;
 }
 
+.article-stretch {width: 100% !important;}
+
 @media screen and (max-width: $dividing-1) {
-    .article {
-    	margin-left: $dis-sidebar-2;
-    	width: $article-width-2;
-        display: table;
-    }
-    
-    body {
-    	width: $dividing-2;
-    }
+    .article {width: $article-width-2;}
+    body {width: $dividing-2;}
 }
 
 @media screen and (max-width: $dividing-2) {
+    .article-stretch {width: auto !important;}
     .article {
-        margin-left: $dis-sidebar-3;
         width: $article-width-3;
         display: block;
+        margin-left: $sidebar-width-3;
     }
-    .article-cell-body {
-    	display: block;
-    }
-	body {
-    	width: $dividing-3;
-	}
+    .vertical {display: block;}
+	body {width: $dividing-3;}
 }
 
 @media screen and (max-width: $dividing-3) {
@@ -81,10 +71,6 @@ body {
         width: $article-width-4;
         display: block;
     }
-    .santa-container,.natsuki-container {
-    	display: none;
-    }
-    body {
-    	width: 100%;
-	}
+    .santa-container,.natsuki-container {display: none;}
+    body {width: 100%;}
 }

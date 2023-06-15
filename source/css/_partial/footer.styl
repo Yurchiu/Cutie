@@ -2,7 +2,7 @@
 	background-color: var(--footer-bg-color);
 	border-top: 1px solid var(--footer-border-color);
 	padding: 15px;
-	margin-left: $dis-sidebar-1;
+	margin-left: $sidebar-width-1;
 	display: flex;
 	justify-content: space-between;
 
@@ -20,24 +20,20 @@
 
 @media screen and (max-width: $dividing-1) {
     .footer {
-        margin-left: $dis-sidebar-2;
+        margin-left: $sidebar-width-2;
+        display: block;
+        .text-left,.text-right {
+            display: block;
+            max-width: 100%;
+            white-space: inherit;
+        }
     }
 }
 
 @media screen and (max-width: $dividing-2) {
-    .footer {
-        margin-left: $dis-sidebar-3;
-    }
+    .footer {margin-left: $sidebar-width-3;}
 }
 
 @media screen and (max-width: $dividing-3) {
-    .footer {
-        margin-left: $dis-sidebar-4;
-        display: block;
-        .text-left,.text-right {
-        	display: block;
-        	max-width: 100%;
-        	white-space: inherit;
-        }
-    }
+    .footer {margin: 0;}
 }

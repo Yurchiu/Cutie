@@ -13,30 +13,22 @@
     </div>
 		<%- partial('_partial/topbar') %>
 		<div id="pjax">
-		<%- partial('_partial/sidebar') %>
-		<div class="article">
-   			<div class="article-cell-body post">
-  				<% if((theme.site_warning.enable=="all")||((theme.site_warning.enable=="root" && url_for(path)==config.root))){ %>
-					<div class="alert alert-<%= theme.site_warning.type %> alert-dismissible fade show" style=" margin: 0;
-                            <% if(theme.site_warning.bgcolor){ %>
-                                background-color: #<%- theme.site_warning.bgcolor %> 
-                            <% } %> 
-                            <% if(theme.site_warning.color){ %>
-                                color: #<%- theme.site_warning.color %>
-                            <% } %> ">
-                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    <%- theme.site_warning.text %>
-                    </div>
-				<% } %>
-    			<%- body %>
-    			<div class="avatar-container" style="padding: 50px;">
-  					<img src="<%= theme.avatar.url %>" class="avatar bounce" style="height: 12%; width: 12%;"/>
-  					<div style="text-align: center; margin-top: 3%;">By <%= config.author %>.</div>
-  				</div>
-    		</div>
-    		<%- partial('_partial/toolbar') %>
-    	</div>
+      <%- partial('_partial/sidebar') %>
+		  <div class="article">
+        <div class="vertical fake-sidebar"></div>
+        <div class="vertical post">
+          <% if((theme.site_warning.enable=="all")||((theme.site_warning.enable=="root" && url_for(path)==config.root))){ %>
+            <div class="alert alert-<%= theme.site_warning.type %> alert-dismissible fade show" style=" margin:0;"><button type="button" class="btn-close" data-bs-dismiss="alert"></button><%- theme.site_warning.text %></div>
+          <% } %>
+           <%- body %>
+          <div class="avatar-container" style="padding: 50px;">
+            <img src="<%= theme.avatar.url %>" class="avatar bounce" style="height: 12%; width: 12%;"/>
+            <div style="text-align: center; margin-top: 3%;">By <%= config.author %>.</div>
+          </div>
+        </div>
+        <%- partial('_partial/toolbar') %>
+      </div>
+      <%- partial('_partial/footer') %>
     </div>
-    <%- partial('_partial/footer') %>
   </body>
 </html>

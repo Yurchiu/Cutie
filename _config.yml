@@ -97,8 +97,6 @@ site_warning:
   enable: root   # 可以取这些值：none | root | all。默认值是 none。
   text: "<i class='fa fa-volume-up' aria-hidden='true'></i> 改 ID 了。由 cieu 变更为 Yurchiu。"
   type: warning  # 可以取这些值：danger | warning | info | success。默认值是 default（灰色）。
-  bgcolor:       # 确有必要，可设置背景颜色。
-  color:         # 确有必要，可设置文本颜色。
 
 
 
