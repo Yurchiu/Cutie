@@ -3,73 +3,20 @@
   <p class="text-right"><%- theme.footer.right %></p>
 </div>
 
-
-<!-- 
-!#                                                 #!
-!#                     Chores                      #!
-!#                                                 #!
--->
-
-
 <%- partial('./animation') %>
-<script type="text/javascript" src="/js/core/binft.js"></script> 
-<script type="text/javascript" src="/js/chaffle.min.js"></script>
-<script src="<%= theme.cdn.js.highlight %>"></script>
-<script src="<%= theme.cdn.js.sweetalert2 %>"></script>
-<script src="<%= theme.cdn.js.sketch %>"></script>
-<script src="<%= theme.cdn.js.bootstrap %>"></script>
-<script src="/js/core/initialization.js"></script>
-<script src="/js/core/colored-egg.js"></script>
 
 <% if(theme.colored_eggs.reverse) { %>
-	<script>
-		$(document).ready(function(){Fool();});
-		$(document).on('pjax:complete', function(){Fool();});
-	</script>
-<% }if(theme.colored_eggs.hair) { %>
-	<script>AprilHair();</script>
+	<script>Fool();</script>
 <% }if(theme.special){ %>
 	<script>if(!Readdata("special")) $("html").addClass("<%= theme.special %>");</script>
 <% } %>
-
-<script>
-	if(!Readdata("color")) $("html").addClass("color-<%= theme.color_schemes %>");
-</script>
 
 <script id="MathJax-script" async src="<%= theme.cdn.js.mathjax %>"></script>
 <script>
 	MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},svg: {fontCache: 'global'}};
 </script>
 
-
-<!-- 
-!#                                                 #!
-!#                     Effects                     #!
-!#                                                 #!
--->
-
-<!-- 根据需要取消注释 -->
-
-<!--<canvas id="shuicheCanvas" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647;pointer-events:none;" width="1920" height="431"></canvas>
-<script src="/js/mouse.js"></script>
-<script type="text/javascript">$.shuicheMouse({type:11,color:"rgba(187,67,128,1)"})</script> 鼠标粒子-->
-
-<script type="text/javascript" src="/js/ctitle.js"></script> <!--标题改动-->
-
-<script type="text/javascript" src="/js/clicklove.js"></script> <!--点击爱心-->
-
-<!--<script type="text/javascript" src="/js/snow.js"></script> 前景下雪  注：与“点击烟花”冲突-->
-
-<!--<script type="text/javascript" src="/js/snow-2.js"></script> 前景下雪——样式二（其实这个版本飘什么都行）-->
-
-<!--<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 99999;pointer-events: none;" ></canvas> 
-<script type="text/javascript" src="/js/firework.js"></script> 点击烟花 -->
-
-<!--<div id="clickCanvas" style=" position: fixed;left: 0;top: 0;z-index: 99999;pointer-events: none;"></div>
-<script type="text/javascript" src="/js/clickple.js"></script> 点击烟花2 -->
-
-<!--<script type="text/javascript" src="/js/values.js"></script> 点击社会主义核心价值观 -->
-
-<!--<script type="text/javascript" src="/js/particle.js"></script>  背景粒子 -->
-
-<!--<script type="text/javascript" src="/js/sakura.js"></script> 前景樱花 -->
+<script>
+	if(!Readdata("color")) $("html").addClass("color-<%= theme.color_schemes %>");
+	initialization();
+</script>

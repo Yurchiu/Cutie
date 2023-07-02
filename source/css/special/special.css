@@ -1,0 +1,14 @@
+.invert {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.blur {
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}

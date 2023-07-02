@@ -3,8 +3,8 @@ var article_width;
 
 function initialization()
 {
-	var back = document.getElementById('backtop')
-    back.style.display ='none'
+	var back = document.getElementById('backtop');
+    back.style.display ='none';
     document.onscroll = function()
     {
         if (document.documentElement.scrollTop > 100)
@@ -12,13 +12,11 @@ function initialization()
         else back.style.display = 'none';
     };
     back.onclick = function(){
-        document.documentElement.scrollTop = 0
+        document.documentElement.scrollTop = 0;
     }
 
   	article_left_margin=$(".article").css("margin-left");
   	article_width=$(".article").css("width");
-
-  	binft(document.getElementById('binft'));
 
     hljs.highlightAll();
 
@@ -39,27 +37,7 @@ function initialization()
     $(".tooltip").hide();
 
     $("#siteLoading").hide();
-
-    colorSetting();
-    specialSetting();
-
-    if(Readdata("toolbar")==1) $(".toolbar").hide();
-    if(Readdata("removevr")==1) {santaremove();natsukiremove();}
-    if(Readdata("stretch")==1)
-    {
-        $("body").css("width","100%");
-        $(".article").addClass("article-stretch");
-    }
+    Setting();
 }
 
-$(document).ready(function()
-    {
-        initialization();
-        if(Readdata("hair")==1) AprilHair();
-    });
 $(document).pjax('a[target!=_blank][pjax!="no"]', '#pjax', {fragment:'#pjax', timeout:6000});
-$(document).on('pjax:complete', function()
-    {
-        initialization();
-        MathJax.typeset();
-    });

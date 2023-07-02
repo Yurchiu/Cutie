@@ -60,18 +60,18 @@ comments:
   # https://livere.com/insight/myCode
   livere:
     enable: false
-    uid: 
+    uid: MTAyMC80Njg5MS8yMzM5Mg==
 
   # Gitalk 评论系统
   # https://github.com/gitalk/gitalk
   gitalk:
     enable: true
-    clientID: "''"
-    clientSecret: "''"
-    repo: "''"
-    owner: "''"
-    admin: "['']"
-    proxy: "''"
+    clientID: "'1c64f04731dad7dcc928'"
+    clientSecret: "'576bde3af3744ef3d054d3b293d0a0c1fce5087f'"
+    repo: "'no-code'"
+    owner: "'yz-hs'"
+    admin: "['yz-hs']"
+    proxy: "'https://o.cieu.tk/https://github.com/login/oauth/access_token'"
 
 
 
@@ -170,10 +170,10 @@ mono_font_name: "Roboto Mono"
 # X 杂项
 
 # 图片加速 CDN，可选
-imgcdn: # https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
+imgcdn: https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
 
 # 自我简述
-short_des: "An AFO whker"
+short_des: "An AFO whker."
 
 # 头像
 avatar:
@@ -194,11 +194,11 @@ colored_eggs:
 
 
 # 博客默认配色
-# 可以取这些值：std | white | trans | night | none，默认值是 std。"none" 非常特殊。
+# 可以取这些值：std | white | night | none，默认值是 std。 "none" 非常特殊。
 color_schemes: std
 
 # 博客默认特殊效果
-# 可以取这些值：none | grayscale | invert，默认值是 none。
+# 可以取这些值：none | grayscale | invert | blur，默认值是 none。
 special: none
 
 # 背景图片地址
@@ -235,6 +235,7 @@ cdn:
     highlight: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css
     fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css
     bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css
+    aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
   js:
     mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-svg-full.min.js
     jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
@@ -245,3 +246,5 @@ cdn:
     sweetalert2: https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.all.min.js
     sketch: https://cdn.staticfile.org/sketch.js/1.0/sketch.min.js
     bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js
+    aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+    meting: https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js

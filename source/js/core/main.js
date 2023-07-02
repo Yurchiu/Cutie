@@ -25,6 +25,7 @@ function hidetoolbar()
 {
   $(".toolbar").hide();
   $(".sidebar").hide();
+  $(".fake-sidebar").hide();
   $(".hidetoolbar").hide();
   $(".showtoolbar").show();
   $(".article").css("margin-left","0");
@@ -36,6 +37,7 @@ function showtoolbar()
 {
   if(Readdata("toolbar")==2) $(".toolbar").show();
   $(".sidebar").show();
+  $(".fake-sidebar").show();
   $(".hidetoolbar").show();
   $(".showtoolbar").hide();
   $(".article").css("margin-left",article_left_margin);
@@ -86,49 +88,68 @@ function santaremove() {
 function natsukiremove() {
   $(".natsuki-container").hide();
 }
-
 //santa
 
 function topbartoggle() {
   $('.sidebar').toggleClass('sidebar-display');
-  $('.santa-container').toggleClass('appear');
-  $('.natsuki-container').toggleClass('appear');
+  if(Readdata("removevr")!=1) $('.santa-container').toggleClass('appear');
+  if(Readdata("removevr")!=1) $('.natsuki-container').toggleClass('appear');
+  $('meting-js').toggleClass('appear');
 }
 //hide
 
 
 function AprilHair() {
-    /***
-      * 愚人节彩蛋 - 你屏幕上有根毛
-      * 出处：https://www.baidu.com/s?ie=UTF-8&wd=%E6%84%9A%E4%BA%BA%E8%8A%82
-      * 整理：mengkun https://mkblog.cn/
-      */
-    var bottom = Math.floor(60 * Math.random()),
-        right = Math.floor(50 * Math.random()),
-        rotate = Math.floor(360 * Math.random());
-    var foolsEgg = document.createElement("img");
-    foolsEgg.src = "/img/hair.png";
-    foolsEgg.style.position = "fixed"; 
-    foolsEgg.style.bottom = "".concat(bottom, "%");
-    foolsEgg.style.right = "".concat(right, "%"); 
-    foolsEgg.style.zIndex = "9999"; 
-    foolsEgg.style.pointerEvents = "none";
-    foolsEgg.style.width = "40%";
-    foolsEgg.style.maxWidth = "190px";
-    foolsEgg.style.transform = "".concat("rotate(", rotate, "deg)"); 
-    document.body.append(foolsEgg);
+  /***
+    * 愚人节彩蛋 - 你屏幕上有根毛
+    * 出处：https://www.baidu.com/s?ie=UTF-8&wd=%E6%84%9A%E4%BA%BA%E8%8A%82
+    * 整理：mengkun https://mkblog.cn/
+    */
+  var bottom = Math.floor(60 * Math.random()),
+    right = Math.floor(50 * Math.random()),
+    rotate = Math.floor(360 * Math.random());
+  var foolsEgg = document.createElement("img");
+  foolsEgg.src = "/img/hair.png";
+  foolsEgg.style.position = "fixed"; 
+  foolsEgg.style.bottom = "".concat(bottom, "%");
+  foolsEgg.style.right = "".concat(right, "%"); 
+  foolsEgg.style.zIndex = "9999"; 
+  foolsEgg.style.pointerEvents = "none";
+  foolsEgg.style.width = "40%";
+  foolsEgg.style.maxWidth = "190px";
+  foolsEgg.style.transform = "".concat("rotate(", rotate, "deg)"); 
+  document.body.append(foolsEgg);
 }
 
-function colorSetting () {
-    type = Readdata("color");
-    if(type==2) $("html").addClass("color-std");
-    else if(type==3) $("html").addClass("color-white");
-    else if(type==4) $("html").addClass("color-night");
-    else if(type==5) $("html").addClass("color-trans");
+function colorSetting (o=0) {
+  type = Readdata("color");
+  if(o) type=o;
+  if(type==2) $("html").addClass("color-std");
+  else if(type==3) $("html").addClass("color-white");
+  else if(type==4) $("html").addClass("color-night");
+  else if(type==5) $("html").addClass("color-trans");
 }
 
-function specialSetting () {
-    type = Readdata("special");
-    if(type==2) $("html").addClass("grayscale");
-    else if(type==3) $("html").addClass("invert");
+function specialSetting (o=0) {
+  type = Readdata("special");
+  if(o) type=o;
+  if(type==2) $("html").addClass("grayscale");
+  else if(type==3) $("html").addClass("invert");
+  else if(type==4) $("html").addClass("blur");
+}
+
+function consoleprint () {
+  console.log("\n %c Theme cutie ©2020-2023 %c by Yurchiu | yz-hs.github.io ","color:#444;background:#eee;padding:5px 0;","color:#eee;background:#444;padding:5px;");
+}
+
+function Setting () {
+  colorSetting();
+  specialSetting();
+  if(Readdata("toolbar")==1) $(".toolbar").hide();
+  if(Readdata("removevr")==1) {santaremove();natsukiremove();}
+  if(Readdata("stretch")==1)
+  {
+    $("body").css("width","100%");
+    $(".article").addClass("article-stretch");
+  }
 }

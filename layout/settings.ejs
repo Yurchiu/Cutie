@@ -7,6 +7,8 @@
   	</div>
 </div>
 <div class="post-text">
+  <button type="button" class="btn btn-outline-secondary" onclick="localStorage.clear()">Click Here To Clear Cookie</button>
+  <br />
 	<p><%= __('Settings.Cookie') %></p>
 	<table>
 		<tr>
@@ -17,11 +19,11 @@
 			<td colspan="2"><%= __('Settings.Color') %></td>
 			<td>
 				<div class="btn-group">
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','1')">None</button>
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','2')">Standard</button>
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','3')">White</button>
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','4')">Night</button>
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','5')"></button>
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','1');">None</button>
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','2');">Standard</button>
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','3');">White</button>
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','4');">Night</button>
+    				<button type="button" class="btn btn-primary" onclick="Savedata('color','5');"></button>
   				</div>
 			</td>
 		</tr>
@@ -29,9 +31,10 @@
 			<td colspan="2"><%= __('Settings.Special') %></td>
 			<td>
 				<div class="btn-group">
-    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','1')">None</button>
-    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','2')">Gray</button>
-    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','3')">Invert</button>
+    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','1');">None</button>
+    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','2');">Gray</button>
+    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','3');">Invert</button>
+            <button type="button" class="btn btn-secondary" onclick="Savedata('special','4');">Blur</button>
   				</div>
 			</td>
 		</tr>
@@ -40,37 +43,28 @@
 			<td>ToolBar Hide</td>
 			<td>
 				<div class="btn-group">
-    				<button type="button" class="btn btn-success" onclick="Savedata('toolbar','1')">Enable</button>
-    				<button type="button" class="btn btn-success" onclick="Savedata('toolbar','2')">Disable</button>
+    				<button type="button" class="btn btn-success" onclick="Savedata('toolbar','1');">Enable</button>
+    				<button type="button" class="btn btn-success" onclick="Savedata('toolbar','2');">Disable</button>
   				</div>
 			</td>
 		</tr>
-		<tr>
-			<td>April Hair</td>
-			<td>
-				<div class="btn-group">
-    				<button type="button" class="btn btn-dark" onclick="Savedata('hair','1')">Enable</button>
-    				<button type="button" class="btn btn-dark" onclick="Savedata('hair','2')">Disable</button>
-  				</div>
-			</td>
-		</tr>
-	  	<tr>
-		  	<td>Remove 看板娘</td>
-  			<td>
-  				<div class="btn-group">
-    				<button type="button" class="btn btn-danger" onclick="Savedata('removevr','1')">Enable</button>
-    				<button type="button" class="btn btn-danger" onclick="Savedata('removevr','2')">Disable</button>
-  				</div>
-  			</td>
-  		</tr>
-  		<tr>
-		  	<td>Page stretching</td>
-  			<td>
-  				<div class="btn-group">
-    				<button type="button" class="btn btn-warning" onclick="Savedata('stretch','1')">Enable</button>
-    				<button type="button" class="btn btn-warning" onclick="Savedata('stretch','2')">Disable</button>
-  				</div>
-  			</td>
-  		</tr>
-  	</table>
+	  <tr>
+		  <td>Remove 看板娘</td>
+  		<td>
+  			<div class="btn-group">
+    			<button type="button" class="btn btn-danger" onclick="Savedata('removevr','1');">Enable</button>
+    			<button type="button" class="btn btn-danger" onclick="Savedata('removevr','2');">Disable</button>
+  			</div>
+  		</td>
+  	</tr>
+  	<tr>
+			<td>Page stretching</td>
+  		<td>
+  			<div class="btn-group">
+    			<button type="button" class="btn btn-warning" onclick="Savedata('stretch','1');">Enable</button>
+    			<button type="button" class="btn btn-warning" onclick="Savedata('stretch','2');">Disable</button>
+  			</div>
+  		</td>
+  	</tr>
+  </table>
 </div>
