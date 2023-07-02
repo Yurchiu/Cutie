@@ -60,18 +60,18 @@ comments:
   # https://livere.com/insight/myCode
   livere:
     enable: false
-    uid: MTAyMC80Njg5MS8yMzM5Mg==
+    uid: 
 
   # Gitalk 评论系统
   # https://github.com/gitalk/gitalk
   gitalk:
     enable: true
-    clientID: "'1c64f04731dad7dcc928'"
-    clientSecret: "'576bde3af3744ef3d054d3b293d0a0c1fce5087f'"
-    repo: "'no-code'"
-    owner: "'yz-hs'"
-    admin: "['yz-hs']"
-    proxy: "'https://o.cieu.tk/https://github.com/login/oauth/access_token'"
+    clientID: "''"
+    clientSecret: "''"
+    repo: "''"
+    owner: "''"
+    admin: "['']"
+    proxy: "''"
 
 
 
@@ -170,7 +170,7 @@ mono_font_name: "Roboto Mono"
 # X 杂项
 
 # 图片加速 CDN，可选
-imgcdn: https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
+imgcdn: 
 
 # 自我简述
 short_des: "An AFO whker."
