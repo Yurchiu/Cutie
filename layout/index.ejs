@@ -8,7 +8,7 @@
 		height: 
 			<% if(post.height){ %>
 				<%- post.height %>
-			<% }else{ %> 30em; <% } %>
+			<% }else{ %> <%= theme.ImgCard_h %>; <% } %>
 		">
 			<div class="inner" style="<%if(post.color){%>color:#<%-post.color%><%}%>">
 				<h2 class="title">

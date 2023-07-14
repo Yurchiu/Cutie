@@ -169,6 +169,15 @@ mono_font_name: "Roboto Mono"
 
 # X 杂项
 
+# 图片背景卡片 高度默认值
+ImgCard_h: 30em
+
+# Aplayer+Meting 底部播放器
+meting:
+  server: netease
+  type: playlist
+  id: 8524070964
+
 # 图片加速 CDN，可选
 imgcdn: 
 
@@ -178,15 +187,17 @@ short_des: "An AFO whker."
 # 头像
 avatar:
   url: /img/new-avatar.jpg
+  # 头像动效，可以取这些值：bounce | revolve | none，默认值是 none。
+  effect: revolve
 
 # 彩蛋
 colored_eggs:
   # 可以取这些值：santa | natsuki | none，默认值是 none。
   type: natsuki
-  width: 140px                      # 人物大小，仅对 natsuki 有用。
-  time: 0.55s                       # 动画时间，仅对 natsuki 有用。
-  bezier: cubic-bezier(0, 0, 0, 1)  # 贝塞尔曲线，仅对 natsuki 有用。
-                                    # 对于 natsuki，可以在 source 文件夹中的 img 文件夹更改图片。
+  width: 140px                       # 人物大小，仅对 natsuki 有用。
+  time: 0.55s                        # 动画时间，仅对 natsuki 有用。
+  bezier: cubic-bezier(0, 0, 0, 1)   # 贝塞尔曲线，仅对 natsuki 有用。
+                                     # 对于 natsuki，可以在 source 文件夹中的 img 文件夹更改图片。
 
   # 可用作愚人节彩蛋                            
   reverse: false                     # 网页反转（只转一次）。
@@ -237,7 +248,6 @@ cdn:
     bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css
     aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
   js:
-    mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-svg-full.min.js
     jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
     anime: https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js
     pjax: https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js

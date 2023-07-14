@@ -7,10 +7,8 @@
   	</div>
 </div>
 <div class="post-text">
-  <button type="button" class="btn btn-outline-secondary" onclick="localStorage.clear()">Click Here To Clear Cookie</button>
-  <br />
 	<p><%= __('Settings.Cookie') %></p>
-	<table>
+	<table style="white-space: nowrap;">
 		<tr>
 			<th colspan="2">Items</th>
 			<th>Options</th>
@@ -39,8 +37,8 @@
 			</td>
 		</tr>
 		<tr>
-			<td rowspan="4"><%= __('Settings.Others') %></td>
-			<td>ToolBar Hide</td>
+			<td rowspan="3"><%= __('Settings.Others') %></td>
+			<td><%= __('Settings.Toolhide') %></td>
 			<td>
 				<div class="btn-group">
     				<button type="button" class="btn btn-success" onclick="Savedata('toolbar','1');">Enable</button>
@@ -49,7 +47,7 @@
 			</td>
 		</tr>
 	  <tr>
-		  <td>Remove 看板娘</td>
+		  <td><%= __('Settings.Removr') %></td>
   		<td>
   			<div class="btn-group">
     			<button type="button" class="btn btn-danger" onclick="Savedata('removevr','1');">Enable</button>
@@ -58,7 +56,7 @@
   		</td>
   	</tr>
   	<tr>
-			<td>Page stretching</td>
+			<td><%= __('Settings.PageStr') %></td>
   		<td>
   			<div class="btn-group">
     			<button type="button" class="btn btn-warning" onclick="Savedata('stretch','1');">Enable</button>
@@ -66,5 +64,9 @@
   			</div>
   		</td>
   	</tr>
+    <tr>
+      <td colspan="2"><%= __('Settings.Reset') %></td>
+      <td><button type="button" class="btn btn-outline-secondary" onclick="localStorage.clear()">Reset</button></td>
+    </tr>
   </table>
 </div>

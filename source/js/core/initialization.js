@@ -20,14 +20,12 @@ function initialization()
 
     hljs.highlightAll();
 
-    $(document).ready(function(){$('.chaffle').chaffle();});
+    $(function(){$('.chaffle').chaffle();$("#siteLoading").hide();});
 
     displaytime();
 
     $("table").wrap("<div style='overflow: auto;'></div>");
     $("mjx-container[display='true']").wrap("<div style='overflow-x: auto;'></div>");
-
-    $('img').attr("onerror","this.src='<%= theme.img_default %>';this.onerror=null");
 
     document.querySelectorAll('pre code').forEach((block) => {hljs.highlightBlock(block);});
 
@@ -36,8 +34,9 @@ function initialization()
         return new bootstrap.Tooltip(tooltipTriggerEl)});
     $(".tooltip").hide();
 
-    $("#siteLoading").hide();
     Setting();
 }
 
 $(document).pjax('a[target!=_blank][pjax!="no"]', '#pjax', {fragment:'#pjax', timeout:6000});
+$(document).on('pjax:send', function() {$("#siteLoading").show();});
+$(document).on('pjax:complete', function() {$("#siteLoading").hide();});

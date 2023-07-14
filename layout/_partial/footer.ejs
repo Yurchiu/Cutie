@@ -11,12 +11,8 @@
 	<script>if(!Readdata("special")) $("html").addClass("<%= theme.special %>");</script>
 <% } %>
 
-<script id="MathJax-script" async src="<%= theme.cdn.js.mathjax %>"></script>
-<script>
-	MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},svg: {fontCache: 'global'}};
-</script>
-
 <script>
 	if(!Readdata("color")) $("html").addClass("color-<%= theme.color_schemes %>");
+	$('img').attr("onerror","this.src='<%= theme.img_default %>';this.onerror=null");
 	initialization();
 </script>

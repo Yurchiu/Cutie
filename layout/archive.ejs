@@ -21,38 +21,19 @@
   	</div>
 </div>
 <div class="post-text archives">
-  <details class="pre">
-    <summary><%= __('Archives.ShowDates')%></summary>
-    <a href="/archives/" class="archives-date">All</a><br />
-    <% var lastyear=-1,lastmonth=-1; %>
-    <% page.posts.each(function (post) { %>
-        <% var year=post.date.year(),month=post.date.month(); %>
-        <% if(lastyear != year){ %>
-            <% if(lastyear!=-1) { %><br /><% } %>
-            <a href="/archives/<%= year %>/" class="archives-date"><%= year %></a>
-            <% lastyear=year;lastmonth=-1; %>
-        <% } %>
-        <% if(lastmonth != month){ %>
-          <% var Month=month+1; if(Month<=9) Month="0"+Month.toString(); %>
-            <a href="/archives/<%= year %>/<%= Month %>/" class="month"> <%= Month %></a>
-          <% lastmonth=month; %>
-        <% } %>
-    <% }) %>
-  </details>
-
   	<ol class="timeline">
-  	<% lastyear=-1,lastmonth=-1; %>
-    <% page.posts.each(function (post) { %>
+  	<% Lyear = -1, Lmonth = -1; %>
+    <% page.posts.each( function (post) { %>
       <li>
-      	<% var year=post.date.year(),month=post.date.month(); %>
-      	<% if(lastyear != year){ %>
-      		<h2><%= year %></h2>
-      		<% lastyear=year;lastmonth=-1; %>
+      	<% Year = post.date.year(), Month = post.date.month(); %>
+      	<% if ( Lyear != Year ){ %>
+      		<h2><a href="/archives/<%= Year %>"><%= Year %></a></h2>
+      		<% Lyear = Year; Lmonth = -1; %>
       	<% } %>
-      	<% if(lastmonth != month){ %>
-          <% var Month=month+1; if(Month<=9) Month="0"+Month.toString(); %>
-      		<h3><%= month+1 %></h3>
-      		<% lastmonth=month; %>
+      	<% if ( Lmonth != Month ){ %>
+          <% Smonth = Month + 1; if ( Smonth <= 9 ) Smonth = "0" + Smonth.toString(); %>
+      		<h3><a href="/archives/<%= Year %>/<%= Smonth %>"><%= Smonth %></a></h3>
+      		<% Lmonth = Month; %>
       	<% } %>
         <b class="date"><%= date(post.date, "YYYY-MM-DD") %></b>
         <a class="title" href="<%- url_for(post.path) %>">

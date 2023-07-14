@@ -186,12 +186,6 @@ $(function(){
 	-moz-animation:bounce 1s .1s ease both;
 }
 
-.avatar-container {
-	padding: 10%;
-	padding-top: 35px;
-	padding-bottom: 15px;
-}
-
 @-webkit-keyframes bounce {
 	0% {
 		-webkit-transform:scale(1)
@@ -208,6 +202,29 @@ $(function(){
 	100% {
 		-webkit-transform:scale(1) rotate(0)
 	}
+}
+
+.revolve{
+    -webkit-transition: .8s;
+    -moz-transition: .8s;
+    -o-transition: .8s;
+    -ms-transition: .8s;
+}
+
+.revolve:hover{
+    -moz-box-shadow:0 3px 10px #888;
+    -webkit-box-shadow:0 3px 10px #888;
+    transform:rotate(720deg);
+    -webkit-transform:rotate(720deg);
+    -moz-transform:rotate(720deg);
+    -o-transform:rotate(720deg);
+    -ms-transform:rotate(720deg);
+}
+
+.avatar-container {
+	padding: 10%;
+	padding-top: 35px;
+	padding-bottom: 15px;
 }
 
 .showtoolbar,.hidetoolbar {
