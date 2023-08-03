@@ -18,13 +18,11 @@ Menu:
   Archives: archives/index.html
   Tags: tags/index.html
   Categories: categories/index.html
+  Mood: somepage/mood/index.html
   About: somepage/about/index.html
   Message_board: somepage/chat/index.html
   Links: somepage/link/index.html
   Settings: somepage/settings/index.html
-
-# 顶部栏也可以放一个页面。可选。
-Topbar: somepage/say/index.html
 
 # 搜索页面的链接。
 Search: somepage/search/index.html
@@ -40,11 +38,11 @@ icon:
   Archives: fa-tasks
   Tags: fa-tags
   Categories: fa-th-large
+  Mood: fa-photo
   About: fa-user-o
   Message_board: fa-commenting-o
   Links: fa-link
   Settings: fa-cog
-  Topbar: fa-bell-o
   Search: fa-search
 
 
@@ -153,21 +151,21 @@ tag_cloud:
 
 # IX 字体
 #
-# 字体，每空仅能填一种
 # https://fonts.googleapis.com/css?family=...
 
-# 主体字体（用于请求）
-font: Montserrat # Saira Monda Montserrat
-# 主体字体的实际名字（用于设值）
-font_name: Montserrat
-# 等宽字体，代码片段使用（用于请求）
-mono_font: Roboto+Mono
-# 等宽字体的实际名字（用于设值）
-mono_font_name: "Roboto Mono"
+# 引用的谷歌字体
+fonts:
+  - Montserrat
+  - Roboto+Mono
 
-
+# 字体家族
+font_family: "Montserrat,sans-serif"
+mono_font_family: "'Roboto Mono',sans-serif"
 
 # X 杂项
+
+# 你的 GitHub 名称，用于某些链接
+github_name: yz-hs
 
 # 图片背景卡片 高度默认值
 ImgCard_h: 30em

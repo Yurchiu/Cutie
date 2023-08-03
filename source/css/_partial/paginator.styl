@@ -5,10 +5,9 @@
 
     .page-number,.space,.prev,.next {
     	border: 1px solid var(--paginator-border-color);
-    	padding: 10px;
-    	margin: 2px;
+        border-right: none;
+    	padding: 8px 13px;
     	background-color: var(--paginator-bg-color);
-    	border-radius: 5px 5px 5px 5px;
         color: var(--paginator-color);
     }
 
@@ -20,5 +19,13 @@
     .current,.current:hover {
         color: var(--paginator-current-color);
     	background-color: var(--paginator-current-bg-color);
+    }
+
+    &>*:first-child {
+        border-radius: 10px 0px 0px 10px;
+    }
+    &>*:last-child {
+        border-radius: 0px 10px 10px 0px;
+        border-right: 1px solid var(--paginator-border-color);
     }
 }

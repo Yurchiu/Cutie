@@ -35,7 +35,7 @@ function hidetoolbar()
 
 function showtoolbar()
 {
-  if(Readdata("toolbar")==2) $(".toolbar").show();
+  if(Readdata("toolbar")==2||(!Readdata("toolbar"))) $(".toolbar").show();
   $(".sidebar").show();
   $(".fake-sidebar").show();
   $(".hidetoolbar").show();

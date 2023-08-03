@@ -39,8 +39,6 @@
   <link rel="stylesheet" href="<%- theme.cdn.css.aplayer %>">
   <link rel="stylesheet" href="<%- theme.cdn.css.katex %>">
   <link rel="stylesheet" href="<%- theme.cdn.css.gitalk %>">
-  <link href="<%- theme.cdn.css.googlefont %>/css?family=<%- theme.font %>" rel="stylesheet">
-  <link href="<%- theme.cdn.css.googlefont %>/css?family=<%- theme.mono_font %>" rel="stylesheet">
   <link rel="stylesheet" href="<%= theme.cdn.css.fontawesome %>">
   <link rel="stylesheet" href="<%= theme.cdn.css.highlight %>">
   <link rel="stylesheet" href="<%= theme.cdn.css.bootstrap %>">
@@ -48,5 +46,9 @@
   <link rel="stylesheet" type="text/css" href="/css/colors/std.css">
   <link rel="stylesheet" type="text/css" href="/css/colors/white.css">
   <link rel="stylesheet" type="text/css" href="/css/colors/night.css">
+  <link rel="stylesheet" type="text/css" href="/css/colors/trans.css">
   <link rel="stylesheet" type="text/css" href="/css/special/special.css">
+  <% for (name in theme.fonts) { %>
+     <link href="<%- theme.cdn.css.googlefont %>/css?family=<%- theme.fonts[name] %>" rel="stylesheet">
+  <% } %>
 </head>
