@@ -3,6 +3,8 @@
 	<div class="meta"><%= config.subtitle %></div>
 </div>
 <% page.posts.each(function (post) { %>
+	<% var title = post.title %>
+	<% if(!title) title = __('NoTitle') %>
 	<% if(post.bgimg){ %>
 		<div class="post-bgimg-item" style="background-image: url(<%= theme.imgcdn %><%= post.bgimg %>);
 		height: 
@@ -12,22 +14,22 @@
 		">
 			<div class="inner" style="<%if(post.color){%>color:#<%-post.color%><%}%>">
 				<h2 class="title">
-				<a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= post.title %>"><% if(post.title){ %><%= post.title %><% }else{ %><%= __('NoTitle') %><% } %></a>
+				<a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= title %>"><%= title %></a>
 				</h2>
 	<% }else{ %>
 		<div class="post-item" style="<%if(post.color){%>color:#<%-post.color%><%}%>"><div>
 		<% if(post.disfa){ %>
 			<h2 class="title">
-				<a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= post.title %>"><% if(post.title){ %><%= post.title %><% }else{ %><%= __('NoTitle') %><% } %></a>
+				<a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= title %>"><%= title %></a>
 			</h2>
 		<% }else{ %>
 			<div class="title_fa">
 			<% if(post.faname){ %>
-			  	<i class="fa <%- post.faname %> fa-2x fa-border fa-fw" aria-hidden="true"></i>
+			  	<i class="fa <%- post.faname %> fa-2x fa-border fa-fw"></i>
 			<% }else{ %>
-			  	<i class="fa fa-file-text-o fa-2x fa-border fa-fw" aria-hidden="true"></i>
+			  	<i class="fa fa-file-text-o fa-2x fa-border fa-fw"></i>
 			<% } %>
-				<a class="title" href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= post.title %>"><% if(post.title){ %><%= post.title %><% }else{ %><%= __('NoTitle') %><% } %></a>
+				<a class="title" href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= title %>"><%= title %></a>
 			</div>
 		<% } %>
 	<% } %>
@@ -55,19 +57,19 @@
 		</div>    
 		<hr />
 		<div class="meta">
-			<span><i class="fa fa-user-o" aria-hidden="true"></i>
+			<span><i class="fa fa-user-o"></i>
 				<% if(post.author){ %>
 					<%= post.author %>
 				<% }else{ %>
 					<%= config.author %>
 				<% } %>
 			</span>
-			<span><i class="fa fa-clock-o" aria-hidden="true"></i> <%= date(post.date,theme.time_format) %></span>
+			<span><i class="fa fa-clock-o"></i> <%= date(post.date,theme.time_format) %></span>
 			<% if(post.top){ %>
-           		<span><i class="fa fa-thumb-tack" aria-hidden="true"></i> <%= __('Posts.Top') %></span>
+           		<span><i class="fa fa-thumb-tack"></i> <%= __('Posts.Top') %></span>
        		<% } %>
       		<% if(post.password){ %>
-      			<span><i class="fa fa-lock" aria-hidden="true"></i> <%= __('Posts.Password') %></span>
+      			<span><i class="fa fa-lock"></i> <%= __('Posts.Password') %></span>
    			<% } %>
    		</div>
 	</div>

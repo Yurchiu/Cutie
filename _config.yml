@@ -7,10 +7,10 @@
 
 # I 侧边栏菜单
 #
-# 不要在链接里加入根目录。例如，`http://test.com/path/to/pages`，你应当填写 `path/to/pages`。
-# 如果链接失效，试着去掉 `index.html`。
-# 记得到第二部分去填写它的 icon。
-# 所有内容都是可选的。如果要增加新的页面，可以仿照格式继续填写，并在 language 下增加它的页面名称。
+# 填写链接。例如，`http://test.com/path/to/pages`，你应当填写 `path/to/pages/index.html`。
+# 无 "/index.html" 后缀会阻止 Pjax。
+# 记得在 II 菜单图标 填写它的 fontawesome icon。
+# 菜单内容任意增删。如果要增，可以仿照格式继续填写，另外需要在 language 文件夹下增加菜单名称翻译。
 
 # Menu 内的内容会显示在侧边栏。
 Menu:
@@ -87,14 +87,11 @@ responsive:
 
 
 # V 首页提示
-#
-# 以下是预设：
-# <i class="fa fa-volume-up" aria-hidden="true"></i> 欢迎来到 cieu 的博客！希望我们能相互交流，共同进步～
 
 site_warning:
   enable: root   # 可以取这些值：none | root | all。默认值是 none。
-  text: "<i class='fa fa-volume-up' aria-hidden='true'></i> 改 ID 了。由 cieu 变更为 Yurchiu。"
-  type: warning  # 可以取这些值：danger | warning | info | success。默认值是 default（灰色）。
+  text: "<i class='fa fa-volume-up'></i> 欢迎来到 Yurchiu 的博客！希望我们能相互交流，共同进步～"
+  type: success  # 可以取这些值：danger | warning | info | success。
 
 
 
@@ -123,14 +120,14 @@ post_excerpt:
                         # noexcerpt: 所有文章被认为没有摘要。
 
   ifdefault: false      # 大前提：博文源文件中不含有 "<!--more-->"。
-                        # ture：展示 "post_default_excerpt" 内容。
+                        # true：展示 "post_default_excerpt" 内容。
                         # false：展示博文的一部分。
 
   display: html         # 可以取这些值：html | text。默认值是 text。
                         # html: 仅当博文源文件中含有 "<!--more-->" 时，保留 html 标签。
                         # text: 任何情况下不保留 html 标签。
 
-  post_default_excerpt: '<i class="fa fa-warning" aria-hidden="true"></i> 本文章无可提供的摘要 qwq。可能 Yurchiu 太懒了，或不适合做摘要。'
+  post_default_excerpt: '<i class="fa fa-warning"></i> 本文章无可提供的摘要 qwq。可能 Yurchiu 太懒了，或不适合做摘要。'
   length_excerpt: 150   # 当展示博文的一部分时，展示的文本字符数。默认是 30。
 
   # 注意：如果一篇博文源文件中不含有 "<!--more-->"，而 display 值为 html 时，则效果与 "display: text" 相同。 
@@ -138,8 +135,11 @@ post_excerpt:
 
 
 # VIII 标签云
+#
+# 位于工具栏。
 
 tag_cloud:
+  enable: true         # 是否启用
   color:               # 颜色渐变范围
     from: "#fff"       # night: #aaa
     to: "#fff"         # not-night: #fff
@@ -162,33 +162,28 @@ fonts:
 font_family: "Montserrat,sans-serif"
 mono_font_family: "'Roboto Mono',sans-serif"
 
-# X 杂项
 
-# 你的 GitHub 名称，用于某些链接
-github_name: yz-hs
 
-# 图片背景卡片 高度默认值
-ImgCard_h: 30em
+# X Aplayer+Meting 底部播放器
 
-# Aplayer+Meting 底部播放器
 meting:
   server: netease
   type: playlist
   id: 8524070964
 
-# 图片加速 CDN，可选
-imgcdn: 
 
-# 自我简述
-short_des: "An AFO whker."
 
-# 头像
+# XI 头像
+
 avatar:
   url: /img/new-avatar.jpg
   # 头像动效，可以取这些值：bounce | revolve | none，默认值是 none。
   effect: revolve
 
-# 彩蛋
+
+
+# XII 博客彩蛋
+
 colored_eggs:
   # 可以取这些值：santa | natsuki | none，默认值是 none。
   type: natsuki
@@ -201,6 +196,32 @@ colored_eggs:
   reverse: false                     # 网页反转（只转一次）。
   hair: false                        # 你的屏幕上有头发。
 
+
+
+# XIII 杂项
+
+# 侧边栏是否显示标签个数等
+sidebar_num: true
+
+# 工具栏是否显示“博客信息”
+toolbar_info: true
+
+# 工具栏是否显示第三栏
+toolbar_third: true
+
+# 你的 GitHub 名称，用于某些链接
+github_name: yz-hs
+
+# 图片背景卡片 高度默认值
+ImgCard_h: 30em
+
+# 图片加速 CDN，可选
+# 对头像、背景图片、图片文章卡片等进行加速。
+# Jsdelivr 提供加速服务：https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
+imgcdn: 
+
+# 自我简述
+short_des: "An AFO whker."
 
 # 博客默认配色
 # 可以取这些值：std | white | night | none，默认值是 std。 "none" 非常特殊。
@@ -217,13 +238,13 @@ bg_url: /img/new-bgp.jpg  # night-bgp.png
 # http://momentjs.cn/docs/#/parsing/string-format/
 time_format: "YYYY-MM-DD, HH:mm:ss"
 
-# 透明度，取值区间为 [0,1] 间的实数。
+# 博客界面透明度，取值为属于区间 [0,1] 的实数。
 opacity: 1
 
-# 图片崩掉后，会用它替换。
+# 图片无法加载，会用它替换。
 img_default: /img/error.jpg
 
-# toolbar 文章显示个数。
+# 工具栏“随机文章”等的显示文章个数。
 toolbar_amount: 7
 
 

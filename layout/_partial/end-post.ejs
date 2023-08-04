@@ -1,23 +1,21 @@
-<% if( (is_post() && theme.copyright.enable=="post") || (theme.copyright.enable=="all") ) { %>
-<br /><hr />
-<img src="<%= theme.imgcdn %>/img/end-heart.gif" style="box-shadow: none;">
-<br />
-<blockquote>
-	<br />
-	<%= __('Posts.Author') %><% if(page.author){ %><%= page.author %><% }else{ %><%= config.author %><% } %>
-	<br /><br />
+<% if((is_post() && theme.copyright.enable=="post") || (theme.copyright.enable=="all")) { %>
+  <br /><hr /><img src="<%= theme.imgcdn %>/img/end-heart.gif" style="box-shadow: none;"><br />
+  <blockquote>
+    <br />
+    <%= __('Posts.Author') %><% if(page.author){ %><%= page.author %><% }else{ %><%= config.author %><% } %>
+    <br /><br />
     <%= __('Posts.Link') %><%= page.permalink %>
     <br /><br />
     <%= __('Posts.Copyright') %><%= theme.copyright.statement %>
     <br /><br />
-</blockquote>
-<br />
-<div class="end-post-meta">
-	<% page.tags.each(function (tag) { %>
-		<span><a href="/tags/<%= tag.name %>"><i class="fa fa-tag" aria-hidden="true"></i> <%= tag.name %></a></span>
-	<% }) %>
-</div>
-<div class="end-post-meta">
-	<span><i class="fa fa-refresh" aria-hidden="true"></i> <%= __('Posts.Refresh') %><%= date(page.updated, theme.time_format) %></span>
-</div>
+  </blockquote>
+  <br />
+  <div class="end-post-meta">
+    <% page.tags.each(function (tag) { %>
+		  <span><a href="/tags/<%= tag.name %>"><i class="fa fa-tag"></i> <%= tag.name %></a></span>
+	 <% }) %>
+  </div>
+  <div class="end-post-meta">
+    <span><i class="fa fa-refresh"></i> <%= __('Posts.Refresh') %><%= date(page.updated, theme.time_format) %></span>
+  </div>
 <% } %>
