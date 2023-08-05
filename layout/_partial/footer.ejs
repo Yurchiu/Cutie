@@ -8,11 +8,11 @@
 <% if(theme.colored_eggs.reverse) { %>
 	<script>Fool();</script>
 <% }if(theme.special){ %>
-	<script>if(!Readdata("special")) $("html").addClass("<%= theme.special %>");</script>
+	<script>if(!readData("special")) $("html").addClass("<%= theme.special %>");</script>
 <% } %>
 
 <script>
-	if(!Readdata("color")) $("html").addClass("color-<%= theme.color_schemes %>");
+	if(!readData("color")) $("html").addClass("color-<%= theme.color_schemes %>");
 	$('img').attr("onerror","this.src='<%= theme.img_default %>';this.onerror=null");
 	initialization();
 </script>

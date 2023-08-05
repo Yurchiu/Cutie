@@ -17,11 +17,11 @@
 			<td colspan="2"><%= __('Settings.Color') %></td>
 			<td>
 				<div class="btn-group">
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','1');">None</button>
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','2');">Standard</button>
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','3');">White</button>
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','4');">Night</button>
-    				<button type="button" class="btn btn-primary" onclick="Savedata('color','5');"></button>
+    				<button type="button" class="btn btn-primary" onclick="saveData('color','1');">None</button>
+    				<button type="button" class="btn btn-primary" onclick="saveData('color','2');">Standard</button>
+    				<button type="button" class="btn btn-primary" onclick="saveData('color','3');">White</button>
+    				<button type="button" class="btn btn-primary" onclick="saveData('color','4');">Night</button>
+    				<button type="button" class="btn btn-primary" onclick="saveData('color','5');"></button>
   				</div>
 			</td>
 		</tr>
@@ -29,38 +29,47 @@
 			<td colspan="2"><%= __('Settings.Special') %></td>
 			<td>
 				<div class="btn-group">
-    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','1');">None</button>
-    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','2');">Gray</button>
-    				<button type="button" class="btn btn-secondary" onclick="Savedata('special','3');">Invert</button>
-            <button type="button" class="btn btn-secondary" onclick="Savedata('special','4');">Blur</button>
+    				<button type="button" class="btn btn-secondary" onclick="saveData('special','1');">None</button>
+    				<button type="button" class="btn btn-secondary" onclick="saveData('special','2');">Gray</button>
+    				<button type="button" class="btn btn-secondary" onclick="saveData('special','3');">Invert</button>
+            <button type="button" class="btn btn-secondary" onclick="saveData('special','4');">Blur</button>
   				</div>
 			</td>
 		</tr>
 		<tr>
-			<td rowspan="3"><%= __('Settings.Others') %></td>
+			<td rowspan="4"><%= __('Settings.Others') %></td>
 			<td><%= __('Settings.Toolhide') %></td>
 			<td>
 				<div class="btn-group">
-    				<button type="button" class="btn btn-success" onclick="Savedata('toolbar','1');">Enable</button>
-    				<button type="button" class="btn btn-success" onclick="Savedata('toolbar','2');">Disable</button>
+    				<button type="button" class="btn btn-success" onclick="saveData('toolbar','1');">Enable</button>
+    				<button type="button" class="btn btn-success" onclick="saveData('toolbar','2');">Disable</button>
   				</div>
 			</td>
 		</tr>
 	  <tr>
-		  <td><%= __('Settings.Removr') %></td>
-  		<td>
-  			<div class="btn-group">
-    			<button type="button" class="btn btn-danger" onclick="Savedata('removevr','1');">Enable</button>
-    			<button type="button" class="btn btn-danger" onclick="Savedata('removevr','2');">Disable</button>
-  			</div>
-  		</td>
-  	</tr>
+      <td><%= __('Settings.Removr') %></td>
+      <td>
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger" onclick="saveData('removevr','1');">Enable</button>
+          <button type="button" class="btn btn-danger" onclick="saveData('removevr','2');">Disable</button>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td><%= __('Settings.RemoveMt') %></td>
+      <td>
+        <div class="btn-group">
+          <button type="button" class="btn btn-info" onclick="saveData('removemt','1');">Enable</button>
+          <button type="button" class="btn btn-info" onclick="saveData('removemt','2');">Disable</button>
+        </div>
+      </td>
+    </tr>
   	<tr>
 			<td><%= __('Settings.PageStr') %></td>
   		<td>
   			<div class="btn-group">
-    			<button type="button" class="btn btn-warning" onclick="Savedata('stretch','1');">Enable</button>
-    			<button type="button" class="btn btn-warning" onclick="Savedata('stretch','2');">Disable</button>
+    			<button type="button" class="btn btn-warning" onclick="saveData('stretch','1');">Enable</button>
+    			<button type="button" class="btn btn-warning" onclick="saveData('stretch','2');">Disable</button>
   			</div>
   		</td>
   	</tr>

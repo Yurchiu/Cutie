@@ -167,6 +167,7 @@ mono_font_family: "'Roboto Mono',sans-serif"
 # X Aplayer+Meting 底部播放器
 
 meting:
+  enable: true
   server: netease
   type: playlist
   id: 8524070964

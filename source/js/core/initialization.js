@@ -15,17 +15,17 @@ function initialization()
         document.documentElement.scrollTop = 0;
     }
 
-  	article_left_margin=$(".article").css("margin-left");
-  	article_width=$(".article").css("width");
+  	article_left_margin = $(".article").css("margin-left");
+  	article_width = $(".article").css("width");
 
     hljs.highlightAll();
-
-    $(function(){$('.chaffle').chaffle();$("#siteLoading").hide();});
-
     displaytime();
 
+    $(".chaffle").chaffle();
+    $("#siteLoading").hide();
     $("table").wrap("<div style='overflow: auto;'></div>");
     $("mjx-container[display='true']").wrap("<div style='overflow-x: auto;'></div>");
+    $("meting-js").addClass("appear");
 
     document.querySelectorAll('pre code').forEach((block) => {hljs.highlightBlock(block);});
 
