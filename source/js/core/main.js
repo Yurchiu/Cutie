@@ -24,11 +24,11 @@ function readData(key) {
 function HideIt()
 {
   if(readData("toolbar")==1) $(".toolbar").hide();
-  if(readData("removevr")==1) {
+  if(readData("disVRecord")==1) {
     santaRemove();
     natsukiRemove();
   }
-  if(readData("removemt")==1) metingRemove();
+  if(readData("disAplayer")==1) metingRemove();
 }
 
 function hideBars()
@@ -161,13 +161,14 @@ function consolePrint () {
   console.log("\n %c Theme cutie ©2020-2023 %c by Yurchiu | yz-hs.github.io ","color:#444;background:#eee;padding:5px 0;","color:#eee;background:#444;padding:5px;");
 }
 
+function Stretch () {
+  $("body").css("width","100%");
+  $(".article").addClass("article-stretch");
+}
+
 function Setting () {
   colorSetting();
   specialSetting();
   HideIt();
-  if(readData("stretch")==1)
-  {
-    $("body").css("width","100%");
-    $(".article").addClass("article-stretch");
-  }
+  if(readData("stretch") == 1) Stretch();
 }

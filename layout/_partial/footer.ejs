@@ -6,13 +6,17 @@
 <%- partial('./animation') %>
 
 <% if(theme.colored_eggs.reverse) { %>
-	<script>Fool();</script>
+    <script>Fool();</script>
 <% }if(theme.special){ %>
-	<script>if(!readData("special")) $("html").addClass("<%= theme.special %>");</script>
+    <script>if(!readData("special")) $("html").addClass("<%= theme.special %>");</script>
+<% }if(theme.stretch){ %>
+    <script>
+    	if(readData("stretch")!=2) Stretch();
+	</script>
 <% } %>
 
 <script>
-	if(!readData("color")) $("html").addClass("color-<%= theme.color_schemes %>");
-	$('img').attr("onerror","this.src='<%= theme.img_default %>';this.onerror=null");
-	initialization();
+    if(!readData("color")) $("html").addClass("color-<%= theme.color_schemes %>");
+    $('img').attr("onerror","this.src='<%= theme.img_default %>';this.onerror=null");
+    initialization();
 </script>

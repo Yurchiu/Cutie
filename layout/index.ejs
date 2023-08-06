@@ -1,78 +1,70 @@
 <div class="header">
-	<h1 class="title"><%= config.title %></h1>
-	<div class="meta"><%= config.subtitle %></div>
+    <h1 class="title"><%= config.title %></h1>
+    <div class="meta"><%= config.subtitle %></div>
 </div>
 <% page.posts.each(function (post) { %>
-	<% var title = post.title %>
-	<% if(!title) title = __('NoTitle') %>
-	<% if(post.bgimg){ %>
-		<div class="post-bgimg-item" style="background-image: url(<%= theme.imgcdn %><%= post.bgimg %>);
-		height: 
-			<% if(post.height){ %>
-				<%- post.height %>
-			<% }else{ %> <%= theme.ImgCard_h %>; <% } %>
-		">
-			<div class="inner" style="<%if(post.color){%>color:#<%-post.color%><%}%>">
-				<h2 class="title">
-				<a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= title %>"><%= title %></a>
-				</h2>
-	<% }else{ %>
-		<div class="post-item" style="<%if(post.color){%>color:#<%-post.color%><%}%>"><div>
-		<% if(post.disfa){ %>
-			<h2 class="title">
-				<a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= title %>"><%= title %></a>
-			</h2>
-		<% }else{ %>
-			<div class="title_fa">
-			<% if(post.faname){ %>
-			  	<i class="fa <%- post.faname %> fa-2x fa-border fa-fw"></i>
-			<% }else{ %>
-			  	<i class="fa fa-file-text-o fa-2x fa-border fa-fw"></i>
-			<% } %>
-				<a class="title" href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= title %>"><%= title %></a>
-			</div>
-		<% } %>
-	<% } %>
-		
-		<div class="excerpt">
-			<% if(theme.post_excerpt.mode=="noexcerpt"){ %>
-				<% if(theme.post_excerpt.ifdefault){ %>
-					<%- theme.post_excerpt.post_default_excerpt %>
-				<% }else{ %>
-					<%- truncate(strip_html(post.content),{length:theme.post_excerpt.length_excerpt}) %>
-				<% } %>
-			<% }else{ %>
-				<% if(post.excerpt){ %>
-					<% if(theme.post_excerpt.display=="html"){ %>
-						<%- post.excerpt %>
-					<% }else{ %>
-						<%- strip_html(post.excerpt) %>
-					<% } %>
-				<% }else if(theme.post_excerpt.ifdefault){ %>
-					<%- theme.post_excerpt.post_default_excerpt %>
-				<% }else{ %>
-					<%- truncate(strip_html(post.content),{length:theme.post_excerpt.length_excerpt}) %>
-				<% } %>
-			<% } %>
-		</div>    
-		<hr />
-		<div class="meta">
-			<span><i class="fa fa-user-o"></i>
-				<% if(post.author){ %>
-					<%= post.author %>
-				<% }else{ %>
-					<%= config.author %>
-				<% } %>
-			</span>
-			<span><i class="fa fa-clock-o"></i> <%= date(post.date,theme.time_format) %></span>
-			<% if(post.top){ %>
-           		<span><i class="fa fa-thumb-tack"></i> <%= __('Posts.Top') %></span>
-       		<% } %>
-      		<% if(post.password){ %>
-      			<span><i class="fa fa-lock"></i> <%= __('Posts.Password') %></span>
-   			<% } %>
-   		</div>
-	</div>
+    <% var title = post.title %>
+    <% if(!title) title = __('NoTitle') %>
+    <% if(post.bgimg){ %>
+        <div class="post-bgimg-item" style="background-image: url(<%= theme.imgcdn %><%= post.bgimg %>);
+        height: 
+            <% if(post.height){ %>
+                <%- post.height %>
+            <% }else{ %> <%= theme.ImgCard_h %>; <% } %>
+        ">
+            <div class="inner" style="<%if(post.color){%>color:#<%-post.color%><%}%>">
+                <h2 class="title">
+                <a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= title %>"><%= title %></a>
+                </h2>
+    <% }else{ %>
+        <div class="post-item" style="<%if(post.color){%>color:#<%-post.color%><%}%>"><div>
+        <% if(post.disfa){ %>
+            <h2 class="title">
+                <a href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= title %>"><%= title %></a>
+            </h2>
+        <% }else{ %>
+            <div class="title_fa">
+            <% if(post.faname){ %>
+                  <i class="fa <%- post.faname %> fa-2x fa-border fa-fw"></i>
+            <% }else{ %>
+                  <i class="fa fa-file-text-o fa-2x fa-border fa-fw"></i>
+            <% } %>
+                <a class="title" href="<%- url_for(post.path) %>" data-bs-toggle="tooltip" title="<%= title %>"><%= title %></a>
+            </div>
+        <% } %>
+    <% } %>
+        
+        <div class="excerpt">
+            <% if(post.excerpt&&(theme.excerpt.mode!="noexcerpt")){ %>
+                <% if(theme.excerpt.display=="html"){ %>
+                    <%- post.excerpt %>
+                <% }else{ %>
+                    <%- strip_html(post.excerpt) %>
+                <% } %>
+            <% }else if(theme.excerpt.ifdefault){ %>
+                <%- theme.excerpt.noexcerpt %>
+            <% }else{ %>
+                <%- truncate(strip_html(post.content),{length:theme.excerpt.length}) %>
+            <% } %>
+        </div>    
+        <hr />
+        <div class="meta">
+            <span><i class="fa fa-user-o"></i>
+                <% if(post.author){ %>
+                    <%= post.author %>
+                <% }else{ %>
+                    <%= config.author %>
+                <% } %>
+            </span>
+            <span><i class="fa fa-clock-o"></i> <%= date(post.date,theme.time_format) %></span>
+            <% if(post.top){ %>
+                <span><i class="fa fa-thumb-tack"></i> <%= __('Posts.Top') %></span>
+            <% } %>
+            <% if(post.password){ %>
+                <span><i class="fa fa-lock"></i> <%= __('Posts.Password') %></span>
+            <% } %>
+        </div>
+    </div>
 </div>
 <% }) %>
 <%- partial('_partial/paginator') %>

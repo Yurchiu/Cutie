@@ -90,7 +90,7 @@ Settings:
   Special: Special Effects
   Others: Others
   Toolhide: ToolBar Hide
-  Removr: Signboard Hide
-  RemoveMt: Aplayer Hide
+  DisVRecord: Signboard Hide
+  DisAplayer: Aplayer Hide
   PageStr: Page stretching
   Reset: Reset

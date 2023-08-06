@@ -12,30 +12,31 @@
 <!--  1-tab  -->
 <div class="title"><%= __('Toolbar.Random.title') %><span class="sidetitle"><%= __('Toolbar.Random.subtitle') %></span></div>
 <div class="item no-lrpadding">
-	<%- list_posts({
-		orderby: 'random',
-		style: 'block',
-    separator: '<!--<hr class="separator" />-->',
-		amount: theme.toolbar_amount,
-		transform(str) {
-    		return '<div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">'+str+'</div></div>';
-  		}
-}) %></div>
+  <%- list_posts({
+    orderby: 'random',
+    style: 'block',
+    separator: '',
+    amount: theme.toolbar_amount,
+    transform(str) {
+      return '<div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">'+str+'</div></div>';
+    }
+  }) %>
+</div>
 <!--  END 1-tab  -->
       </div>
       <div class="hide">
 <!--  2-tab  -->
 <div class="title"><%= __('Toolbar.Refresh.title') %><span class="sidetitle"><%= __('Toolbar.Refresh.subtitle') %></span></div>
 <div class="item no-lrpadding">
-	<%- list_posts({
-		orderby: 'updated',
-		style: 'block',
-    separator: '<!--<hr class="separator" />-->',
-		amount: theme.toolbar_amount,
-		transform(str) {
-    		return '<div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">'+str+'</div></div>';
-  		}
-	}) %>
+  <%- list_posts({
+    orderby: 'updated',
+    style: 'block',
+    separator: '',
+    amount: theme.toolbar_amount,
+    transform(str) {
+      return '<div class="title_fa"><i class="fa fa-file-text-o fa-border" style="height: 30px;border: none;"></i><div class="title">'+str+'</div></div>';
+    }
+  }) %>
 </div>
 <!--  END 2-tab  -->
       </div>
@@ -43,19 +44,18 @@
 <!--  3-tab  -->
 <% if(theme.toolbar_third){ %>
   <div class="title"><%= __('Toolbar.Another.title') %><a data-bs-toggle="tooltip" href="javascript:document.body.contentEditable='true';document.designMode='on';void(0);" title="<%= __('Toolbar.Another.coloregg') %>" target="_self" class="sidetitle"><%= __('Toolbar.Another.subtitle') %></a></div>
-
   <div style="height: 10px;"></div>
+  <div id="showTime"><script type="text/javascript" src="/js/core/showtime.js"></script></div>
   <div class="item">
-    <div id="displaytime"><script type="text/javascript" src="/js/core/displaytime.js"></script></div>
     <div id="timeprogress"></div>
     <script>
-		var myDate = new Date();
-		var hours = myDate.getHours();
-		var minutes = myDate.getMinutes();
-		minutes = hours * 60 + minutes;
-		var pro = minutes / 14.4;
-		var innerhtml="<div class=\"progress\" style='height: 20px'><div data-bs-toggle='tooltip' class=\"progress-bar\" title=\"<%= __('Progress') %>"+pro.toFixed(2)+"%\"style=\"width: "+pro+"%; background-color: #4caf50; color: #fff;\">"+pro.toFixed(0)+"%</div></div>";
-		document.getElementById("timeprogress").innerHTML = innerhtml;
+      var myDate = new Date();
+      var hours = myDate.getHours();
+      var minutes = myDate.getMinutes();
+      minutes = hours * 60 + minutes;
+      var pro = minutes / 14.4;
+      var innerhtml="<div class=\"progress\" style='height: 20px'><div data-bs-toggle='tooltip' class=\"progress-bar\" title=\"<%= __('Progress') %>"+pro.toFixed(2)+"%\"style=\"width: "+pro+"%; background-color: #4caf50; color: #fff;\">"+pro.toFixed(0)+"%</div></div>";
+      document.getElementById("timeprogress").innerHTML = innerhtml;
     </script>
   </div>
 
@@ -78,23 +78,37 @@
 
   <% if(theme.toolbar_info){ %>
   <div class="item">
-  	<div class="title"><%= __('Info.name') %></div>
+    <div class="title"><%= __('Info.name') %></div>
     <div class="list-group">
-  	  <div class="list-group-item"><div><i class="fa fa-file-text-o fa-fw"></i>&nbsp;<%= __('Info.count') %></div><div class="badge"><%= site.posts.length %></div></div>
-  	  <div class="list-group-item"><div><i class="fa fa-refresh fa-fw"></i>&nbsp;<%= __('Info.update') %></div><div class="badge"><%= date(page.updated, "MM-DD") %></div></div>
-  	  <div class="list-group-item"><div><i class="fa fa-font fa-fw"></i>&nbsp;<%= __('Info.words') %></div><div class="badge"><%= totalcount(site) %></span></div></div>
+      <div class="list-group-item"><div><i class="fa fa-file-text-o fa-fw"></i>&nbsp;<%= __('Info.count') %></div><div class="badge"><%= site.posts.length %></div></div>
+      <div class="list-group-item"><div><i class="fa fa-refresh fa-fw"></i>&nbsp;<%= __('Info.update') %></div><div class="badge"><%= date(page.updated, "MM-DD") %></div></div>
+      <div class="list-group-item"><div><i class="fa fa-font fa-fw"></i>&nbsp;<%= __('Info.words') %></div><div class="badge"><%= totalcount(site) %></span></div></div>
     </div>
   </div><% } %>
 
   <% if(toc(page.content,{list_number: false})){ %><!-- 标签可能太多，影响目录 -->
     <div class="post-toc">
-    	<div class="title"><%= __('Post_Toc') %></div>
-    	<div class="post-toc-inner"><%- toc(page.content,{list_number: false,max_depth: page.tocd?page.tocd:3}) %></div>
+      <div class="title"><%= __('Post_Toc') %></div>
+      <div class="post-toc-inner">
+        <%- toc(page.content, {
+          list_number: false,
+          max_depth: page.tocd ? page.tocd : toc_depth
+        }) %>
+        </div>
     </div>
   <% }else if(theme.tag_cloud.enable){ %>
     <div class="item">
       <div class="title"><%= __('Tag_Cloud') %></div>
-      <div class="toolbar-tag-cloud"><%- tagcloud({min_font: theme.tag_cloud.font.from, max_font: theme.tag_cloud.font.to, amount: 200, color: true, start_color: theme.tag_cloud.color.from,  end_color: theme.tag_cloud.color.to}) %></div>
+      <div class="toolbar-tag-cloud">
+        <%- tagcloud({
+          min_font: theme.tag_cloud.font.from,
+          max_font: theme.tag_cloud.font.to,
+          amount: 200,
+          color: true,
+          start_color: theme.tag_cloud.color.from,
+          end_color: theme.tag_cloud.color.to
+        }) %>
+      </div>
     </div>
   <% } %> 
 

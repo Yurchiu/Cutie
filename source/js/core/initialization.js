@@ -3,7 +3,7 @@ var article_width;
 
 function initialization()
 {
-	var back = document.getElementById('backtop');
+	var back = document.getElementById('back2Top');
     back.style.display ='none';
     document.onscroll = function()
     {
@@ -19,7 +19,7 @@ function initialization()
   	article_width = $(".article").css("width");
 
     hljs.highlightAll();
-    displaytime();
+    showTime();
 
     $(".chaffle").chaffle();
     $("#siteLoading").hide();

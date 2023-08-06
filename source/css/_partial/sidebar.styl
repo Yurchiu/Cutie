@@ -1,102 +1,102 @@
 .sidebar {
-	position: fixed;
-	overflow-y: auto;
-	width: $sidebar-width-1;
-	height: 100%;
-	z-index: $sidebar-z-index;
-	background-color: var(--sidebar-bg-color);
-	border-right: 1px solid var(--sidebar-border-color);
-	box-sizing: border-box;
-	transition: 0.6s all;
+    position: fixed;
+    overflow-y: auto;
+    width: $sidebar-width-1;
+    height: 100%;
+    z-index: $sidebar-z-index;
+    background-color: var(--sidebar-bg-color);
+    border-right: 1px solid var(--sidebar-border-color);
+    box-sizing: border-box;
+    transition: 0.6s all;
 
-	.sidebar-author {
-		text-align: center;
-		font-weight: 700;
-	}
+    .sidebar-author {
+        text-align: center;
+        font-weight: 700;
+    }
 
-	.sidebar-list-container {
-		padding: 7%;
-		max-height: 100%;
-	}
+    .sidebar-list-container {
+        padding: 7%;
+        max-height: 100%;
+    }
 
-	.sidebar-footer {
-		position: fixed;
-		width: $sidebar-width-1;
-		bottom: 0px;
-		background-color: var(--sidebar-footer-bg-color);
-		padding: 10px 0px;
-		display: flex;
-		justify-content: space-around;
-		border: 1px solid var(--sidebar-footer-border-color);
-		box-sizing: border-box;
-		z-index: $sidebar-footer-z-index;
-		.item { 
-			text-align: center;
-			cursor: pointer;
-		}
-		*,.mini-text { color: var(--sidebar-footer-color);}
-	}
+    .sidebar-footer {
+        position: fixed;
+        width: $sidebar-width-1;
+        bottom: 0px;
+        background-color: var(--sidebar-footer-bg-color);
+        padding: 10px 0px;
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid var(--sidebar-footer-border-color);
+        box-sizing: border-box;
+        z-index: $sidebar-footer-z-index;
+        .item { 
+            text-align: center;
+            cursor: pointer;
+        }
+        *,.mini-text { color: var(--sidebar-footer-color);}
+    }
 
-	.mini-text {
-		color: var(--sidebar-text-mini-text-color);
-		font-size: $mini-fs;
-		font-weight: 500;
-	}
+    .mini-text {
+        color: var(--sidebar-text-mini-text-color);
+        font-size: $mini-fs;
+        font-weight: 500;
+    }
 
-	.list-group-item,.list-group-item-current {
-		border-radius: 10px;
-  		padding: 10px 15px;
-  		transition: 0.6s all;
- 		background-color: var(--sidebar-list-group-item-bg-color);
- 		color: var(--sidebar-list-group-item-color);
- 		display: flex;
- 		justify-content: space-between;
-  	}
+    .list-group-item,.list-group-item-current {
+        border-radius: 10px;
+        padding: 10px 15px;
+        transition: 0.6s all;
+        background-color: var(--sidebar-list-group-item-bg-color);
+        color: var(--sidebar-list-group-item-color);
+        display: flex;
+        justify-content: space-between;
+      }
 
-  	.list-group-item {
-  		&:hover,&:focus {
-    		color: var(--sidebar-list-group-item-hover-color);
-    		background-color: var(--sidebar-list-group-item-hover-bg-color);
-  		}
-  	}
+    .list-group-item {
+        &:hover,&:focus {
+            color: var(--sidebar-list-group-item-hover-color);
+            background-color: var(--sidebar-list-group-item-hover-bg-color);
+        }
+    }
 
-	.list-group-item-current {
-  		color: var(--sidebar-list-group-item-current-color);
-    	background-color: var(--sidebar-list-group-item-current-bg-color);
-  	}
+    .list-group-item-current {
+        color: var(--sidebar-list-group-item-current-color);
+        background-color: var(--sidebar-list-group-item-current-bg-color);
+    }
 
-	.badge {
-		background-color: var(--sidebar-badge-bg-color);
-	}
+    .badge {
+        background-color: var(--sidebar-badge-bg-color);
+    }
 }
 
 .fake-sidebar {
-	width: $sidebar-width-1;
-	height: 100%;
+    width: $sidebar-width-1;
+    height: 100%;
 }
 
-@media screen and (max-width: $dividing-1) {
+@media screen and (max-width: $width-1) {
     .sidebar,.fake-sidebar {width: $sidebar-width-2;}
     .sidebar-footer {width: $sidebar-width-2;}
 }
 
-@media screen and (max-width: $dividing-2) {
+@media screen and (max-width: $width-2) {
     .sidebar,.fake-sidebar {width: $sidebar-width-3;}
     .sidebar-footer {width: $sidebar-width-3;}
 }
 
-@media screen and (max-width: $dividing-3) {
+@media screen and (max-width: $width-3) {
     .sidebar,.fake-sidebar {
         float: left;
-    	width: $sidebar-width-4;
-   		margin-left: $-sidebar-width-4;
+        width: $sidebar-width-4;
+        margin-left: $-sidebar-width-4;
     }
     .sidebar-display {
-    	margin-left: 0;
+        margin-left: 0;
     }
 }
 
 .sidebar::-webkit-scrollbar {
-	width: 0;
-	height: 0;
+    width: 0;
+    height: 0;
 }

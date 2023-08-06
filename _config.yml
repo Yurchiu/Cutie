@@ -50,7 +50,7 @@ icon:
 # III 评论
 #
 # 评论功能在不包含 "discomments: true" 的页面开启。
-# 支持两个评论系统。
+# 支持两个评论系统。最多同时启用一个。
 
 comments:
   # LiveRe（来必力）评论系统
@@ -75,20 +75,21 @@ comments:
 
 # IV 自适应
 #
-# 根据设定的宽度（单位为 px）改变显示方式。
+# 根据设定的屏幕宽度（单位为 px）改变显示方式。
 
 responsive:
-  dividing_1: 1170
-  dividing_2: 990
-  # 这里隐去工具栏。
-  dividing_3: 770
-  # 这里隐去侧边栏。
+  width_1: 1170
+  # 低于此数值，使文章区宽度减小。
+  width_2: 990
+  # 低于此数值，工具栏会被置于文章区下方。。
+  width_3: 770
+  # 低于此数值，侧边栏会被隐藏。点击顶部栏的左侧图标弹出侧边栏。
 
 
 
 # V 首页提示
 
-site_warning:
+site_info:
   enable: root   # 可以取这些值：none | root | all。默认值是 none。
   text: "<i class='fa fa-volume-up'></i> 欢迎来到 Yurchiu 的博客！希望我们能相互交流，共同进步～"
   type: success  # 可以取这些值：danger | warning | info | success。
@@ -99,6 +100,9 @@ site_warning:
 
 footer:          # 页脚版权信息。
   left: '©2019-2023 <a href="https://github.com/yz-hs">Yurchiu</a>. All rights reserved.'
+                 # 请勿修改 right。如果是根据本主题进行二创主题，那么请
+                 # 注明是由本主题修改而成。此条件下可以修改 right。
+                 # 本主题采用 MIT 许可协议。
   right: 'Theme <a href="https://github.com/yz-hs/cutie">Cutie</a>, by Yurchiu.'
 
 copyright:       # 文末版权信息。
@@ -106,31 +110,31 @@ copyright:       # 文末版权信息。
                  # all: 在每个页面末尾显示。
                  # post: 只在每个博文末尾显示。
                 
-  statement: '本博客所有文章除特别声明外，均允许规范转载。转载请注明出处！'
+  statement: '本博客中所有原创文章除特别声明外，均允许规范转载，转载请注明出处。所有非原创文章，按照原作者要求转载。'
 
 
 
 # VII 博文摘要
 #
-# 在首页文章卡片中的摘要信息。
+# 在文章卡片中的摘要信息。
 
-post_excerpt:
+excerpt:
   mode: excerpt         # 可以取这些值：excerpt | noexcerpt。默认值是 excerpt。
-                        # excerpt: 如果博文源文件中含有 "<!--more-->"，将会将它前面的内容作为摘要。
-                        # noexcerpt: 所有文章被认为没有摘要。
+                        # excerpt: 如果博文源文件中含有“<!--more-->”，将会将它前面的内容作为摘要。
+                        # noexcerpt: 所有文章被认为不含有“<!--more-->”。
 
-  ifdefault: false      # 大前提：博文源文件中不含有 "<!--more-->"。
-                        # true：展示 "post_default_excerpt" 内容。
+  ifdefault: true       # 大前提：博文源文件中不含有“<!--more-->”。
+                        # true：展示“noexcerpt”内容。
                         # false：展示博文的一部分。
 
   display: html         # 可以取这些值：html | text。默认值是 text。
-                        # html: 仅当博文源文件中含有 "<!--more-->" 时，保留 html 标签。
+                        # html: 仅当博文源文件中含有“<!--more-->”时，保留 html 标签。
                         # text: 任何情况下不保留 html 标签。
 
-  post_default_excerpt: '<i class="fa fa-warning"></i> 本文章无可提供的摘要 qwq。可能 Yurchiu 太懒了，或不适合做摘要。'
-  length_excerpt: 150   # 当展示博文的一部分时，展示的文本字符数。默认是 30。
+  noexcerpt: '<i class="fa fa-warning"></i> <%= config.author %> 没有为本文章提供摘要 qwq<br>可能 <%= config.author %> 太懒了，或本文章没法做摘要。'
+  length: 150   # 当展示博文的一部分时，展示的文本字符数。默认是 30。
 
-  # 注意：如果一篇博文源文件中不含有 "<!--more-->"，而 display 值为 html 时，则效果与 "display: text" 相同。 
+  # 注意：如果一篇博文源文件中不含有“<!--more-->”，而 display 值为 html 时，则效果与“display: text”相同。 
 
 
 
@@ -154,6 +158,7 @@ tag_cloud:
 # https://fonts.googleapis.com/css?family=...
 
 # 引用的谷歌字体
+# 可以有多个。
 fonts:
   - Montserrat
   - Roboto+Mono
@@ -165,7 +170,8 @@ mono_font_family: "'Roboto Mono',sans-serif"
 
 
 # X Aplayer+Meting 底部播放器
-
+#
+# enable 选择 false，访客无法在博客的“设置”页面开启。
 meting:
   enable: true
   server: netease
@@ -184,8 +190,10 @@ avatar:
 
 
 # XII 博客彩蛋
-
+#
+# 本部分选择 false 者，访客均无法在博客的“设置”页面开启。
 colored_eggs:
+  # 看板娘（？）
   # 可以取这些值：santa | natsuki | none，默认值是 none。
   type: natsuki
   width: 140px                       # 人物大小，仅对 natsuki 有用。
@@ -201,6 +209,8 @@ colored_eggs:
 
 # XIII 杂项
 
+# 下面三个选项，博客的“设置”页面没有对应的选项。
+#
 # 侧边栏是否显示标签个数等
 sidebar_num: true
 
@@ -209,6 +219,26 @@ toolbar_info: true
 
 # 工具栏是否显示第三栏
 toolbar_third: true
+
+
+
+# 下面的三个选项，访客可以在博客的“设置”页面更改。
+#
+# 博客默认配色
+# 可以取这些值：std | white | night | none，默认值是 std。 "none" 非常特殊。
+color_schemes: std
+
+# 博客默认特殊效果
+# 可以取这些值：none | grayscale | invert | blur，默认值是 none。
+special: none
+
+# 拉伸页面
+# 将博客界面两端的空隙填充
+stretch: false
+
+# 在博客的“设置”页面中，存在一些本配置文件中没有的设置。
+
+
 
 # 你的 GitHub 名称，用于某些链接
 github_name: yz-hs
@@ -223,14 +253,6 @@ imgcdn:
 
 # 自我简述
 short_des: "An AFO whker."
-
-# 博客默认配色
-# 可以取这些值：std | white | night | none，默认值是 std。 "none" 非常特殊。
-color_schemes: std
-
-# 博客默认特殊效果
-# 可以取这些值：none | grayscale | invert | blur，默认值是 none。
-special: none
 
 # 背景图片地址
 bg_url: /img/new-bgp.jpg  # night-bgp.png
@@ -247,6 +269,9 @@ img_default: /img/error.jpg
 
 # 工具栏“随机文章”等的显示文章个数。
 toolbar_amount: 7
+
+# 默认目录深度。
+toc_depth: 3
 
 
 

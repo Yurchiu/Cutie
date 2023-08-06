@@ -20,7 +20,7 @@ body {
   	margin: 0 auto;
 	box-shadow: 0 0 40px var(--body-shadow-color);
 	height: auto;
-	width: $dividing-1;
+	width: $width-1;
 	line-height: 140%;
 	letter-spacing: 1.3px;
 }
@@ -51,12 +51,12 @@ body {
 
 .appear {display: block !important;}
 
-@media screen and (max-width: $dividing-1) {
+@media screen and (max-width: $width-1) {
     .article {width: $article-width-2;}
-    body {width: $dividing-2;}
+    body {width: $width-2;}
 }
 
-@media screen and (max-width: $dividing-2) {
+@media screen and (max-width: $width-2) {
     .article-stretch {width: auto !important;}
     .article {
         width: $article-width-3;
@@ -64,10 +64,10 @@ body {
         margin-left: $sidebar-width-3;
     }
     .vertical {display: block;}
-	body {width: $dividing-3;}
+	body {width: $width-3;}
 }
 
-@media screen and (max-width: $dividing-3) {
+@media screen and (max-width: $width-3) {
     .article {
         margin: auto;
         width: $article-width-4;

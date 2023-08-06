@@ -17,8 +17,8 @@
 		  <div class="article">
         <div class="vertical fake-sidebar"></div>
         <div class="vertical post">
-          <% if( theme.site_warning.enable=="all" || (theme.site_warning.enable=="root" && url_for(path)==config.root) ){ %>
-            <div class="alert alert-<%= theme.site_warning.type %> alert-dismissible fade show" style=" margin:0;"><button type="button" class="btn-close" data-bs-dismiss="alert"></button><%- theme.site_warning.text %></div>
+          <% if( theme.site_info.enable=="all" || (theme.site_info.enable=="root" && url_for(path)==config.root) ){ %>
+            <div class="alert alert-<%= theme.site_info.type %> alert-dismissible fade show" style=" margin:0;"><button type="button" class="btn-close" data-bs-dismiss="alert"></button><%- theme.site_info.text %></div>
           <% } %>
           <%- body %>
           <div class="avatar-container" style="padding: 50px;">

@@ -1,3 +1,4 @@
+<!-- It is not contained by Pjax. -->
 <!-- 
 !#                                                 #!
 !#                     Chores                      #!
@@ -5,10 +6,13 @@
 -->
 
 <% if(theme.meting.enable) { %>
-	<meting-js class="meting-js appear" fixed="ture" server="<%= theme.meting.server %>" type="<%= theme.meting.type %>" id="<%= theme.meting.id %>"></meting-js>
+    <meting-js class="meting-js appear" fixed="ture" server="<%= theme.meting.server %>" type="<%= theme.meting.type %>" id="<%= theme.meting.id %>"></meting-js>
 <% } %>
 
-<script>consolePrint();HideIt();</script>
+<script>
+    consolePrint();
+    HideIt();
+</script>
 
 <% if(theme.colored_eggs.hair) { %>
 	<script>AprilHair();</script>
