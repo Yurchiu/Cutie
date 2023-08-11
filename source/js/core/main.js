@@ -67,7 +67,7 @@ function topbarToggle() {
 
 function santaColorEgg() {
   $(".santa").attr("onclick","santaRemove()");
-  $(".santa-body").attr("style","font-size: 500px;");
+  $(".santa .body").attr("style","font-size: 500px;");
 }
 function metingRemove() {
   $("meting-js").removeClass("appear");

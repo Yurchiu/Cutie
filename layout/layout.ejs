@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<%- partial('_partial/head') %>
-	<body style="background-image: url(<%= theme.imgcdn %><%= theme.bg_url %>);">
+	<body style="background-image: url(<%- theme.in_cdn %><%- theme.bg_url %>);">
     <div id="siteLoading" class="siteloading">
     <div class="loader-inner">
       <div class="loader-line-wrap"><div class="loader-line"></div></div>
@@ -18,12 +18,12 @@
         <div class="vertical fake-sidebar"></div>
         <div class="vertical post">
           <% if( theme.site_info.enable=="all" || (theme.site_info.enable=="root" && url_for(path)==config.root) ){ %>
-            <div class="alert alert-<%= theme.site_info.type %> alert-dismissible fade show" style=" margin:0;"><button type="button" class="btn-close" data-bs-dismiss="alert"></button><%- theme.site_info.text %></div>
+            <div class="alert alert-<%- theme.site_info.type %> alert-dismissible fade show" style=" margin:0;"><button type="button" class="btn-close" data-bs-dismiss="alert"></button><%- theme.site_info.text %></div>
           <% } %>
           <%- body %>
           <div class="avatar-container" style="padding: 50px;">
-            <img src="<%= theme.imgcdn %><%= theme.avatar.url %>" class="avatar <%= theme.avatar.effect %>" style="height: 12%; width: 12%;"/>
-            <div style="text-align: center; margin-top: 3%;">By <%= config.author %>.</div>
+            <img src="<%- theme.in_cdn %><%- theme.avatar.url %>" class="avatar <%- theme.avatar.effect %>" style="height: 12%; width: 12%;"/>
+            <div style="text-align: center; margin-top: 3%;">By <%- config.author %>.</div>
           </div>
         </div>
         <%- partial('_partial/toolbar') %>

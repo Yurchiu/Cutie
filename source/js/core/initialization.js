@@ -24,7 +24,6 @@ function initialization()
     $(".chaffle").chaffle();
     $("#siteLoading").hide();
     $("table").wrap("<div style='overflow: auto;'></div>");
-    $("mjx-container[display='true']").wrap("<div style='overflow-x: auto;'></div>");
     $("meting-js").addClass("appear");
 
     document.querySelectorAll('pre code').forEach((block) => {hljs.highlightBlock(block);});

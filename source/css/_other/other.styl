@@ -9,24 +9,24 @@
 
 /*  黑幕  */
 
-.text-shady,.text-blur,.text-invsb {
+shady,blur,invsb {
 	transition: 0.6s all;
 	&:hover {transition: 0.6s all;}
 }
 
-.text-black,.text-shady {
+black,shady {
 	color: #000;
 	background-color: #000;
 }
 
-.text-shady:hover {color: #fff;}
+shady:hover {color: #fff;}
 
-.text-blur {
+blur {
 	filter: blur(4px);
 	&:hover {filter: blur(0);}
 }
 
-.text-invsb {
+invsb {
 	opacity: 0;
 	&:hover {opacity: 1;}
 }
@@ -102,7 +102,7 @@ $(function(){
 
 /*  注解文字  */
 
-.text-comments {
+small {
 	color: var(--text-color);
 	font-size: 8px;
 	font-weight: 500;

@@ -18,6 +18,7 @@ Menu:
 Out_Search: Out-Site Search
 Search: Search
 Search_text: Enter keywords to search for ...
+Search_pre: Please click <a href="%s">this</a> before searching.
 
 Topbar: Complain
 

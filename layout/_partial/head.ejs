@@ -7,48 +7,47 @@
   <meta http-equiv='content-language' content='zh-cn'>
   <title>
   	<% if (page.current>1) { %>
-  	    <%= _p('Pages',page.current) %> |
+  	    <%- _p('Pages',page.current) %> |
   	<% } %>
 
     <% if(page.title){ %>
-  		<%= page.title %> |
+  		<%- page.title %> |
   	<% }else if(page.category){ %>
-  		<%= __('Menu.Categories') %> <%= page.category %> |
+  		<%- __('Menu.Categories') %> <%- page.category %> |
   	<% }else if (page.tag) { %>
-  	  <%= __('Menu.Tags') %> <%= page.tag %> |
+  	  <%- __('Menu.Tags') %> <%- page.tag %> |
   	<% }else if (page.archive) { %>
-  	  <%= __('Menu.Archives') %> |
+  	  <%- __('Menu.Archives') %> |
   	<% }else{} %>
 
-  	<%= config.title %>
+  	<%- config.title %>
   </title>
-
-  <script src="<%- theme.cdn.js.jquery %>"></script>
-  <script src="<%- theme.cdn.js.anime %>"></script>
-  <script src="<%- theme.cdn.js.pjax %>"></script>
-  <script src="<%- theme.cdn.js.gitalk %>"></script>
-  <script src="<%= theme.cdn.js.highlight %>"></script>
-  <script src="<%= theme.cdn.js.sweetalert2 %>"></script>
-  <script src="<%= theme.cdn.js.sketch %>"></script>
-  <script src="<%= theme.cdn.js.bootstrap %>"></script>
-  <script src="<%- theme.cdn.js.aplayer %>"></script>
-  <script src="<%- theme.cdn.js.meting %>"></script>
-  <script src="/js/core/main.js"></script>
-  <script src="/js/core/search.js"></script>
-  <script src="/js/core/chaffle.min.js"></script>
-  <script src="/js/core/initialization.js"></script>
-  <link rel="stylesheet" type="text/css" href="<%- theme.cdn.css.aplayer %>">
-  <link rel="stylesheet" type="text/css" href="<%- theme.cdn.css.katex %>">
-  <link rel="stylesheet" type="text/css" href="<%- theme.cdn.css.gitalk %>">
-  <link rel="stylesheet" type="text/css" href="<%= theme.cdn.css.fontawesome %>">
-  <link rel="stylesheet" type="text/css" href="<%= theme.cdn.css.highlight %>">
-  <link rel="stylesheet" type="text/css" href="<%= theme.cdn.css.bootstrap %>">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <link rel="stylesheet" type="text/css" href="/css/colors/std.css">
-  <link rel="stylesheet" type="text/css" href="/css/colors/white.css">
-  <link rel="stylesheet" type="text/css" href="/css/colors/night.css">
-  <link rel="stylesheet" type="text/css" href="/css/special/special.css">
+  <script src="<%- theme.out_cdn.js.jquery %>"></script>
+  <script src="<%- theme.out_cdn.js.anime %>"></script>
+  <script src="<%- theme.out_cdn.js.pjax %>"></script>
+  <script src="<%- theme.out_cdn.js.gitalk %>"></script>
+  <script src="<%- theme.out_cdn.js.highlight %>"></script>
+  <script src="<%- theme.out_cdn.js.sweetalert2 %>"></script>
+  <script src="<%- theme.out_cdn.js.sketch %>"></script>
+  <script src="<%- theme.out_cdn.js.bootstrap %>"></script>
+  <script src="<%- theme.out_cdn.js.aplayer %>"></script>
+  <script src="<%- theme.out_cdn.js.meting %>"></script>
+  <script src="<%- theme.in_cdn %>/js/chaffle.min.js"></script>
+  <script src="<%- theme.in_cdn %>/js/core/main.js"></script>
+  <script src="<%- theme.in_cdn %>/js/core/search.js"></script>
+  <script src="<%- theme.in_cdn %>/js/core/initialization.js"></script>
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.aplayer %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.katex %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.gitalk %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.fontawesome %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.highlight %>">
+  <link rel="stylesheet" href="<%- theme.out_cdn.css.bootstrap %>">
+  <link rel="stylesheet" href="<%- theme.in_cdn %>/css/style.css">
+  <link rel="stylesheet" href="<%- theme.in_cdn %>/css/colors/std.css">
+  <link rel="stylesheet" href="<%- theme.in_cdn %>/css/colors/white.css">
+  <link rel="stylesheet" href="<%- theme.in_cdn %>/css/colors/night.css">
+  <link rel="stylesheet" href="<%- theme.in_cdn %>/css/special/special.css">
   <% for (name in theme.fonts) { %>
-     <link href="<%- theme.cdn.css.googlefont %>/css?family=<%- theme.fonts[name] %>" rel="stylesheet">
+     <link href="<%- theme.out_cdn.css.googlefont %>/css?family=<%- theme.fonts[name] %>" rel="stylesheet">
   <% } %>
 </head>

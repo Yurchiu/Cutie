@@ -1,67 +1,70 @@
 <div class="header">
-    <h1 class="title">
-    	<% if(page.title){ %>
-         <%= page.title %>
+  <h1 class="title">
+    <% if(page.title){ %>
+      <%- page.title %>
+    <% }else{ %>
+      <%- __('NoTitle') %>
+    <% } %>
+  </h1>
+  <div class="meta">
+    <span><i class="fa fa-user-o"></i>
+      <% if(page.author){ %>
+        <%- page.author %>
       <% }else{ %>
-        <%= __('NoTitle') %>
-      <% } %>
-    </h1>
-    <div class="meta">
-	   <span><i class="fa fa-user-o"></i>
-        <% if(page.author){ %>
-          <%= page.author %>
-        <% }else{ %>
-          <%= config.author %>
-        <% } %> 
-      </span>
-	    <span><i class="fa fa-clock-o"></i> <%= date(page.date, theme.time_format) %></span>
-      <span><i class="fa fa-font"></i> <%= wordcount(page.content) %></span>
-      <% if(page.top){ %>
-        <span><i class="fa fa-thumb-tack"></i> <%= __('Posts.Top') %></span>
-      <% } %>
-      <% if(page.password){ %>
-        <span><i class="fa fa-lock"></i> <%= __('Posts.Password') %></span>
-      <% } %>
-      <span class="hideBars" onclick="hideBars()"><i class="fa fa-eye-slash"></i> <%= __('Hide') %></span>
-      <span class="showBars" onclick="showBars()"><i class="fa fa-eye"></i> <%= __('Show') %></span>
-    </div>
+        <%- config.author %>
+      <% } %> 
+    </span>
+    <span><i class="fa fa-clock-o"></i> <%- date(page.date, theme.time_format) %></span>
+    <span><i class="fa fa-font"></i> <%- wordcount(page.content) %></span>
+    <% if(page.top){ %>
+      <span><i class="fa fa-thumb-tack"></i> <%- __('Posts.Top') %></span>
+    <% }if(page.password){ %>
+      <span><i class="fa fa-lock"></i> <%- __('Posts.Password') %></span>
+    <% } %>
+    <span class="hideBars" onclick="hideBars()"><i class="fa fa-eye-slash"></i>
+      <%- __('Hide') %>
+    </span>
+    <span class="showBars" onclick="showBars()"><i class="fa fa-eye"></i>
+      <%- __('Show') %>
+    </span>
+  </div>
 </div>
 <div class="breadcrumb">
-    <div class="url">
-      <a href="/"><i class="fa fa-home"></i> <%= __('Menu.Home') %></a> /
-        <% if(page.title){ %>
-          <%= page.title %>
-        <% }else{ %>
-          <%= __('NoTitle') %>
-        <% } %>
-    </div>
-    <div class="share">
-      <%= __('Posts.Share') %> <a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%= page.permalink %>&title=<%= page.title %>&site=<%= config.url %>"><i class="fa fa-qq"></i></a>
-    </div>
+  <div class="url">
+    <a href="/"><i class="fa fa-home"></i><%- __('Menu.Home') %></a> /
+    <% if(page.title){ %>
+      <%- page.title %>
+    <% }else{ %>
+      <%- __('NoTitle') %>
+    <% } %>
+  </div>
+  <div class="share">
+    <%- __('Posts.Share') %> <a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%- page.permalink %>&title=<%- page.title %>&site=<%- config.url %>"><i class="fa fa-qq"></i></a>
+  </div>
 </div>
 <% if(page.bgimg) { %>
-<div class="post-bgimg-item" style="background-image: url(<%= theme.imgcdn %><%= page.bgimg %>);
-    height: 
-      <% if(page.height){ %>
-        <%- page.height %>
-      <% }else{ %> 30em; <% } %>
-    "></div>
+<div class="post-bgimg-item" style="background-image: url(<%- theme.in_cdn %><%- page.bgimg %>);
+  height: 
+    <% if(page.height){ %>
+      <%- page.height %>
+    <% }else{ %> 30em; <% } %>
+  "></div>
 <% } %>
 <div class="post-text">
-    <%- page.content %>
-    <%- partial('_partial/end-post') %>
+  <%- page.content %>
+  <%- partial('_partial/end-post') %>
 </div>
 <% if(is_post()){ %>
-    <div class="prevnext">
-  	  <% if(page.prev){ %>
-  	  	  <a class="prev" href="<%= url_for(page.prev.path) %>"><%= __('Paginator.Prev') %></a>
-  	  <% }else{ %>
-  	  	  <span class="prev"><%= __('Paginator.None') %></span>
-  	  <% }if(page.next){ %>
-  		  <a class="next" href="<%= url_for(page.next.path) %>"><%= __('Paginator.Next') %></a>
-  	  <% }else{ %>
-  	  	  <span class="next"><%= __('Paginator.None') %></span>
-  	  <% } %>
-    </div>
+  <div class="prevnext">
+    <% if(page.prev){ %>
+      <a class="prev" href="<%- url_for(page.prev.path) %>"><%- __('Paginator.Prev') %></a>
+    <% }else{ %>
+      <span class="prev"><%- __('Paginator.None') %></span>
+    <% }if(page.next){ %>
+      <a class="next" href="<%- url_for(page.next.path) %>"><%- __('Paginator.Next') %></a>
+    <% }else{ %>
+      <span class="next"><%- __('Paginator.None') %></span>
+    <% } %>
+  </div>
 <% } %>
 <%- partial('_partial/comments') %>

@@ -81,7 +81,7 @@ responsive:
   width_1: 1170
   # 低于此数值，使文章区宽度减小。
   width_2: 990
-  # 低于此数值，工具栏会被置于文章区下方。。
+  # 低于此数值，工具栏会被置于文章区下方。
   width_3: 770
   # 低于此数值，侧边栏会被隐藏。点击顶部栏的左侧图标弹出侧边栏。
 
@@ -123,7 +123,7 @@ excerpt:
                         # excerpt: 如果博文源文件中含有“<!--more-->”，将会将它前面的内容作为摘要。
                         # noexcerpt: 所有文章被认为不含有“<!--more-->”。
 
-  ifdefault: true       # 大前提：博文源文件中不含有“<!--more-->”。
+  ifdefault: false      # 大前提：博文源文件中不含有“<!--more-->”。
                         # true：展示“noexcerpt”内容。
                         # false：展示博文的一部分。
 
@@ -131,7 +131,7 @@ excerpt:
                         # html: 仅当博文源文件中含有“<!--more-->”时，保留 html 标签。
                         # text: 任何情况下不保留 html 标签。
 
-  noexcerpt: '<i class="fa fa-warning"></i> <%= config.author %> 没有为本文章提供摘要 qwq<br>可能 <%= config.author %> 太懒了，或本文章没法做摘要。'
+  noexcerpt: '<i class="fa fa-warning"></i> Yurchiu 没有为本文章提供摘要 qwq。可能 Yurchiu 太懒了，或本文章没法做摘要。'
   length: 150   # 当展示博文的一部分时，展示的文本字符数。默认是 30。
 
   # 注意：如果一篇博文源文件中不含有“<!--more-->”，而 display 值为 html 时，则效果与“display: text”相同。 
@@ -196,7 +196,7 @@ colored_eggs:
   # 看板娘（？）
   # 可以取这些值：santa | natsuki | none，默认值是 none。
   type: natsuki
-  width: 140px                       # 人物大小，仅对 natsuki 有用。
+  width: 140px                       # 人物大小。
   time: 0.55s                        # 动画时间，仅对 natsuki 有用。
   bezier: cubic-bezier(0, 0, 0, 1)   # 贝塞尔曲线，仅对 natsuki 有用。
                                      # 对于 natsuki，可以在 source 文件夹中的 img 文件夹更改图片。
@@ -244,12 +244,12 @@ stretch: false
 github_name: yz-hs
 
 # 图片背景卡片 高度默认值
-ImgCard_h: 30em
+imgcard_h: 30em
 
-# 图片加速 CDN，可选
-# 对头像、背景图片、图片文章卡片等进行加速。
-# Jsdelivr 提供加速服务：https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
-imgcdn: 
+# Jsdelivr 提供的加速 CDN，可选。不填，请留下空引号 `""`
+# 对本主题中的静态资源进行加速。
+# https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
+in_cdn: ""
 
 # 自我简述
 short_des: "An AFO whker."
@@ -283,9 +283,9 @@ toc_depth: 3
 
 
 # 本主题使用的 CDN。
-cdn:
+out_cdn:
   css:
-    katex: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.6/katex.min.css
+    katex: https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.min.css
     gitalk: https://unpkg.com/gitalk/dist/gitalk.css
     googlefont: https://fonts.googleapis.com
     highlight: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css

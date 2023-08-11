@@ -2,15 +2,15 @@
 
 <a class="santa-container" data-bs-toggle="tooltip" title="Don't touch me! qwq">
   <div class="santa" onclick="santaColorEgg()">
-    <div class="santa-body">
-        <div class="santa-head">
-            <div class="santa-ear"></div>
-            <div class="santa-ear"></div>
-            <div class="santa-hat"></div>
-            <div class="santa-eye"></div>
-            <div class="santa-eye"></div>
-            <div class="santa-nose"></div>
-            <div class="santa-mouth"></div>
+    <div class="body" style="font-size: <%- theme.colored_eggs.width %>">
+        <div class="head">
+            <div class="ear"></div>
+            <div class="ear"></div>
+            <div class="hat"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
         </div>
     </div>
   </div>
@@ -18,15 +18,15 @@
 
 <% }else if(theme.colored_eggs.type == "natsuki"){%>
 
-<div class="natsuki-container" style="width: <%= theme.colored_eggs.width %>" data-bs-toggle="tooltip" title="Don't touch me! qwq">
-    <img id="natsuki2" width="100%" height="100%" src="<%= theme.imgcdn %>/img/natsuki2.png">
-    <img id="natsuki1" width="100%" height="100%" src="<%= theme.imgcdn %>/img/natsuki1.png">
+<div class="natsuki-container" style="width: <%- theme.colored_eggs.width %>" data-bs-toggle="tooltip" title="Don't touch me! qwq">
+    <img id="natsuki2" width="100%" height="100%" src="<%- theme.in_cdn %>/img/natsuki2.png">
+    <img id="natsuki1" width="100%" height="100%" src="<%- theme.in_cdn %>/img/natsuki1.png">
 </div>
 <script type="text/javascript">
     $("#natsuki1").click(function(){
         $("#natsuki1").hide();
         $("#natsuki2").show();
-        $("#natsuki2").css("animation","natsuki <%= theme.colored_eggs.time %> <%= theme.colored_eggs.bezier %>");
+        $("#natsuki2").css("animation","natsuki <%- theme.colored_eggs.time %> <%- theme.colored_eggs.bezier %>");
     });
     $("#natsuki2").each(function(){
         $(this)[0].addEventListener("animationend",function() {

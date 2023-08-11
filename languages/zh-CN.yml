@@ -18,6 +18,7 @@ Menu:
 Out_Search: 站外搜索
 Search: 搜索
 Search_text: 输入关键词搜索...
+Search_pre: 搜索前请点击这个<a href="%s">链接</a>。
 
 Topbar: 吐槽
 

@@ -5,7 +5,7 @@
     li {
         margin: 0 0 2em;
 
-        .ava {
+        img:first-child {
             width: 60px;
             height: 60px;
             display: block;
@@ -16,41 +16,41 @@
         &:last-child {
             margin-bottom: 0;
         }
-        &:nth-child(4n) .inner:before {
+        &:nth-child(4n) inner:before {
             border-right-color: #70c3ff;
         }
-        &:nth-child(4n) .inner {
+        &:nth-child(4n) inner {
             background: #70c3ff;
         }
-        &:nth-child(4n-1) .inner:before {
+        &:nth-child(4n-1) inner:before {
             border-right-color: #7f8ea0;
         }
-        &:nth-child(4n-1) .inner {
+        &:nth-child(4n-1) inner {
             background: #7f8ea0;
         }
-        &:nth-child(4n-2) .inner:before {
+        &:nth-child(4n-2) inner:before {
             border-right-color: #89d04f;
         }
-        &:nth-child(4n-2) .inner {
+        &:nth-child(4n-2) inner {
             background: #89d04f;
         }
         &:hover {
-            .inner {
+            inner {
                 transform: rotateY(-20deg);
                 transform-style: preserve-3d;
             }
-            .inner {
+            inner {
                 box-shadow: 0.8em 0 0.8em -0.5em rgba(0,0,0,.4);
             }
         }
     }
 
-    .text {
+    text {
         padding-left: 5.2em;
         color: #fff;
         max-width: 100%;
 
-        .inner {
+        inner {
             position: relative;
             padding: 0.8em;
             background: #fd6a7f;
@@ -70,17 +70,16 @@
         }
     }
 
-    li, .inner {
+    li, inner {
         transition: all .8s cubic-bezier(.59,1.45,.69,.98) .2s;
     }
 
-    .info {
+    info {
         border-top: 0.18em dashed rgba(82, 82, 82, 0.38);
         margin-top: 0.6em;
         padding-top: 0.6em;
     }
 
-    .info span {
-        margin-right: 0.4em;
-    }
+    inner,text,info {display: block;}
+
 }/*From mkBlog*/

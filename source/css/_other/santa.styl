@@ -8,47 +8,33 @@
 
 #natsuki2 {display: none;}
 
-.santa-body {
-    font-size: 100px;
+.santa-container {
+
+.body {
     color: #f91047;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     width: 1em;
     height: 1em;
     background-color: currentColor;
-    -webkit-box-shadow: inset 0 -0.25em rgba(0,0,0,0.1);
     box-shadow: inset 0 -0.25em rgba(0,0,0,0.1);
     border-radius: 50%;
-    -webkit-transform-origin: center bottom;
-        -ms-transform-origin: center bottom;
-            transform-origin: center bottom;
-    -webkit-animation: balance alternate infinite 2s ease-in-out;
-            animation: balance alternate infinite 2s ease-in-out;
+    transform-origin: center bottom;
+    animation: balance alternate infinite 2s ease-in-out;
 }
  
-.santa-head {
+.head {
     font-size: .4em;
     width: 1em;
     height: 1.9em;
     background-color: white;
     border-radius: .5em;
-    -webkit-transform: translateY(-1em);
-        -ms-transform: translateY(-1em);
-            transform: translateY(-1em);
+    transform: translateY(-1em);
     position: relative;
 }
  
-.santa-head::before {
+.head::before {
     content: '';
     width: 1em;
     height: .375em;
@@ -59,7 +45,7 @@
     top: .65em;
 }
  
-.santa-ear {
+.ear {
     background-color: #fc8363;
     width: .1em;
     height: .3em;
@@ -67,30 +53,28 @@
     top: .75em;
 }
  
-.santa-ear:nth-of-type(1) {
+.ear:nth-of-type(1) {
     border-radius: .05em 0 0 .05em;
     left: -0.1em;
 }
  
-.santa-ear:nth-of-type(2) {
+.ear:nth-of-type(2) {
     border-radius: 0 .05em .05em 0;
     right: -0.1em;
 }
  
-.santa-hat {
+.hat {
     content: '';
     width: 1em;
     height: .15em;
     position: absolute;
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
+    transform: scale(1.1);
     top: .5em;
     left: 0;
     background-color: white;
 }
  
-.santa-hat::before {
+.hat::before {
     content: '';
     display: block;
     width: 1em;
@@ -102,7 +86,7 @@
     top: -0.5em;
 }
  
-.santa-hat::after {
+.hat::after {
     content: '';
     width: .25em;
     height: .25em;
@@ -113,11 +97,10 @@
     z-index: 0;
     top: -0.72em;
     right: 0;
-    -webkit-box-shadow: -0.2em .2em 0 .12em rgba(0,0,0,0.2),-0.2em .2em 0 .12em #f91047;
-            box-shadow: -0.2em .2em 0 .12em rgba(0,0,0,0.2),-0.2em .2em 0 .12em #f91047;
+    box-shadow: -0.2em .2em 0 .12em rgba(0,0,0,0.2),-0.2em .2em 0 .12em #f91047;
 }
  
-.santa-eye {
+.eye {
     width: .12em;
     height: .12em;
     background-color: black;
@@ -127,12 +110,12 @@
     left: .2em;
 }
  
-.santa-eye+.santa-eye {
+.eye+.eye {
     left: auto;
     right: .2em;
 }
  
-.santa-nose {
+.nose {
     width: .12em;
     height: .22em;
     background-color: #f24c4c;
@@ -140,12 +123,10 @@
     position: absolute;
     top: .84em;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
 }
  
-.santa-mouth {
+.mouth {
     width: .18em;
     height: .1em;
     border-bottom-right-radius: 5vw;
@@ -155,11 +136,9 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-animation: hohoho 4s linear forwards infinite;
-            animation: hohoho 4s linear forwards infinite;
+    transform: translate(-50%, -50%);
+    animation: hohoho 4s linear forwards infinite;
+}
 }
  
 @-webkit-keyframes hohoho {
@@ -193,27 +172,13 @@
 }
  
 @-webkit-keyframes balance {
-    from {
-        -webkit-transform: rotate(-4deg);
-                transform: rotate(-4deg);
-    }
- 
-    to {
-        -webkit-transform: rotate(4deg);
-                transform: rotate(4deg);
-    }
+    from {transform: rotate(-4deg);}
+    to {transform: rotate(4deg);}
 }
  
 @keyframes balance {
-    from {
-        -webkit-transform: rotate(-4deg);
-                transform: rotate(-4deg);
-    }
- 
-    to {
-        -webkit-transform: rotate(4deg);
-                transform: rotate(4deg);
-    }
+    from {transform: rotate(-4deg);}
+    to {transform: rotate(4deg);}
 }
  
 /*
@@ -221,29 +186,23 @@ How to display:
 
 HTML:
 <div class="santa">
-    <div class="santa-body">
-        <div class="santa-head">
-            <div class="santa-ear"></div>
-            <div class="santa-ear"></div>
-            <div class="santa-hat"></div>
-            <div class="santa-eye"></div>
-            <div class="santa-eye"></div>
-            <div class="santa-nose"></div>
-            <div class="santa-mouth"></div>
+    <div class="body">
+        <div class="head">
+            <div class="ear"></div>
+            <div class="ear"></div>
+            <div class="hat"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
         </div>
     </div>
 </div>
 */
 
 
-@keyframes natsuki { /* css事件*/
-	0% {
- 		transform: translate(0px, 0px);
- 	}
- 	50% {
- 		transform: translate(0px, -100px); /*可配i跳动方向*/
- 	}
- 	100% {
- 		transform: translate(0px, 0px);
- 	}
+@keyframes natsuki {
+	0% {transform: translate(0px, 0px);}
+ 	50% {transform: translate(0px, -100px);}
+ 	100% {transform: translate(0px, 0px);}
 }

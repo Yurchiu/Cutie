@@ -1,50 +1,50 @@
 <div class="header">
-  	<h1 class="title">
-  	    <% if (page.category) { %>
-  	      <%= page.category %>
-  	    <% }else if (page.tag) { %>
-  	      <%= page.tag %>
-  	    <% }else{ %>
-  	      <%= __('Menu.Archives') %>
-  	    <% } %>
-  	</h1>
-  	<div class="meta">
-  	    <% if (page.category) { %>
-  	      <%= _p('Archives.Categories',page.category) %>
-  	    <% }else if (page.tag) { %>
-  	      <%= _p('Archives.Tags',page.tag) %>
-        <% }else if(url_for(page.path)==url_for(theme.Menu.Archives)) { %>
-          <%= _p('Archives.Archives',site.posts.length)%>
-  	    <% }else{ %>
-  	      <%= __('Archives.Dates')%>
-  	    <% } %>
-  	</div>
+  <h1 class="title">
+    <% if (page.category) { %>
+      <%- page.category %>
+    <% }else if (page.tag) { %>
+      <%- page.tag %>
+    <% }else{ %>
+      <%- __('Menu.Archives') %>
+    <% } %>
+  </h1>
+  <div class="meta">
+    <% if (page.category) { %>
+      <%- _p('Archives.Categories',page.category) %>
+    <% }else if (page.tag) { %>
+      <%- _p('Archives.Tags',page.tag) %>
+    <% }else if(url_for(page.path)==url_for(theme.Menu.Archives)) { %>
+      <%- _p('Archives.Archives',site.posts.length)%>
+    <% }else{ %>
+      <%- __('Archives.Dates')%>
+    <% } %>
+    </div>
 </div>
 <div class="post-text archives">
-  	<ol class="timeline">
-  	<% Lyear = -1, Lmonth = -1; %>
-    <% page.posts.each( function (post) { %>
-      <li>
-      	<% Year = post.date.year(), Month = post.date.month(); %>
-      	<% if ( Lyear != Year ){ %>
-      		<h2><a href="/archives/<%= Year %>"><%= Year %></a></h2>
-      		<% Lyear = Year; Lmonth = -1; %>
-      	<% } %>
-      	<% if ( Lmonth != Month ){ %>
-          <% Smonth = Month + 1; if ( Smonth <= 9 ) Smonth = "0" + Smonth.toString(); %>
-      		<h3><a href="/archives/<%= Year %>/<%= Smonth %>"><%= Smonth %></a></h3>
-      		<% Lmonth = Month; %>
-      	<% } %>
-        <b class="date"><%= date(post.date, "YYYY-MM-DD") %></b>
-        <a class="title" href="<%- url_for(post.path) %>">
-          <% if(post.title){ %>
-            <%= post.title %>
-          <% }else{ %>
-            <%= __('NoTitle') %>
-          <% } %>
-        </a>
-      </li>
-    <% }) %>
-    </ol>
+  <ol class="timeline">
+  <% Lyear = -1, Lmonth = -1; %>
+  <% page.posts.each( function (post) { %>
+    <li>
+      <% Year = post.date.year(), Month = post.date.month(); %>
+      <% if ( Lyear != Year ){ %>
+        <h2><a href="/archives/<%- Year %>/index.html"><%- Year %></a></h2>
+        <% Lyear = Year; Lmonth = -1; %>
+      <% } %>
+      <% if ( Lmonth != Month ){ %>
+        <% Smonth = Month + 1; if ( Smonth <= 9 ) Smonth = "0" + Smonth.toString(); %>
+        <h3><a href="/archives/<%- Year %>/<%- Smonth %>/index.html"><%- Smonth %></a></h3>
+        <% Lmonth = Month; %>
+      <% } %>
+      <b class="date"><%- date(post.date, "YYYY-MM-DD") %></b>
+      <a class="title" href="<%- url_for(post.path) %>">
+        <% if(post.title){ %>
+          <%- post.title %>
+        <% }else{ %>
+          <%- __('NoTitle') %>
+        <% } %>
+      </a>
+    </li>
+  <% }) %>
+  </ol>
 </div>
 <%- partial('_partial/paginator') %>
