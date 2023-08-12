@@ -1,16 +1,18 @@
 calc-width(a , b)
     return a - b;
 
-$sidebar-width-1  = 220px;
-$sidebar-width-2  = 220px;
-$sidebar-width-3  = 220px;
-$sidebar-width-4  = 220px;
-$-sidebar-width-4 = -220px;
+$sidebar-width-1       = 220px;
+$sidebar-width-2       = 220px;
+$sidebar-width-3       = 220px;
+$sidebar-width-4       = 220px;
+$sidebar-width-n       = -220px;
+$sidebar-fmargin       = 8px;
+$sidebar-f-width       = calc-width($sidebar-width-1,2*$sidebar-fmargin)
 
-$toolbar-width-1  = 240px;
-$toolbar-width-2  = 240px;
+$toolbar-width-1       = 240px;
+$toolbar-width-2       = 240px;
 
-$article-width-1  = $width-1;
-$article-width-2  = $width-2;
-$article-width-3  = calc-width($width-3,$sidebar-width-3);
-$article-width-4  = 100%;
+$article-width-1       = $width-1;
+$article-width-2       = $width-2;
+$article-width-3       = calc-width($width-3,$sidebar-width-3);
+$article-width-4       = 100%;

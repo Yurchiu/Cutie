@@ -9,7 +9,7 @@ night 配色
 
 --text-color                                                     : #aaa;
 
---siteloading-bg-color                                           : rgba(33, 33, 33, .7);
+--YurLoading-bg-color                                            : rgba(33, 33, 33, .7);
 --scrollbar-bg-color                                             : #444;
 --scrollbar-color                                                : #666;
 --body-shadow-color                                              : #999;
@@ -70,7 +70,7 @@ night 配色
 
 --sidebar-border-color                                           : #333;
 --sidebar-bg-color                                               : #333;
---sidebar-footer-border-color                                    : #222;
+--sidebar-footer-border-color                                    : #555;
 --sidebar-footer-bg-color                                        : #222;
 --sidebar-footer-color                                           : #98a6ad;
 --sidebar-text-mini-text-color                                   : #98a6ad;

@@ -22,7 +22,7 @@ function initialization()
     showTime();
 
     $(".chaffle").chaffle();
-    $("#siteLoading").hide();
+    $("#YurLoading").hide();
     $("table").wrap("<div style='overflow: auto;'></div>");
     $("meting-js").addClass("appear");
 
@@ -37,5 +37,5 @@ function initialization()
 }
 
 $(document).pjax('a[target!=_blank][pjax!="no"]', '#pjax', {fragment:'#pjax', timeout:6000});
-$(document).on('pjax:send', function() {$("#siteLoading").show();});
-$(document).on('pjax:complete', function() {$("#siteLoading").hide();});
+$(document).on('pjax:send', function() {$("#YurLoading").show();});
+$(document).on('pjax:complete', function() {$("#YurLoading").hide();});

@@ -2,12 +2,13 @@
   <div class="avatar-container">
   	<img src="<%- theme.in_cdn %><%- theme.avatar.url %>" class="avatar <%- theme.avatar.effect %>" />
   </div>
+
   <div class="sidebar-author">
     <%- config.author %><br />
     <span class="mini-text"><%- theme.short_des %></span>
   </div>
+
   <div class="sidebar-list-container">
-  <div class="mini-text"><%- __('Sidebar_list') %></div>
     <div style="height: 10px;"></div>
   	<% for (name in theme.Menu) { %>
       <% var classname = "list-group-item"; %>
@@ -26,15 +27,16 @@
     <% } %>
     <div style="height: 200px;"></div>
   </div>
+
   <div class="sidebar-footer">
-  	<div class="item" id="back2Top">
-  		<i class="fa fa-arrow-circle-up"></i><div class="mini-text"><%- __('B2D') %></div>
+  	<div class="item" id="back2Top" data-bs-toggle="tooltip" title="<%- __('B2D') %>">
+  		<i class="fa fa-arrow-circle-up"></i>
   	</div>
-  	<div class="item">
-  		<a href="/atom.xml"><i class="fa fa-feed"></i><div class="mini-text">RSS</div></a>
+  	<div class="item" data-bs-toggle="tooltip" title="RSS">
+  		<a href="/atom.xml"><i class="fa fa-feed"></i></a>
   	</div>
-  	<div class="item">
-  		<a href="<%- url_for(theme.Search) %>"><i class="fa <%- theme.icon.Search %>"></i><div class="mini-text"><%- __('Search') %></div></a>
+  	<div class="item"  data-bs-toggle="tooltip" title="<%- __('Search') %>">
+  		<a href="<%- url_for(theme.Search) %>"><i class="fa <%- theme.icon.Search %>"></i></a>
   	</div>
   </div>
 </div>

@@ -20,21 +20,22 @@
     }
 
     .sidebar-footer {
+        margin: $sidebar-fmargin;
         position: fixed;
-        width: $sidebar-width-1;
+        width: $sidebar-f-width;
         bottom: 0px;
         background-color: var(--sidebar-footer-bg-color);
         padding: 10px 0px;
         display: flex;
         justify-content: space-around;
-        border: 1px solid var(--sidebar-footer-border-color);
-        box-sizing: border-box;
+        border-radius: 8px;
+        box-shadow: 0 0 5px var(--sidebar-footer-border-color);
         z-index: $sidebar-footer-z-index;
         .item { 
             text-align: center;
             cursor: pointer;
         }
-        *,.mini-text { color: var(--sidebar-footer-color);}
+        *{ color: var(--sidebar-footer-color);}
     }
 
     .mini-text {
@@ -89,7 +90,7 @@
     .sidebar,.fake-sidebar {
         float: left;
         width: $sidebar-width-4;
-        margin-left: $-sidebar-width-4;
+        margin-left: $sidebar-width-n;
     }
     .sidebar-display {
         margin-left: 0;

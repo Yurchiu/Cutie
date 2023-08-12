@@ -226,7 +226,7 @@ toolbar_third: true
 #
 # 博客默认配色
 # 可以取这些值：std | white | night | none，默认值是 std。 "none" 非常特殊。
-color_schemes: std
+color_schemes: white
 
 # 博客默认特殊效果
 # 可以取这些值：none | grayscale | invert | blur，默认值是 none。

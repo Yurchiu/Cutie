@@ -9,7 +9,7 @@ white 配色
 
 --text-color                                                     : #555;
 
---siteloading-bg-color                                           : rgba(256,256,256,.7);
+--YurLoading-bg-color                                            : rgba(256,256,256,.7);
 --scrollbar-bg-color                                             : #f5f5f5;
 --scrollbar-color                                                : #ff8282;
 --body-shadow-color                                              : rgba(0, 0, 0, 0.3);
@@ -70,7 +70,7 @@ white 配色
 
 --sidebar-border-color                                           : #fafafa;
 --sidebar-bg-color                                               : #fafafa;
---sidebar-footer-border-color                                    : #fff;
+--sidebar-footer-border-color                                    : #dadada;
 --sidebar-footer-bg-color                                        : #fff;
 --sidebar-footer-color                                           : #555;
 --sidebar-text-mini-text-color                                   : #98a6ad;
