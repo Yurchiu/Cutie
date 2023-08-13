@@ -22,27 +22,30 @@
 </div>
 <div class="post-text archives">
   <ol class="timeline">
-  <% Lyear = -1, Lmonth = -1; %>
+  <% Lyear = -1, Lmonth = -1, Ldate = -1; %>
   <% page.posts.each( function (post) { %>
     <li>
       <% Year = post.date.year(), Month = post.date.month(); %>
       <% if ( Lyear != Year ){ %>
-        <h2><a href="/archives/<%- Year %>/index.html"><%- Year %></a></h2>
+        <t><a href="/archives/<%- Year %>/index.html">Year <%- Year %></a></t>
         <% Lyear = Year; Lmonth = -1; %>
       <% } %>
       <% if ( Lmonth != Month ){ %>
         <% Smonth = Month + 1; if ( Smonth <= 9 ) Smonth = "0" + Smonth.toString(); %>
-        <h3><a href="/archives/<%- Year %>/<%- Smonth %>/index.html"><%- Smonth %></a></h3>
+        <t><a href="/archives/<%- Year %>/<%- Smonth %>/index.html">Month <%- Smonth %></a></t>
         <% Lmonth = Month; %>
       <% } %>
-      <b class="date"><%- date(post.date, "YYYY-MM-DD") %></b>
-      <a class="title" href="<%- url_for(post.path) %>">
+      <% if (Ldate != date(post.date, "YYYY-MM-DD")){ %>
+        <% Ldate = date(post.date, "YYYY-MM-DD"); Lflag = 1; %>
+        <b class="date"><%- Ldate %></b>
+      <% } %>
+      <p><a class="title" href="<%- url_for(post.path) %>">
         <% if(post.title){ %>
           <%- post.title %>
         <% }else{ %>
           <%- __('NoTitle') %>
         <% } %>
-      </a>
+      </a></p>
     </li>
   <% }) %>
   </ol>

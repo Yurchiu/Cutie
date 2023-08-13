@@ -106,7 +106,9 @@ trans 配色
 --fa-border-color                                                : #eee;
 
 --timeline-b-color                                               : #909399;
---timeline-hover-b-color                                         : #eb5055;
+--timeline-t-color                                               : #777;
+--timeline-hover-t-color                                         : rgb(245,169,184);
+--timeline-hover-b-color                                         : rgb(91,206,250);
 --timeline-circle-color                                          : #ccc;
 --timeline-line-color                                            : #eee;
 --timeline-circle-bg-color                                       : #fff;

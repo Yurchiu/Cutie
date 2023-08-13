@@ -36,6 +36,6 @@ function initialization()
     Setting();
 }
 
-$(document).pjax('a[target!=_blank][pjax!="no"]', '#pjax', {fragment:'#pjax', timeout:6000});
+$(document).pjax('a[target!=_blank][pjax!="no"]', '#article-container', {fragment:'#article-container', timeout:6000});
 $(document).on('pjax:send', function() {$("#YurLoading").show();});
 $(document).on('pjax:complete', function() {$("#YurLoading").hide();});

@@ -21,16 +21,19 @@
 }
 
 .tags {
-	font-size: $huge-fs;
-	a {
+	font-size: $normal-fs;
+	tag {
 		display: inline-block;
-		padding: 2px 6px;
-		color: #777 !important;
-		border: none !important;
-		margin-right: 30px;
+		margin: 5px;
+		* {
+			color: #fff !important;
+			border: none !important;
+		}
 	}
 }
 
 .archives a,.category-list-item a {border: none !important;}
+
+.archives .timeline t::after {top: .4em;}
 
 .category-list-item a {font-size: 20px;}
