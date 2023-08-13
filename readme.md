@@ -6,8 +6,6 @@
 
 ## Background
 
-This is the version 2.0 of theme cieuka, using Bootstrap.
-
 In order to learn relevant knowledge and make a good-looking theme, I made this. The layout of the theme is like [handsome](https://www.ihewro.com/archives/489/), a typecho theme. Most of the codes were originally programmed by me, while the rest were from the Internet, for instance, [mkBlog](https://mkblog.cn/).
 
 <!--more-->

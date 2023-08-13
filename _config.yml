@@ -249,7 +249,7 @@ imgcard_h: 30em
 # Jsdelivr 提供的加速 CDN，可选。不填，请留下空引号 `""`
 # 对本主题中的静态资源进行加速。
 # https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
-in_cdn: ""
+in_cdn: 
 
 # 自我简述
 short_des: "An AFO whker."

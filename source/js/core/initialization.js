@@ -19,7 +19,6 @@ function initialization()
   	article_width = $(".article").css("width");
 
     hljs.highlightAll();
-    showTime();
 
     $(".chaffle").chaffle();
     $("#YurLoading").hide();

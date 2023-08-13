@@ -57,10 +57,19 @@
     title="<%- __('Toolbar.Another.coloregg') %>"
     target="_self" class="sidetitle"><%- __('Toolbar.Another.subtitle') %></a></div>
 
-  <div style="height: 20px;"></div>
+  <div style="height: 10px;"></div>
 
-  <div id="showTime">
-    <script type="text/javascript" src="<%- theme.in_cdn %>/js/showtime.js"></script>
+  <div class="item">
+    <tag style="display: inline-block;">Hitokoto</tag><br><br>
+    <div id="hitokoto"><%- _p('hitokoto',config.author) %></div>
+    <script>
+      fetch('https://v1.hitokoto.cn')
+        .then(function (res){return res.json();})
+        .then(function (data) {
+          $("#hitokoto").html(data.hitokoto+"<br><br><div style='text-align: right;'>——"+data.from+"</div>");
+        })
+        .catch(function (err) {console.error(err);})
+    </script>
   </div>
 
   <div class="item">
@@ -84,18 +93,7 @@
       document.getElementById("timeprogress").innerHTML = innerhtml;
     </script>
   </div>
-
-  <div class="item">
-    <div id="hitokoto"><%- _p('hitokoto',config.author) %></div>
-    <script>
-      fetch('https://v1.hitokoto.cn')
-        .then(function (res){return res.json();})
-        .then(function (data) {
-          $("#hitokoto").html(data.hitokoto+"<br><br><div style='text-align: right;'>——"+data.from+"</div>");
-        })
-        .catch(function (err) {console.error(err);})
-    </script>
-  </div><% } %>
+<% } %>
 <!--  END 3-tab  -->
 
       </div>
