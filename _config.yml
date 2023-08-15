@@ -58,7 +58,7 @@ comments:
   # https://livere.com/insight/myCode
   livere:
     enable: false
-    uid: 
+    uid: MTAyMC80Njg5MS8yMzM5Mg==
 
   # Gitalk 评论系统
   # https://github.com/gitalk/gitalk
@@ -132,6 +132,7 @@ excerpt:
                         # text: 任何情况下不保留 html 标签。
 
   noexcerpt: '<i class="fa fa-warning"></i> Yurchiu 没有为本文章提供摘要 qwq。可能 Yurchiu 太懒了，或本文章没法做摘要。'
+
   length: 150   # 当展示博文的一部分时，展示的文本字符数。默认是 30。
 
   # 注意：如果一篇博文源文件中不含有“<!--more-->”，而 display 值为 html 时，则效果与“display: text”相同。 
@@ -247,9 +248,9 @@ github_name: yz-hs
 imgcard_h: 30em
 
 # Jsdelivr 提供的加速 CDN，可选。不填，请留下空引号 `""`
-# 对本主题中的静态资源进行加速。
+# 对本主题中的 css、js、img 文件夹中的静态资源进行加速。
 # https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
-in_cdn: 
+in_cdn: ""
 
 # 自我简述
 short_des: "An AFO whker."

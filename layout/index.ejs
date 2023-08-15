@@ -6,7 +6,7 @@
   <% var title = post.title %>
   <% if(!title) title = __('NoTitle') %>
   <% if(post.bgimg){ %>
-    <div class="post-bgimg-item" style="background-image: url(<%- theme.in_cdn %><%- post.bgimg %>);
+    <div class="post-bgimg-item" style="background-image: url(<%- post.bgimg %>);
       height: 
         <% if(post.height){ %>
           <%- post.height %>

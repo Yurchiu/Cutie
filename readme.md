@@ -1,6 +1,6 @@
 # Theme Cutie
 
-![](https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io/img/intro4.png)
+![](https://cdn.jsdelivr.net/gh/yz-hs/PicGo/intro4.png)
 
 中文版文档，本主题的完整说明：[Chinese version](https://yz-hs.github.io/39e4c172e542/)。
 

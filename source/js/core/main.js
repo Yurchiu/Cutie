@@ -85,27 +85,6 @@ function natsukiRemove() {
 
 //-------------------------hide and show-------------------------//
 
-function changePPT(ppt)
-{
-  var len = document.querySelector("#"+ppt);
-  var width = parseFloat(window.getComputedStyle(len, null).getPropertyValue('width'));
-  len.style.height = width * 0.5757 + "px";
-  var width_srceen = screen.width;
-  var new_window_width = $(window.frames[ppt]).width();
-  var multiple =new_window_width / width_srceen;
-  let block=window.frames[ppt].document.querySelectorAll(":not(.poser)");
-  for (var i = 0; i < block.length; i++) {
-    var style = parseFloat(window.getComputedStyle(block[i], null).getPropertyValue('font-size'));
-    var hi = style * multiple;
-    block[i].style.fontSize=hi+"px";
-    style = parseFloat(window.getComputedStyle(block[i], null).getPropertyValue('padding'));
-    hi = style * multiple;
-    block[i].style.padding=hi+"px";
-  }
-}
-function recoverPPT(ppt){window.frames[ppt].location.reload();}
-//Simple-PPT
-
 function Fool()
 {
     if (!readData("fool")) {
