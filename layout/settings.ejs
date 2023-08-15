@@ -37,15 +37,25 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="4"><%- __('Settings.Others') %></td>
-      <td><%- __('Settings.Toolhide') %></td>
+
+      <% var rowspan = 4,ok1 = 1,ok2 = 1,ok3 = 1; %>
+      <% if(theme.colored_eggs.type!="natsuki" && theme.colored_eggs.type!="santa"){ %>
+      <%     ok1 = 0; rowspan--; } %>
+      <% if(!theme.meting.enable){ %>
+      <%     ok2 = 0; rowspan--; } %>
+      <% if(!theme.toolbar_enable){ %>
+      <%     ok3 = 0; rowspan--; } %>
+
+      <td rowspan="<%- rowspan %>"><%- __('Settings.Others') %></td>
+      <td><%- __('Settings.PageStr') %></td>
       <td>
         <div class="btn-group">
-          <button type="button" class="btn btn-success" onclick="saveData('toolbar','1')">Enable</button>
-          <button type="button" class="btn btn-success" onclick="saveData('toolbar','2')">Disable</button>
-          </div>
+          <button type="button" class="btn btn-warning" onclick="saveData('stretch','1')">Enable</button>
+          <button type="button" class="btn btn-warning" onclick="saveData('stretch','2')">Disable</button>
+        </div>
       </td>
     </tr>
+    <% if(ok1){ %>
     <tr>
       <td><%- __('Settings.DisVRecord') %></td>
       <td>
@@ -55,6 +65,7 @@
         </div>
       </td>
     </tr>
+    <% }if(ok2){ %>
     <tr>
       <td><%- __('Settings.DisAplayer') %></td>
       <td>
@@ -64,15 +75,17 @@
         </div>
       </td>
     </tr>
+    <% }if(ok3){ %>
     <tr>
-      <td><%- __('Settings.PageStr') %></td>
+      <td><%- __('Settings.Toolhide') %></td>
       <td>
         <div class="btn-group">
-          <button type="button" class="btn btn-warning" onclick="saveData('stretch','1')">Enable</button>
-          <button type="button" class="btn btn-warning" onclick="saveData('stretch','2')">Disable</button>
-        </div>
+          <button type="button" class="btn btn-success" onclick="saveData('toolbar','1')">Enable</button>
+          <button type="button" class="btn btn-success" onclick="saveData('toolbar','2')">Disable</button>
+          </div>
       </td>
     </tr>
+    <% } %>
     <tr>
       <td colspan="2"><%- __('Settings.Reset') %></td>
       <td><button type="button" class="btn btn-outline-secondary" onclick="localStorage.clear()">Reset</button></td>

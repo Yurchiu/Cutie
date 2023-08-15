@@ -78,12 +78,12 @@
 
 @media screen and (max-width: $width-1) {
     .sidebar,.fake-sidebar {width: $sidebar-width-2;}
-    .sidebar-footer {width: $sidebar-width-2;}
+    .sidebar-footer {width: calc-width($sidebar-width-2,2*$sidebar-fmargin) !important;}
 }
 
 @media screen and (max-width: $width-2) {
     .sidebar,.fake-sidebar {width: $sidebar-width-3;}
-    .sidebar-footer {width: $sidebar-width-3;}
+    .sidebar-footer {width: calc-width($sidebar-width-3,2*$sidebar-fmargin) !important;}
 }
 
 @media screen and (max-width: $width-3) {
@@ -95,6 +95,7 @@
     .sidebar-display {
         margin-left: 0;
     }
+    .sidebar-footer {width: calc-width($sidebar-width-4,2*$sidebar-fmargin) !important;}
 }
 
 .sidebar::-webkit-scrollbar {

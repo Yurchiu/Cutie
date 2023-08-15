@@ -1,16 +1,16 @@
 calc-width(a , b)
     return a - b;
 
-$sidebar-width-1       = 220px;
-$sidebar-width-2       = 220px;
-$sidebar-width-3       = 220px;
-$sidebar-width-4       = 220px;
-$sidebar-width-n       = -220px;
-$sidebar-fmargin       = 8px;
+$sidebar-width-1       = unit(hexo-config('sidebar_width.width_1'),px);
+$sidebar-width-2       = unit(hexo-config('sidebar_width.width_2'),px);
+$sidebar-width-3       = unit(hexo-config('sidebar_width.width_3'),px);
+$sidebar-width-4       = unit(hexo-config('sidebar_width.width_4'),px);
+$sidebar-width-n       = calc-width(unit(0,px),$sidebar-width-4);
+$sidebar-fmargin       = unit(hexo-config('sidebar_footer_margin'),px);
 $sidebar-f-width       = calc-width($sidebar-width-1,2*$sidebar-fmargin)
 
-$toolbar-width-1       = 240px;
-$toolbar-width-2       = 240px;
+$toolbar-width-1       = unit(hexo-config('toolbar_width.width_1'),px);
+$toolbar-width-2       = unit(hexo-config('toolbar_width.width_2'),px);
 
 $article-width-1       = $width-1;
 $article-width-2       = $width-2;

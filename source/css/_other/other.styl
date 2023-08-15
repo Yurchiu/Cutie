@@ -116,14 +116,10 @@ small {
 	list-style: none;
 	padding-top: .1em;
 	padding-bottom: .1em;
-	padding-left: 1.2em !important;
-	margin-left: .3em !important;
+	padding-left: 1.2em;
+	margin-left: .3em;
 	border-left: .2em solid var(--timeline-line-color);
-	color: var(--text-color) !important;
-	
-	a {
-		&:hover {color: var(--post-text-link-hover-color) !important;}
-	}
+	color: var(--text-color);
 
 	p {
 		border-radius: 10px;
@@ -167,12 +163,6 @@ small {
 	li:hover b::after {border-color: var(--timeline-hover-b-color);}
 	li:hover t::after {border-color: var(--timeline-hover-t-color);}
 	li:hover b {color: var(--timeline-hover-b-color);}
-}
-
-/* SweetAlert 优先级更改 */
-
-.swal2-container {
-	z-index: $swal2-z-index !important;
 }
 
 /* 头像 */

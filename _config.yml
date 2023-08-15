@@ -58,7 +58,7 @@ comments:
   # https://livere.com/insight/myCode
   livere:
     enable: false
-    uid: MTAyMC80Njg5MS8yMzM5Mg==
+    uid: 
 
   # Gitalk 评论系统
   # https://github.com/gitalk/gitalk
@@ -75,7 +75,7 @@ comments:
 
 # IV 自适应
 #
-# 根据设定的屏幕宽度（单位为 px）改变显示方式。
+# 根据设定的屏幕宽度（单位都是 px）改变显示方式。
 
 responsive:
   width_1: 1170
@@ -84,6 +84,23 @@ responsive:
   # 低于此数值，工具栏会被置于文章区下方。
   width_3: 770
   # 低于此数值，侧边栏会被隐藏。点击顶部栏的左侧图标弹出侧边栏。
+
+# 根据上面，整个自适应方式被划分为四个阶段。
+
+# 设定各个阶段侧边栏的宽度。
+sidebar_width:
+  width_1: 220
+  width_2: 220
+  width_3: 220
+  width_4: 230
+
+# 设定全阶段侧边栏的底部栏的 margin。
+sidebar_footer_margin: 8
+
+# 设定前两个阶段工具栏的宽度。
+toolbar_width:
+  width_1: 240
+  width_2: 240
 
 
 
@@ -223,6 +240,13 @@ toolbar_third: true
 
 
 
+# 下面的三个选项，访客无法在博客的“设置”页面更改。
+#
+# 工具栏是否显示
+toolbar_enable: true
+
+
+
 # 下面的三个选项，访客可以在博客的“设置”页面更改。
 #
 # 博客默认配色
@@ -250,7 +274,7 @@ imgcard_h: 30em
 # Jsdelivr 提供的加速 CDN，可选。不填，请留下空引号 `""`
 # 对本主题中的 css、js、img 文件夹中的静态资源进行加速。
 # https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
-in_cdn: ""
+in_cdn: "" # https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
 
 # 自我简述
 short_des: "An AFO whker."

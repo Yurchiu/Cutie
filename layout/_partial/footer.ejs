@@ -17,6 +17,7 @@
 
 <script>
     if(!readData("color")) $("html").addClass("color-<%- theme.color_schemes %>");
+    if(!<%- theme.toolbar_enable %>) $(".toolbar").hide();
     $('img').attr("onerror","this.src='<%- theme.in_cdn %><%- theme.img_default %>';this.onerror=null");
     initialization();
 </script>
