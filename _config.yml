@@ -50,7 +50,7 @@ icon:
 # III 评论
 #
 # 评论功能在不包含 "discomments: true" 的页面开启。
-# 支持两个评论系统。最多同时启用一个。
+# 支持三个评论系统。最多同时启用一个。
 
 comments:
   # LiveRe（来必力）评论系统
@@ -63,7 +63,7 @@ comments:
   # Gitalk 评论系统
   # https://github.com/gitalk/gitalk
   gitalk:
-    enable: true
+    enable: false
     clientID: "''"
     clientSecret: "''"
     repo: "''"
@@ -71,6 +71,25 @@ comments:
     admin: "['']"
     proxy: "''"
 
+  # Giscus 评论系统
+  # https://giscus.app/zh-CN
+  giscus:
+    enable: true
+    # 把它拆成这些选项，是为了支持 Pjax。
+    src: https://giscus.app/client.js
+    repo: 
+    repoid: 
+    category: 
+    categoryid: 
+    mapping: 
+    strict: 
+    reactions_enabled: 
+    emit_metadata: 
+    input-position: top
+    theme: light
+    lang: zh-CN
+    loading: lazy
+    crossorigin: anonymous
 
 
 # IV 自适应
@@ -108,8 +127,10 @@ toolbar_width:
 
 site_info:
   enable: root   # 可以取这些值：none | root | all。默认值是 none。
-  text: "<i class='fa fa-volume-up'></i> 欢迎来到 Yurchiu 的博客！希望我们能相互交流，共同进步～"
-  type: success  # 可以取这些值：danger | warning | info | success。
+                 # root：只会在博客首页显示；
+                 # all：在所有页面显示。
+  text: <i class='fa fa-volume-up'></i> 本博客更改评论系统为 Giscus。 # "<i class='fa fa-volume-up'></i> 欢迎来到 Yurchiu 的博客！希望我们能相互交流，共同进步～"
+  type: warning  # 可以取这些值：danger | warning | info | success。
 
 
 

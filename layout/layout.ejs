@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-	<%- partial('_partial/head') %>
-	<body style="background-image: url(<%- theme.in_cdn %><%- theme.bg_url %>);">
+  <%- partial('_partial/head') %>
+  <body style="background-image: url(<%- theme.in_cdn %><%- theme.bg_url %>);">
     <div id="YurLoading" class="YurLoading">
       <div class="inner">
         <div class="line-wrap"><div class="line"></div></div>
@@ -11,14 +11,14 @@
         <div class="line-wrap"><div class="line"></div></div>
       </div>
     </div>
-		<%- partial('_partial/topbar') %>
-		<div id="article-container">
+    <%- partial('_partial/topbar') %>
+    <div id="article-container">
       <%- partial('_partial/sidebar') %>
-		  <div class="article">
+      <div class="article">
         <div class="vertical fake-sidebar"></div>
         <div class="vertical post">
           <% if( theme.site_info.enable=="all" || (theme.site_info.enable=="root" && url_for(path)==config.root) ){ %>
-            <div class="alert alert-<%- theme.site_info.type %> alert-dismissible fade show" style=" margin:0;"><button type="button" class="btn-close" data-bs-dismiss="alert"></button><%- theme.site_info.text %></div>
+            <div class="alert alert-<%- theme.site_info.type %> alert-dismissible fade show" style="margin:0;"><button type="button" class="btn-close" data-bs-dismiss="alert"></button><%- theme.site_info.text %></div>
           <% } %>
           <%- body %>
           <div class="avatar-container" style="padding: 50px;">
