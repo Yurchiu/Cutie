@@ -81,7 +81,7 @@ comments:
     repoid: 
     category: 
     categoryid: 
-    mapping: 
+    mapping: pathname
     strict: 0
     reactions_enabled: 1
     emit_metadata: 0
