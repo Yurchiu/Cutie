@@ -4,7 +4,8 @@
 	width: $toolbar-width-1;
 	height: 100%;
 	box-sizing: border-box;
-
+	z-index: $toolbar-z-index;
+	
 	.item {padding: 12px;}
 
 	.post-toc {
@@ -56,7 +57,7 @@
 			padding: 3px 6px;
 			border-radius: 8px; 
 			background-color: var(--toolbar-tag-cloud-bg-color);
-			font-weight: 1000;
+			font-weight: bold;
 		}
 	}
 
@@ -84,7 +85,7 @@
 		}
 		.sidetitle {
 			color: var(--toolbar-tab-page-sidetitle-color);
-			font-size: $mini-fs;
+			font-size: $toolbar-mini-fs;
 			font-weight: 500;
 		}
 		.fa-border {

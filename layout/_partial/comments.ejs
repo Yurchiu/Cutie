@@ -53,6 +53,10 @@
         x.setAttribute("data-emit-metadata","<%- theme.comments.giscus.emit_metadata %>");
         x.setAttribute("data-input-position","<%- theme.comments.giscus.input_position %>");
         x.setAttribute("data-theme","<%- theme.comments.giscus.theme %>");
+
+        if(readData("color")==4 || "<%- theme.color_schemes %>"=="night"&&!readData("color"))
+          x.setAttribute("data-theme","<%- theme.comments.giscus.night_theme %>");
+
         x.setAttribute("data-lang","<%- theme.comments.giscus.lang %>");
         x.setAttribute("data-loading","<%- theme.comments.giscus.loading %>");
         x.setAttribute("crossorigin","<%- theme.comments.giscus.crossorigin %>");

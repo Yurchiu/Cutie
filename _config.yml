@@ -82,11 +82,12 @@ comments:
     category: 
     categoryid: 
     mapping: 
-    strict: 
-    reactions_enabled: 
-    emit_metadata: 
-    input-position: top
+    strict: 0
+    reactions_enabled: 1
+    emit_metadata: 0
+    input_position: top
     theme: light
+    night_theme: dark # night 配色下的主题
     lang: zh-CN
     loading: lazy
     crossorigin: anonymous
@@ -184,8 +185,8 @@ excerpt:
 tag_cloud:
   enable: true         # 是否启用
   color:               # 颜色渐变范围
-    from: "#fff"       # night: #aaa
-    to: "#fff"         # not-night: #fff
+    from: "#fff"
+    to: "#fff"
   font:                # 字体渐变范围（单位 px）
     from: 14
     to: 14
@@ -234,7 +235,7 @@ avatar:
 colored_eggs:
   # 看板娘（？）
   # 可以取这些值：santa | natsuki | none，默认值是 none。
-  type: natsuki
+  type: santa
   width: 140px                       # 人物大小。
   time: 0.55s                        # 动画时间，仅对 natsuki 有用。
   bezier: cubic-bezier(0, 0, 0, 1)   # 贝塞尔曲线，仅对 natsuki 有用。
@@ -261,7 +262,7 @@ toolbar_third: true
 
 
 
-# 下面的三个选项，访客无法在博客的“设置”页面更改。
+# 下面的一个选项，访客无法在博客的“设置”页面更改。
 #
 # 工具栏是否显示
 toolbar_enable: true
@@ -286,10 +287,10 @@ stretch: false
 
 
 
-# 你的 GitHub 名称，用于某些链接
+# 你的 GitHub 用户名，用于某些链接
 github_name: yz-hs
 
-# 图片背景卡片 高度默认值
+# 图片背景卡片的高度默认值
 imgcard_h: 30em
 
 # Jsdelivr 提供的加速 CDN，可选。不填，请留下空引号 `""`
@@ -301,14 +302,15 @@ in_cdn: "" # https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
 short_des: "An AFO whker."
 
 # 背景图片地址
-bg_url: /img/new-bgp.jpg  # night-bgp.png
+bg_url: /img/new-bgp.jpg
+nightbg_url: /img/night-bgp.png # night 配色下的背景图片
 
 # 时间格式
 # http://momentjs.cn/docs/#/parsing/string-format/
 time_format: "YYYY-MM-DD, HH:mm:ss"
 
 # 博客界面透明度，取值为属于区间 [0,1] 的实数。
-opacity: 1
+opacity: 0.9
 
 # 图片无法加载，会用它替换。
 img_default: /img/error.jpg

@@ -12,9 +12,9 @@ night 配色
 --YurLoading-bg-color                                            : rgba(33, 33, 33, .7);
 --scrollbar-bg-color                                             : #444;
 --scrollbar-color                                                : #666;
---body-shadow-color                                              : #999;
+--body-shadow-color                                              : #000;
 
---blockquote-color                                               : #252525;
+--blockquote-color                                               : #222;
 --a-color                                                        : rgb(170, 170, 170);
 --hr-color                                                       : rgb(33, 33, 33);
 --h-bg-color                                                     : rgba(99,99,99,.3);
@@ -64,27 +64,27 @@ night 配色
 --post-item-bg-color                                             : #222;
 --post-item-border-color                                         : #222;
 --post-item-meta-color                                           : #98a6ad;
---post-item-shadow-color                                         : #999;
---post-item-hover-shadow-color                                   : #555;
---post-item-bottom-shadow-color                                  : #999;
+--post-item-shadow-color                                         : #444;
+--post-item-hover-shadow-color                                   : #666;
+--post-item-bottom-shadow-color                                  : #333;
 
---sidebar-border-color                                           : #333;
---sidebar-bg-color                                               : #333;
---sidebar-footer-border-color                                    : #555;
---sidebar-footer-bg-color                                        : #222;
+--sidebar-border-color                                           : #222;
+--sidebar-bg-color                                               : #222;
+--sidebar-footer-border-color                                    : #222;
+--sidebar-footer-bg-color                                        : #111;
 --sidebar-footer-color                                           : #98a6ad;
 --sidebar-text-mini-text-color                                   : #98a6ad;
---sidebar-list-group-item-bg-color                               : #333;
+--sidebar-list-group-item-bg-color                               : #222;
 --sidebar-list-group-item-color                                  : #999;
 --sidebar-list-group-item-hover-color                            : #999;
---sidebar-list-group-item-hover-bg-color                         : #222;
+--sidebar-list-group-item-hover-bg-color                         : #333;
 --sidebar-list-group-item-current-color                          : #999;
---sidebar-list-group-item-current-bg-color                       : #222;
+--sidebar-list-group-item-current-bg-color                       : #333;
 --sidebar-badge-color                                            : #fff;
 --sidebar-badge-bg-color                                         : #000;
 
---toolbar-border-color                                           : #333;
---toolbar-bg-color                                               : #333;
+--toolbar-border-color                                           : #222;
+--toolbar-bg-color                                               : #222;
 --toolbar-title-color                                            : #aaa;
 --toolbar-post-toc-bg-color                                      : #333;
 --toolbar-post-toc-color                                         : #aaa;
@@ -97,13 +97,13 @@ night 配色
 --toolbar-list-group-item-border-color                           : #666;
 --toolbar-list-group-item-badge-color                            : #ddd;
 --toolbar-list-group-item-badge-bg-color                         : #000;
---toolbar-tag-cloud-bg-color                                     : #333;
+--toolbar-tag-cloud-bg-color                                     : #444;
 
---topbar-bg-color                                                : #444;
+--topbar-bg-color                                                : #333;
 --topbar-link-color                                              : #999;
---topbar-shadow-color                                            : #999;
+--topbar-shadow-color                                            : #000;
 
---fa-border-color                                                : rgb(33, 33, 33);
+--fa-border-color                                                : #555;
 
 --timeline-b-color                                               : #909399;
 --timeline-t-color                                               : #777;
@@ -112,5 +112,7 @@ night 配色
 --timeline-circle-color                                          : #666;
 --timeline-line-color                                            : #666;
 --timeline-circle-bg-color                                       : #222;
+
+--table-text-color                                               : #555;
 
 }

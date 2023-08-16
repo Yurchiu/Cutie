@@ -35,7 +35,7 @@ function snowCanvas() {
     snowcanvas.id = "snowfall";
     snowcanvas.width = window.innerWidth;
     snowcanvas.height = /*document.body.clientHeight*/window.innerHeight;
-    snowcanvas.setAttribute("style", "position: fixed;left: 0;top: 0;z-index: 9999; pointer-events: none;");
+    snowcanvas.setAttribute("style", "position: fixed;left: 0;top: 0;z-index: 99999; pointer-events: none;");
     document.getElementsByTagName("body")[0].appendChild(snowcanvas);
     this.canvas = snowcanvas;
     this.ctx = snowcanvas.getContext("2d");

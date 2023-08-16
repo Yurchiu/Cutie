@@ -3,24 +3,20 @@
 	box-shadow: 0 0 5px var(--topbar-shadow-color);
 	padding: 12px;
 	position: sticky; top: 0;
-	z-index: $topbar-z-index;
 	display: flex;
 	justify-content: space-between;
 	height: 50px;
-
+	z-index: $topbar-z-index;
+	font-size: $topbar-fs;
+	
 	.topbar-title { font-weight: 700; }
 	.topbar-menu { display: none; }
     a { color: var(--topbar-link-color); }
 
 	.topbar-title,.topbar-comments,.topbar-menu { 
-        font-size: $topbar-fs;
         margin-top: auto;
         margin-bottom: auto;
     }
-}
-
-.github-corner>svg {
-	z-index: -99999;
 }
 
 @media screen and (max-width: $width-3) {

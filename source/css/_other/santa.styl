@@ -1,5 +1,5 @@
 .santa-container,.natsuki-container {
-	z-index: 9999;
+	z-index: $max-z-index;
 	position: fixed;
 	bottom: 5px;
 	right: 5px;
@@ -81,7 +81,7 @@
     height: .5em;
     background: #f91047;
     border-radius: .5em .5em 0 0;
-    z-index: 2;
+    z-index: $max-z-index - 1;
     position: absolute;
     top: -0.5em;
 }
@@ -94,7 +94,6 @@
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    z-index: 0;
     top: -0.72em;
     right: 0;
     box-shadow: -0.2em .2em 0 .12em rgba(0,0,0,0.2),-0.2em .2em 0 .12em #f91047;
