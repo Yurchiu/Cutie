@@ -1,22 +1,11 @@
-var article_left_margin;
-var article_width;
-
 function initialization()
 {
-	var back = document.getElementById('back2Top');
-    back.style.display ='none';
-    document.onscroll = function()
-    {
-        if (document.documentElement.scrollTop > 100)
-            back.style.display = 'block';
-        else back.style.display = 'none';
-    };
-    back.onclick = function(){
+    document.getElementById('back2Top').onclick = function(){
         document.documentElement.scrollTop = 0;
     }
-
-  	article_left_margin = $(".article").css("margin-left");
-  	article_width = $(".article").css("width");
+    document.getElementById('back2Down').onclick = function(){
+        document.documentElement.scrollTop = 1145141919810;
+    }
 
     hljs.highlightAll();
 

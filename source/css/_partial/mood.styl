@@ -11,7 +11,6 @@
             display: block;
             border-radius: 100%;
             position: absolute;
-            z-index: $article-z-index;
         }
 
         &:last-child {
@@ -35,22 +34,12 @@
         &:nth-child(4n-2) inner {
             background: #89d04f;
         }
-        &:hover {
-            inner {
-                transform: rotateY(-20deg);
-                transform-style: preserve-3d;
-            }
-            inner {
-                box-shadow: 0.8em 0 0.8em -0.5em rgba(0,0,0,.4);
-            }
-        }
     }
 
     text {
         padding-left: 5.2em;
         color: #fff;
         max-width: 100%;
-        z-index: $min-z-index;
 
         inner {
             position: relative;
@@ -72,10 +61,6 @@
         }
     }
 
-    li, inner {
-        transition: all .8s cubic-bezier(.59,1.45,.69,.98) .2s;
-    }
-
     info {
         border-top: 0.18em dashed rgba(82, 82, 82, 0.38);
         margin-top: 0.6em;
@@ -85,3 +70,15 @@
     inner,text,info {display: block;}
 
 }/*From mkBlog*/
+
+@media screen and (max-width: $width-3) {
+	li {
+		img:first-child {
+        	width: 50px !important;
+        	height: 50px !important;
+    	}
+    	text {
+        	padding-left: 4.5em !important;
+    	}
+    }
+}

@@ -112,7 +112,7 @@ sidebar_width:
   width_1: 220
   width_2: 220
   width_3: 220
-  width_4: 230
+  width_4: 250
 
 # 设定全阶段侧边栏的底部栏的 margin。
 sidebar_footer_margin: 8
@@ -235,8 +235,8 @@ avatar:
 colored_eggs:
   # 看板娘（？）
   # 可以取这些值：santa | natsuki | none，默认值是 none。
-  type: santa
-  width: 140px                       # 人物大小。
+  type: natsuki
+  width: 120px                       # 人物大小。
   time: 0.55s                        # 动画时间，仅对 natsuki 有用。
   bezier: cubic-bezier(0, 0, 0, 1)   # 贝塞尔曲线，仅对 natsuki 有用。
                                      # 对于 natsuki，可以在 source 文件夹中的 img 文件夹更改图片。

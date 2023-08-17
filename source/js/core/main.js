@@ -38,7 +38,6 @@ function hideBars()
   $(".fake-sidebar").hide();
   $(".hideBars").hide();
   $(".showBars").show();
-  $(".article").css("margin-left","0");
   $(".footer").css("margin-left","0");
   $(".article").css("width","100%");
   HideIt();
@@ -51,9 +50,8 @@ function showBars()
   $(".fake-sidebar").show();
   $(".hideBars").show();
   $(".showBars").hide();
-  $(".article").css("margin-left",article_left_margin);
-  $(".footer").css("margin-left",article_left_margin);
-  $(".article").css("width",article_width);
+  $(".footer").removeAttr("style","");
+  $(".article").removeAttr("style","");
   HideIt();
 }
 

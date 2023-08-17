@@ -9,7 +9,7 @@ table {
 
 	tr {
 		border-top: 1px solid #ccc;
-		background-color: #fff;
+		background: #fff;
 		margin: 0;
 		padding: 0;
 
@@ -20,7 +20,7 @@ table {
 			margin: 0;
 			padding: 6px 13px;
 			color: #fff;
-			background-color: #5db084;
+			background: #5db084;
 
 			&:first-child,&:last-child {
 				margin-top: 0;
@@ -41,12 +41,12 @@ table {
 		}
 
 		&:nth-child(2n) {
-			background-color: #e3f1ea;
+			background: #e3f1ea;
 		}
 		&:nth-child(1) th {
 			color: #eee;
 			border: 1px solid #009688;
-			background-color: #009688;
+			background: #009688;
 		}
 	}
 }
@@ -58,7 +58,7 @@ blockquote {
     margin: 1em 3em 1em 2em;
     font-weight: 400;
     border-left: 4px solid rgba(0, 0, 0, .2);
-    background-color: var(--blockquote-color);
+    background: var(--blockquote-color);
     word-break: break-all;
     opacity: 0.8;
 }
@@ -87,7 +87,7 @@ a {
 	text-decoration: none;
 	color: var(--a-color);
 	&:hover {
-		transition: 0.6s all;
+		transition: 0.4s all;
 	}
 }
 
@@ -136,7 +136,7 @@ fieldset {
     padding: 20px;
 }
 fieldset >legend {
-    background-color: #eb5055;
+    background: #eb5055;
     color: #fff;
     border-radius: .2em;
     padding: .1em .3em;
@@ -152,14 +152,14 @@ summary:focus {
 }
 
 summary:hover {
-    background-color: #ddd;
+    background: #ddd;
 }
 
 details >summary {
-	transition: 0.3s;
+	transition: 0.4s;
 	margin: 10px 0;
 	border-radius: 25px;
-    background-color: #eee;
+    background: #eee;
     text-align: center;
     padding: 10px;
     border-style: none;
@@ -169,6 +169,12 @@ details >summary {
 
 /* 其他 */
 
-u,emp,wavy,del,psw {
+u,emp,wavy,del,psw,s {
 	color: var(--text-color) !important;
+}
+
+psw {
+	&:not(&:hover) {
+		background: var(--text-color) !important;
+	}
 }

@@ -3,7 +3,7 @@
     overflow-y: auto;
     width: $sidebar-width-1;
     height: 100%;
-    background-color: var(--sidebar-bg-color);
+    background: var(--sidebar-bg-color);
     border-right: 1px solid var(--sidebar-border-color);
     box-sizing: border-box;
     transition: 0.6s all;
@@ -24,7 +24,7 @@
         position: fixed;
         width: $sidebar-f-width;
         bottom: 0px;
-        background-color: var(--sidebar-footer-bg-color);
+        background: var(--sidebar-footer-bg-color);
         padding: 10px 0px;
         display: flex;
         justify-content: space-around;
@@ -47,7 +47,7 @@
         border-radius: 10px;
         padding: 10px 15px;
         transition: 0.6s all;
-        background-color: var(--sidebar-list-group-item-bg-color);
+        background: var(--sidebar-list-group-item-bg-color);
         color: var(--sidebar-list-group-item-color);
         display: flex;
         justify-content: space-between;
@@ -56,17 +56,17 @@
     .list-group-item {
         &:hover,&:focus {
             color: var(--sidebar-list-group-item-hover-color);
-            background-color: var(--sidebar-list-group-item-hover-bg-color);
+            background: var(--sidebar-list-group-item-hover-bg-color);
         }
     }
 
     .list-group-item-current {
         color: var(--sidebar-list-group-item-current-color);
-        background-color: var(--sidebar-list-group-item-current-bg-color);
+        background: var(--sidebar-list-group-item-current-bg-color);
     }
 
     .badge {
-        background-color: var(--sidebar-badge-bg-color);
+        background: var(--sidebar-badge-bg-color);
     }
 }
 
