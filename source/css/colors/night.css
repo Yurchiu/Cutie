@@ -81,11 +81,11 @@ night 配色
 --sidebar-footer-color                                           : #98a6ad;
 --sidebar-text-mini-text-color                                   : #98a6ad;
 --sidebar-list-group-item-bg-color                               : #222;
---sidebar-list-group-item-color                                  : #999;
---sidebar-list-group-item-hover-color                            : #999;
---sidebar-list-group-item-hover-bg-color                         : #333;
---sidebar-list-group-item-current-color                          : #999;
---sidebar-list-group-item-current-bg-color                       : #333;
+--sidebar-list-group-item-color                                  : #ddd;
+--sidebar-list-group-item-hover-color                            : #ddd;
+--sidebar-list-group-item-hover-bg-color                         : #444;
+--sidebar-list-group-item-current-color                          : #ddd;
+--sidebar-list-group-item-current-bg-color                       : #444;
 --sidebar-badge-color                                            : #fff;
 --sidebar-badge-bg-color                                         : #000;
 

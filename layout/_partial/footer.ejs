@@ -22,8 +22,10 @@
     if(!<%- theme.toolbar_enable %>)
         $(".toolbar").hide();
 
-    if(readData("color")==4 || "<%- theme.color_schemes %>"=="night"&&!readData("color"))
+    if(readData("color")==4 || "<%- theme.color_schemes %>"=="night"&&!readData("color")){
+        $("body").css("opacity","<%- theme.night_opacity %>");
         $("body").css("background-image","url(<%- theme.in_cdn %><%- theme.nightbg_url %>)");
+    }
 
     $('img').attr("onerror","this.src='<%- theme.in_cdn %><%- theme.img_default %>';this.onerror=null");
 

@@ -302,15 +302,16 @@ in_cdn: "" # https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
 short_des: "An AFO whker."
 
 # 背景图片地址
-bg_url: /img/new-bgp.jpg
-nightbg_url: /img/night-bgp.png # night 配色下的背景图片
+bg_url: /img/new-bgp.png
+nightbg_url: /img/night-bgp.jpg # night 配色下的背景图片
 
 # 时间格式
 # http://momentjs.cn/docs/#/parsing/string-format/
 time_format: "YYYY-MM-DD, HH:mm:ss"
 
 # 博客界面透明度，取值为属于区间 [0,1] 的实数。
-opacity: 0.95
+opacity: 0.9
+night_opacity: 0.8
 
 # 图片无法加载，会用它替换。
 img_default: /img/error.jpg
