@@ -19,6 +19,12 @@ topbar 为深色，其余以浅色为主。
 --hr-color                                                       : #edf1f2;
 --h-bg-color                                                     : rgba(189,202,219,.3);
 --h-cross-color                                                  : #ff8282;
+--summary-color                                                  : #eee;
+--summary-hover-color                                            : #ddd;
+--fieldset-border-color                                          : #ccc;
+--legend-background-color                                        : #eb5055;
+--th-background-color                                            : #009688;
+--tr-background-color                                            : #e3f1ea;
 
 --toolbar-fa-border-color                                        : #fff;
 
@@ -112,6 +118,7 @@ topbar 为深色，其余以浅色为主。
 --timeline-circle-color                                          : #ccc;
 --timeline-line-color                                            : #eee;
 --timeline-circle-bg-color                                       : #fff;
+--timeline-item-bg-color                                         : #eee;
 
 --table-text-color                                               : #555;
 

@@ -310,7 +310,7 @@ nightbg_url: /img/night-bgp.png # night 配色下的背景图片
 time_format: "YYYY-MM-DD, HH:mm:ss"
 
 # 博客界面透明度，取值为属于区间 [0,1] 的实数。
-opacity: 0.9
+opacity: 0.95
 
 # 图片无法加载，会用它替换。
 img_default: /img/error.jpg

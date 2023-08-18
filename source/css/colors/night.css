@@ -7,7 +7,7 @@ night 配色
 
 .color-night {
 
---text-color                                                     : #aaa;
+--text-color                                                     : #ddd;
 
 --YurLoading-bg-color                                            : rgba(33, 33, 33, .7);
 --scrollbar-bg-color                                             : #444;
@@ -19,6 +19,12 @@ night 配色
 --hr-color                                                       : rgb(33, 33, 33);
 --h-bg-color                                                     : rgba(99,99,99,.3);
 --h-cross-color                                                  : #ff8282;
+--summary-color                                                  : #666;
+--summary-hover-color                                            : #555;
+--fieldset-border-color                                          : #555;
+--legend-background-color                                        : #eb5055;
+--th-background-color                                            : #009688;
+--tr-background-color                                            : #e3f1ea;
 
 --toolbar-fa-border-color                                        : rgb(37, 37, 37);
 
@@ -33,34 +39,34 @@ night 配色
 
 --footer-bg-color                                                : #333;
 --footer-border-color                                            : #333;
---footer-color                                                   : #aaa;
+--footer-color                                                   : #ddd;
 
---paginator-padding-color                                        : rgb(25, 25, 25);
+--paginator-padding-color                                        : #111;
 --paginator-border-color                                         : rgb(33, 33, 33);
---paginator-bg-color                                             : rgb(33, 33, 33);
+--paginator-bg-color                                             : #444;
 --paginator-color                                                : rgb(170, 170, 170);
 --paginator-hover-color                                          : #fff;
 --paginator-hover-bg-color                                       : rgb(33, 33, 33);
 --paginator-current-color                                        : #fff;
---paginator-current-bg-color                                     : rgb(37, 37, 37);
+--paginator-current-bg-color                                     : #777;
 
 --post-bg-color                                                  : #111;
 --post-header-bg-color                                           : #222;
 --post-header-border-bottom-color                                : #222;
---post-header-title-color                                        : #aaa;
+--post-header-title-color                                        : #ddd;
 --post-meta-color                                                : #98a6ad;
 --post-breadcrumb-bg-color                                       : #222;
 --post-breadcrumb-border-color                                   : #222;
 --post-text-bg-color                                             : #222;
 --post-text-border-color                                         : #222;
---post-text-link-color                                           : #ccc;
+--post-text-link-color                                           : #ddd;
 --post-text-link-hover-color                                     : #fff;
 --post-prev-bg-color                                             : #222;
 --post-prev-border-color                                         : #222;
---post-prev-color                                                : #aaa;
+--post-prev-color                                                : #ddd;
 --post-next-bg-color                                             : #222;
 --post-next-border-color                                         : #222;
---post-next-color                                                : #aaa;
+--post-next-color                                                : #ddd;
 --post-item-bg-color                                             : #222;
 --post-item-border-color                                         : #222;
 --post-item-meta-color                                           : #98a6ad;
@@ -85,33 +91,34 @@ night 配色
 
 --toolbar-border-color                                           : #222;
 --toolbar-bg-color                                               : #222;
---toolbar-title-color                                            : #aaa;
+--toolbar-title-color                                            : #ddd;
 --toolbar-post-toc-bg-color                                      : #333;
---toolbar-post-toc-color                                         : #aaa;
+--toolbar-post-toc-color                                         : #ddd;
 --toolbar-post-toc-border-color                                  : #666;
 --toolbar-tab-page-tabContent-border-top-color                   : #333;
 --toolbar-tab-page-sidetitle-color                               : #98a6ad;
 --toolbar-tab-page-current-border-bottom-color                   : #fff;
 --toolbar-list-group-item-bg-color                               : #333;
---toolbar-list-group-item-color                                  : #aaa;
+--toolbar-list-group-item-color                                  : #ddd;
 --toolbar-list-group-item-border-color                           : #666;
 --toolbar-list-group-item-badge-color                            : #ddd;
 --toolbar-list-group-item-badge-bg-color                         : #000;
 --toolbar-tag-cloud-bg-color                                     : #444;
 
 --topbar-bg-color                                                : #333;
---topbar-link-color                                              : #999;
+--topbar-link-color                                              : #ddd;
 --topbar-shadow-color                                            : #000;
 
 --fa-border-color                                                : #555;
 
 --timeline-b-color                                               : #909399;
 --timeline-t-color                                               : #777;
---timeline-hover-b-color                                         : #eb5055;
+--timeline-hover-b-color                                         : #ee82ee;
 --timeline-hover-t-color                                         : #9cdcfe;
 --timeline-circle-color                                          : #666;
 --timeline-line-color                                            : #666;
 --timeline-circle-bg-color                                       : #222;
+--timeline-item-bg-color                                         : #444;
 
 --table-text-color                                               : #555;
 

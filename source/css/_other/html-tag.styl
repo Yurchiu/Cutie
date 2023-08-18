@@ -20,7 +20,6 @@ table {
 			margin: 0;
 			padding: 6px 13px;
 			color: #fff;
-			background: #5db084;
 
 			&:first-child,&:last-child {
 				margin-top: 0;
@@ -41,12 +40,12 @@ table {
 		}
 
 		&:nth-child(2n) {
-			background: #e3f1ea;
+			background: var(--tr-background-color);
 		}
 		&:nth-child(1) th {
-			color: #eee;
-			border: 1px solid #009688;
-			background: #009688;
+			color: #fff;
+			border: 1px solid var(--th-background-color);
+			background: var(--th-background-color);
 		}
 	}
 }
@@ -131,15 +130,15 @@ code {
 /*  提示框  */
 
 fieldset {
-    border: 2px solid rgba(0,0,0,.8);
+    border: 2px solid var(--fieldset-border-color);
     border-radius: .3em;
     padding: 20px;
 }
 fieldset >legend {
-    background: #eb5055;
+    background: var(--legend-background-color);
     color: #fff;
     border-radius: .2em;
-    padding: .1em .3em;
+    padding: .1em .4em;
     font-size: 16px;
     float: none;
     width: auto;
@@ -152,19 +151,19 @@ summary:focus {
 }
 
 summary:hover {
-    background: #ddd;
+    background: var(--summary-hover-color);
 }
 
 details >summary {
 	transition: 0.4s;
 	margin: 10px 0;
 	border-radius: 25px;
-    background: #eee;
+    background: var(--summary-color);
     text-align: center;
     padding: 10px;
     border-style: none;
     cursor: pointer;
-    color: var(--table-text-color);
+    color: var(--text-color);
 }
 
 /* 其他 */

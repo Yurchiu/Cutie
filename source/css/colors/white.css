@@ -19,6 +19,12 @@ white 配色
 --hr-color                                                       : #dfdfdf;
 --h-bg-color                                                     : rgba(189,202,219,.3);
 --h-cross-color                                                  : #ff8282;
+--summary-color                                                  : #eee;
+--summary-hover-color                                            : #ddd;
+--fieldset-border-color                                          : #ccc;
+--legend-background-color                                        : #eb5055;
+--th-background-color                                            : #009688;
+--tr-background-color                                            : #e3f1ea;
 
 --toolbar-fa-border-color                                        : #fff;
 
@@ -87,7 +93,7 @@ white 配色
 --toolbar-bg-color                                               : #fafafa;
 --toolbar-title-color                                            : #555;
 --toolbar-post-toc-bg-color                                      : #fff;
---toolbar-post-toc-color                                         : #fff;
+--toolbar-post-toc-color                                         : #777;
 --toolbar-post-toc-border-color                                  : #ddd;
 --toolbar-tab-page-tabContent-border-top-color                   : #ddd;
 --toolbar-tab-page-sidetitle-color                               : #98a6ad;
@@ -107,11 +113,12 @@ white 配色
 
 --timeline-b-color                                               : #909399;
 --timeline-t-color                                               : #777;
---timeline-hover-t-color                                         : #9cdcfe;
 --timeline-hover-b-color                                         : #ee82ee;
+--timeline-hover-t-color                                         : #9cdcfe;
 --timeline-circle-color                                          : #ccc;
 --timeline-line-color                                            : #eee;
 --timeline-circle-bg-color                                       : #fff;
+--timeline-item-bg-color                                         : #eee;
 
 --table-text-color                                               : #555;
 

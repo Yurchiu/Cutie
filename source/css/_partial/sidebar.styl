@@ -48,24 +48,26 @@
         padding: 10px 15px;
         transition: 0.6s all;
         background: var(--sidebar-list-group-item-bg-color);
-        color: var(--sidebar-list-group-item-color);
         display: flex;
         justify-content: space-between;
-      }
+
+        div {color: var(--sidebar-list-group-item-color);}
+    }
 
     .list-group-item {
         &:hover,&:focus {
-            color: var(--sidebar-list-group-item-hover-color);
             background: var(--sidebar-list-group-item-hover-bg-color);
+            div {color: var(--sidebar-list-group-item-hover-color);}
         }
     }
 
     .list-group-item-current {
-        color: var(--sidebar-list-group-item-current-color);
         background: var(--sidebar-list-group-item-current-bg-color);
+        div {color: var(--sidebar-list-group-item-current-color);}
     }
 
     .badge {
+        color: var(--sidebar-badge-color) !important;
         background: var(--sidebar-badge-bg-color);
     }
 }

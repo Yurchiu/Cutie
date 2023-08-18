@@ -51,8 +51,7 @@ invsb {
 /*  标签页  */
 
 .tab-page {
-	box-shadow: 0px 0px 8px #ddd;
-	border-radius: 5px;
+	box-shadow: 0px 0px 8px #bbb;
 
 	.hide {display: none;}
 	.tabTitle >ul {
@@ -70,9 +69,9 @@ invsb {
 		cursor: pointer;
 		text-align: center;
 	}
-	.current {border-bottom: 1px solid var(--toolbar-tab-page-current-border-bottom-color);}
+	.current {border-bottom: 2px solid var(--toolbar-tab-page-current-border-bottom-color);}
 	.tabContent >div {
-		border-top: 1px solid var(--toolbar-tab-page-tabContent-border-top-color);
+		border-top: 2px solid var(--toolbar-tab-page-tabContent-border-top-color);
 		padding: 15px;
 		padding-bottom: 25px;
 		overflow: auto;
@@ -121,7 +120,7 @@ small {
 	p {
 		border-radius: 10px;
 		padding: 13px;
-		background: rgba(0,0,0,.05);
+		background: var(--timeline-item-bg-color);
 	}
 
 	b,t {
@@ -166,10 +165,10 @@ small {
 
 .avatar {
 	border-radius: 50%;
-   	height: 70%;
-   	width: 70%;
-   	display: block;
-   	margin: auto;
+  height: 65%;
+  width: 65%;
+  display: block;
+  margin: auto;
 }
 
 .bounce:hover {

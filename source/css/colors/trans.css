@@ -16,9 +16,15 @@ trans 配色
 
 --blockquote-color                                               : #fff;
 --a-color                                                        : #777;
---hr-color                                                       : rgb(245,169,184);
+--hr-color                                                       : rgba(245,169,184,.5);
 --h-bg-color                                                     : rgba(189,202,219,.3);
 --h-cross-color                                                  : rgb(245,169,184);
+--summary-color                                                  : #eee;
+--summary-hover-color                                            : #ddd;
+--fieldset-border-color                                          : #ccc;
+--legend-background-color                                        : rgb(245,169,184);
+--th-background-color                                            : rgb(245,169,184);
+--tr-background-color                                            : rgba(245,169,184,0.2);
 
 --toolbar-fa-border-color                                        : #fff;
 
@@ -66,7 +72,7 @@ trans 配色
 --post-item-meta-color                                           : #98a6ad;
 --post-item-shadow-color                                         : rgb(245,169,184);
 --post-item-hover-shadow-color                                   : rgb(91,206,250);
---post-item-bottom-shadow-color                                  : rgba(245,169,184,.7);
+--post-item-bottom-shadow-color                                  : rgba(245,169,184,0.8);
 
 --sidebar-border-color                                           : #fafafa;
 --sidebar-bg-color                                               : #fafafa;
@@ -87,9 +93,9 @@ trans 配色
 --toolbar-bg-color                                               : #fafafa;
 --toolbar-title-color                                            : rgb(245,169,184);
 --toolbar-post-toc-bg-color                                      : #fff;
---toolbar-post-toc-color                                         : #fff;
+--toolbar-post-toc-color                                         : #777;
 --toolbar-post-toc-border-color                                  : #ddd;
---toolbar-tab-page-tabContent-border-top-color                   : rgb(245,169,184);
+--toolbar-tab-page-tabContent-border-top-color                   : rgba(245,169,184,.5);
 --toolbar-tab-page-sidetitle-color                               : rgb(91,206,250);
 --toolbar-tab-page-current-border-bottom-color                   : rgb(245,169,184);
 --toolbar-list-group-item-bg-color                               : #fff;
@@ -99,8 +105,8 @@ trans 配色
 --toolbar-list-group-item-badge-bg-color                         : rgb(245,169,184);
 --toolbar-tag-cloud-bg-color                                     : #f9cdd6;
 
---topbar-bg-color                                                : #fff;
---topbar-link-color                                              : rgb(245,169,184);
+--topbar-bg-color                                                : rgb(245,169,184);
+--topbar-link-color                                              : #fff;
 --topbar-shadow-color                                            : #ccc;
 
 --fa-border-color                                                : #eee;
@@ -112,6 +118,7 @@ trans 配色
 --timeline-circle-color                                          : #ccc;
 --timeline-line-color                                            : #eee;
 --timeline-circle-bg-color                                       : #fff;
+--timeline-item-bg-color                                         : rgba(245,169,184,.1);
 
 --table-text-color                                               : #555;
 
