@@ -204,7 +204,7 @@ fonts:
   - Roboto+Mono
 
 # 字体家族
-font_family: "Montserrat,sans-serif"
+font_family: "Montserrat,'Harmony_Regular',sans-serif"
 mono_font_family: "'Roboto Mono',sans-serif"
 
 
@@ -294,7 +294,7 @@ github_name: yz-hs
 imgcard_h: 30em
 
 # Jsdelivr 提供的加速 CDN，可选。不填，请留下空引号 `""`
-# 对本主题中的 css、js、img 文件夹中的静态资源进行加速。
+# 对本主题中的 css、js、img、custom 文件夹中的静态资源进行加速。
 # https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
 in_cdn: "" # https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
 
@@ -311,7 +311,7 @@ time_format: "YYYY-MM-DD, HH:mm:ss"
 
 # 博客界面透明度，取值为属于区间 [0,1] 的实数。
 opacity: 0.9
-night_opacity: 0.8
+night_opacity: 0.85
 
 # 图片无法加载，会用它替换。
 img_default: /img/error.jpg

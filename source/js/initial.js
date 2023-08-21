@@ -1,4 +1,4 @@
-function initialization()
+function initial()
 {
     document.getElementById('back2Top').onclick = function(){
         document.documentElement.scrollTop = 0;

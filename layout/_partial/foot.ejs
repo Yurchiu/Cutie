@@ -1,10 +1,4 @@
 <!-- It is not contained by Pjax. -->
-<!-- 
-!#                                                 #!
-!#                     Chores                      #!
-!#                                                 #!
--->
-
 <% if(theme.meting.enable) { %>
     <meting-js class="meting-js appear" fixed="ture" server="<%- theme.meting.server %>" type="<%- theme.meting.type %>" id="<%- theme.meting.id %>"></meting-js>
 <% } %>
@@ -14,47 +8,9 @@
     HideIt();
 </script>
 
+<link rel="stylesheet" href="<%- theme.in_cdn %>/custom/custom.css">
+<script src="<%- theme.in_cdn %>/custom/custom.js"></script>
+
 <% if(theme.colored_eggs.hair) { %>
 	<script>AprilHair();</script>
 <% } %>
-
-<!-- 
-!#                                                 #!
-!#                     Effects                     #!
-!#                                                 #!
--->
-
-<!-- 根据需要取消注释 -->
-
-<style type="text/css">
-	.effect {
-		position: fixed;
-		left: 0px; top: 0px;
-		z-index: 99999;
-		pointer-events:none;
-	}
-</style>
-
-<!--<canvas id="shuicheCanvas" class="effect"></canvas>
-<script src="<%- theme.in_cdn %>/js/mouse.js"></script>
-<script>$.shuicheMouse({type:11,color:"rgba(187,67,128,1)"})</script> 鼠标粒子-->
-
-<script src="<%- theme.in_cdn %>/js/ctitle.js"></script> <!--标题改动-->
-
-<!--<script src="<%- theme.in_cdn %>/js/clicklove.js"></script> 点击爱心-->
-
-<!--<script src="<%- theme.in_cdn %>/js/snow.js"></script> 前景下雪 注：与“点击烟花”冲突-->
-
-<!--<script src="<%- theme.in_cdn %>/js/snow-2.js"></script> 前景下雪 2（其实这个版本飘什么都行）-->
-
-<!--<canvas class="fireworks"  class="effect"></canvas> 
-<script src="<%- theme.in_cdn %>/js/firework.js"></script> 点击烟花 -->
-
-<div id="clickCanvas"  class="effect"></div>
-<script src="<%- theme.in_cdn %>/js/clickple.js"></script> <!--点击烟花 2-->
-
-<!--<script src="<%- theme.in_cdn %>/js/values.js"></script> 点击社会主义核心价值观-->
-
-<!--<script src="<%- theme.in_cdn %>/js/particle.js"></script> 背景粒子-->
-
-<!--<script src="<%- theme.in_cdn %>/js/sakura.js"></script> 前景樱花-->
