@@ -293,10 +293,10 @@ github_name: yz-hs
 # 图片背景卡片的高度默认值
 imgcard_h: 30em
 
-# Jsdelivr 提供的加速 CDN，可选。不填，请留下空引号 `""`
+# Jsdelivr 提供的加速 CDN，可选。
 # 对本主题中的 css、js、img、custom 文件夹中的静态资源进行加速。
 # https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
-in_cdn: "" # https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
+in_cdn: # https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
 
 # 自我简述
 short_des: "An AFO whker."
@@ -319,9 +319,6 @@ img_default: /img/error.jpg
 # 工具栏“随机文章”等的显示文章个数。
 toolbar_amount: 7
 
-# 默认目录深度。
-toc_depth: 3
-
 
 
 #! ---------------------------------------------------------------
@@ -341,6 +338,7 @@ out_cdn:
     fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css
     bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css
     aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+    tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css
   js:
     jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
     anime: https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js
@@ -352,3 +350,4 @@ out_cdn:
     bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js
     aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
     meting: https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js
+    tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js

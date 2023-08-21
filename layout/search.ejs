@@ -13,7 +13,7 @@
       var path = search_path;
       searchFunc(path, 'local-search-input', 'local-search-result');
 	</script>
-  <p><%- _p('Search_pre',theme.in_cdn+config.search.path) %></p>
+  <p><%- __('Search_pre') %></p>
 	<form class="d-flex">
     	<input id="local-search-input" class="form-control me-2 pe-4" type="search" placeholder="<%- __('Search_text') %>" aria-label="Search">
       <button type="button" data-bs-toggle="tooltip" title="<%- __('Out_Search') %>" class="btn btn-secondary" onclick="window.open('https://cn.bing.com/search?q='+document.getElementById('local-search-input').value+'+site%3A<%- config.url %>');"><i class="fa fa-search"></i></button>

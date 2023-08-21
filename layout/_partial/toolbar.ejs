@@ -119,13 +119,16 @@
   <% if(toc(page.content,{list_number: false})){ %><!-- 标签可能太多，影响目录 -->
     <div class="post-toc">
       <div class="title"><%- __('Post_Toc') %></div>
-      <div class="post-toc-inner">
-        <%- toc(page.content, {
-          list_number: false,
-          max_depth: page.depth ? page.depth : theme.toc_depth
-        }) %>
-        </div>
+      <div class="post-toc-inner"></div>
     </div>
+    <script>
+      tocbot.init({
+        tocSelector: '.post-toc-inner',
+        contentSelector: '.post-text',
+        headingSelector: 'h1, h2, h3, h4, h5, h6',
+        hasInnerContainers: true,
+      });
+    </script>
   <% }else if(theme.tag_cloud.enable){ %>
     <div class="item">
       <div class="title"><%- __('Tag_Cloud') %></div>

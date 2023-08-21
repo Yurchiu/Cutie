@@ -9,7 +9,7 @@ function saveData(key, data) {
     key = 'Yurchiu_' + key;  
     data = JSON.stringify(data);  
     if (window.localStorage) {  
-        localStorage.setItem(key, data);  
+localStorage.setItem(key, data);  
     }  
 }   
 function readData(key) {  
@@ -88,9 +88,9 @@ function Fool()
     if (!readData("fool")) {
     document.body.classList.add('reverse-coloregg');
     window.setTimeout(function () {
-        saveData("fool", "fool");
-        document.body.classList.remove('reverse-coloregg');  
-        }, 10000);
+saveData("fool", "fool");
+document.body.classList.remove('reverse-coloregg');  
+}, 10000);
     } 
 }
 //April-Fool
@@ -149,3 +149,5 @@ function Setting () {
   HideIt();
   if(readData("stretch") == 1) Stretch();
 }
+
+//------------------------------------------------
