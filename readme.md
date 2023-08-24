@@ -2,6 +2,8 @@
 
 ![](https://cdn.jsdelivr.net/gh/yz-hs/PicGo/intro4.png)
 
+**This topic is at the end of development, and new function suggestions are not accepted. If there are bugs, optimization requirements, etc., you can Issue, PR or leave a message in <https://yz-hs.github.io/somepage/chat/>.**
+
 中文版文档，本主题的完整说明：[Chinese version](https://yz-hs.github.io/39e4c172e542/)。
 
 ## Background

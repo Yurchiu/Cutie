@@ -296,7 +296,7 @@ imgcard_h: 30em
 # Jsdelivr 提供的加速 CDN，可选。
 # 对本主题中的 css、js、img、custom 文件夹中的静态资源进行加速。
 # https://cdn.jsdelivr.net/gh/[you]/[yourBlog]
-in_cdn: # https://cdn.jsdelivr.net/gh/yz-hs/yz-hs.github.io
+in_cdn: 
 
 # 自我简述
 short_des: "An AFO whker."
