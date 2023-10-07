@@ -36,7 +36,11 @@ Then, you need to read documents to further configure the theme and learn more a
 
 @[Yurchiu](https://github.com/yz-hs)
 
-## Contributing
+## Contributors
+
+@[Yurchiu](https://github.com/yz-hs)
+
+@[tsxc](https://github.com/tsxc-github)
 
 Feel free to dive in! Open an issue or submit PRs.
 
