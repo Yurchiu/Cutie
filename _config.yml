@@ -91,6 +91,9 @@ comments:
     lang: zh-CN
     loading: lazy
     crossorigin: anonymous
+  waline:
+    enable: true
+    serverurl: http://4-6.tpddns.cn:8360
 
 
 # IV 自适应
