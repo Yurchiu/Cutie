@@ -65,7 +65,17 @@
       }
       my_giscus_load();
     </script>
-    
+
+  <% }else if(theme.comments.waline.enable) { %>
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
+    <div id="waline"></div>
+    <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+      init({
+        el: '#waline',
+        serverURL: '<%-theme.comments.waline.serverurl%>',
+      });
+    </script>
 
   <% }else{ %>
 

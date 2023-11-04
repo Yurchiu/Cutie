@@ -74,7 +74,7 @@ comments:
   # Giscus 评论系统
   # https://giscus.app/zh-CN
   giscus:
-    enable: true
+    enable: false
     # 把它拆成这些选项，是为了支持 Pjax。
     src: https://giscus.app/client.js
     repo: 
@@ -91,6 +91,9 @@ comments:
     lang: zh-CN
     loading: lazy
     crossorigin: anonymous
+  waline:
+    enable: false
+    serverurl: 
 
 
 # IV 自适应
