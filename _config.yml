@@ -94,6 +94,12 @@ comments:
   waline:
     enable: false
     serverurl: 
+    reaction: false #文章反应，参见https://waline.js.org/guide/features/reaction.html
+
+Pageview_Counter: #浏览量功能
+  waline: # 参见https://waline.js.org/guide/features/pageview.html
+    enable: false
+    serverurl: 
 
 
 # IV 自适应
