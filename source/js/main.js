@@ -122,7 +122,9 @@ function colorSetting (o = 0) {
   if(o) type = o;
   if(type==2) $("html").addClass("color-std");
   else if(type==3) $("html").addClass("color-white");
-  else if(type==4) $("html").addClass("color-night");
+  else if(type==4) {
+    $("html").addClass("color-night");
+    window.document.documentElement.setAttribute( "data-theme", "dark" );}
   else if(type==5) $("html").addClass("color-trans");
 }
 
