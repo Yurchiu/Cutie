@@ -74,7 +74,7 @@ comments:
   # Giscus 评论系统
   # https://giscus.app/zh-CN
   giscus:
-    enable: true
+    enable: false
     # 把它拆成这些选项，是为了支持 Pjax。
     src: https://giscus.app/client.js
     repo: 
@@ -91,6 +91,19 @@ comments:
     lang: zh-CN
     loading: lazy
     crossorigin: anonymous
+  waline:
+    enable: false
+    serverurl: 
+    reaction: false #文章反应，参见https://waline.js.org/guide/features/reaction.html
+  twikoo:
+    enable: false
+    envid: 
+    lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+
+Pageview_Counter: #浏览量功能
+  waline: # 参见https://waline.js.org/guide/features/pageview.html
+    enable: false
+    serverurl: 
 
 
 # IV 自适应
