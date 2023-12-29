@@ -1,103 +1,113 @@
-<div class="comments">
+<% if(theme.comments.enable){ %>
+  <div class="comments">
+    <% if(page.discomments){ %>
 
-  <% if(page.discomments){ %>
+      <%- __('Comments.Unable') %>
 
-    <%- __('Comments.Unable') %>
+    <% }else if(theme.comments.livere.enable) { %>
 
-  <% }else if(theme.comments.livere.enable) { %>
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+          if (typeof LivereTower === 'function') { return; }
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+      </script>
+      <div id="lv-container" data-id="city" data-uid="<%- theme.comments.livere.uid %>"></div>
 
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-    <div id="lv-container" data-id="city" data-uid="<%- theme.comments.livere.uid %>"></div>
+    <% }else if(theme.comments.gitalk.enable) { %>
 
-  <% }else if(theme.comments.gitalk.enable) { %>
+      <div id="gitalk-container"></div>
+      <script>
+        var gitalk = new Gitalk({
+          clientID: <%- theme.comments.gitalk.clientID %>,
+          clientSecret: <%- theme.comments.gitalk.clientSecret %>,
+          repo: <%- theme.comments.gitalk.repo %>,
+          owner: <%- theme.comments.gitalk.owner %>,
+          admin: <%- theme.comments.gitalk.admin %>,
+          id: location.pathname,
+          language: '<%- config.language %>',
+          proxy: <%- theme.comments.gitalk.proxy %>,
+          distractionFreeMode: false
+        });
+        gitalk.render('gitalk-container');
+      </script>
 
-    <div id="gitalk-container"></div>
-    <script>
-      var gitalk = new Gitalk({
-        clientID: <%- theme.comments.gitalk.clientID %>,
-        clientSecret: <%- theme.comments.gitalk.clientSecret %>,
-        repo: <%- theme.comments.gitalk.repo %>,
-        owner: <%- theme.comments.gitalk.owner %>,
-        admin: <%- theme.comments.gitalk.admin %>,
-        id: location.pathname,
-        language: '<%- config.language %>',
-        proxy: <%- theme.comments.gitalk.proxy %>,
-        distractionFreeMode: false
-      });
-      gitalk.render('gitalk-container');
-    </script>
+    <% }else if(theme.comments.giscus.enable) { %>
 
-  <% }else if(theme.comments.giscus.enable) { %>
+      <div class="giscus"></div>
+      <script>
+        function my_giscus_load(){
+          var x=document.createElement("script");
+          x.setAttribute("src","<%- theme.comments.giscus.src %>");
+          x.setAttribute("data-repo","<%- theme.comments.giscus.repo %>");
+          x.setAttribute("data-repo-id","<%- theme.comments.giscus.repoid %>");
+          x.setAttribute("data-category","<%- theme.comments.giscus.category %>");
+          x.setAttribute("data-category-id","<%- theme.comments.giscus.categoryid %>");
+          x.setAttribute("data-mapping","<%- theme.comments.giscus.mapping %>");
+          x.setAttribute("data-strict","<%- theme.comments.giscus.strict %>");
+          x.setAttribute("data-reactions-enabled","<%- theme.comments.giscus.reactions_enabled %>");
+          x.setAttribute("data-emit-metadata","<%- theme.comments.giscus.emit_metadata %>");
+          x.setAttribute("data-input-position","<%- theme.comments.giscus.input_position %>");
+          x.setAttribute("data-theme","<%- theme.comments.giscus.theme %>");
 
-    <div class="giscus"></div>
-    <script>
-      function my_giscus_load(){
-        var x=document.createElement("script");
-        x.setAttribute("src","<%- theme.comments.giscus.src %>");
-        x.setAttribute("data-repo","<%- theme.comments.giscus.repo %>");
-        x.setAttribute("data-repo-id","<%- theme.comments.giscus.repoid %>");
-        x.setAttribute("data-category","<%- theme.comments.giscus.category %>");
-        x.setAttribute("data-category-id","<%- theme.comments.giscus.categoryid %>");
-        x.setAttribute("data-mapping","<%- theme.comments.giscus.mapping %>");
-        x.setAttribute("data-strict","<%- theme.comments.giscus.strict %>");
-        x.setAttribute("data-reactions-enabled","<%- theme.comments.giscus.reactions_enabled %>");
-        x.setAttribute("data-emit-metadata","<%- theme.comments.giscus.emit_metadata %>");
-        x.setAttribute("data-input-position","<%- theme.comments.giscus.input_position %>");
-        x.setAttribute("data-theme","<%- theme.comments.giscus.theme %>");
+          if(readData("color")==4 || "<%- theme.color_schemes %>"=="night"&&!readData("color"))
+            x.setAttribute("data-theme","<%- theme.comments.giscus.night_theme %>");
 
-        if(readData("color")==4 || "<%- theme.color_schemes %>"=="night"&&!readData("color"))
-          x.setAttribute("data-theme","<%- theme.comments.giscus.night_theme %>");
+          x.setAttribute("data-lang","<%- theme.comments.giscus.lang %>");
+          x.setAttribute("data-loading","<%- theme.comments.giscus.loading %>");
+          x.setAttribute("crossorigin","<%- theme.comments.giscus.crossorigin %>");
+          x.setAttribute("async","true");
+          document.head.appendChild(x);
+        }
+        my_giscus_load();
+      </script>
 
-        x.setAttribute("data-lang","<%- theme.comments.giscus.lang %>");
-        x.setAttribute("data-loading","<%- theme.comments.giscus.loading %>");
-        x.setAttribute("crossorigin","<%- theme.comments.giscus.crossorigin %>");
-        x.setAttribute("async","true");
-        document.head.appendChild(x);
-      }
-      my_giscus_load();
-    </script>
+    <% }else if(theme.comments.waline.enable) { %>
+      <div id="waline"></div>
+        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
+        <!-- Meta 图标 (可选) -->
+        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css"/>
+        <script type="module">
+          import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+          init({
+            el: '#waline',
+            serverURL: '<%-theme.comments.waline.serverurl%>',
+          });
+        </script>
+      <script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+        init({
+          el: '#waline',
+          serverURL: '<%-theme.comments.waline.serverurl%>',
+          reaction: <%-theme.comments.waline.reaction%> ,
+        });
+      </script>
+    <% }else if(theme.comments.twikoo.enable) { %>
+      <div id="tcomment"></div>
+      <script>
+        // 感谢imaegoo提供的解决方案
+        var twikooJs = document.createElement('script')
+        twikooJs.src = 'https://cdn.staticfile.org/twikoo/1.6.25/twikoo.all.min.js'
+        twikooJs.onload = function () {
+          twikoo.init({
+            envId: '<%-theme.comments.twikoo.envid%>', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+            el: '#tcomment', // 容器元素
+            // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+            // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+            lang: '<%-theme.comments.twikoo.lang%>', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+          })
+        }
+        document.body.appendChild(twikooJs)
+      </script>
+    <% }else{ %>
 
-  <% }else if(theme.comments.waline.enable) { %>
-    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
-    <div id="waline"></div>
-    <script type="module">
-      import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-      init({
-        el: '#waline',
-        serverURL: '<%-theme.comments.waline.serverurl%>',
-        reaction: <%-theme.comments.waline.reaction%> ,
-      });
-    </script>
-  <% }else if(theme.comments.twikoo.enable) { %>
-    <div id="tcomment"></div>
-    <script>
-      // 感谢imaegoo提供的解决方案
-      var twikooJs = document.createElement('script')
-      twikooJs.src = 'https://cdn.staticfile.org/twikoo/1.6.25/twikoo.all.min.js'
-      twikooJs.onload = function () {
-        twikoo.init({
-          envId: '<%-theme.comments.twikoo.envid%>', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-          el: '#tcomment', // 容器元素
-          // region: 'ap-guangzhou', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-          // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-          lang: '<%-theme.comments.twikoo.lang%>', // 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
-        })
-      }
-      document.body.appendChild(twikooJs)
-    </script>
-  <% }else{ %>
+      <%- _p('Comments.Unopen',config.author) %>
 
-    <%- _p('Comments.Unopen',config.author) %>
+    <% } %>
 
-  <% } %>
-
-</div>
+  </div>
+<% } %>

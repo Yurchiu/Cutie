@@ -53,6 +53,7 @@ icon:
 # 支持三个评论系统。最多同时启用一个。
 
 comments:
+  enable: true # 直接去掉评论的框体
   # LiveRe（来必力）评论系统
   # 从这里得到你的 uid。
   # https://livere.com/insight/myCode
