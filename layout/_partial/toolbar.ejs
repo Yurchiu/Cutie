@@ -116,18 +116,25 @@
     </div>
   </div><% } %>
 
-  <% if(toc(page.content,{list_number: false})){ %><!-- 标签可能太多，影响目录 -->
+  <% if(toc(page.content,{list_number: false})||page.password){ %><!-- 标签可能太多，影响目录 -->
     <div class="post-toc">
       <div class="title"><%- __('Post_Toc') %></div>
       <div class="post-toc-inner"></div>
     </div>
     <script>
-      tocbot.init({
-        tocSelector: '.post-toc-inner',
-        contentSelector: '.post-text',
-        headingSelector: 'h1, h2, h3, h4, h5, h6',
-        hasInnerContainers: true,
-      });
+      function run_tocbot(){
+        tocbot.init({
+          tocSelector: '.post-toc-inner',
+          contentSelector: '.post-text',
+          headingSelector: 'h1, h2, h3, h4, h5, h6',
+          hasInnerContainers: true,
+        });
+      }
+      <% if(page.password){ %>
+        addEventListener('hexo-blog-decrypt', run_tocbot);
+      <% }else{ %>
+        run_tocbot();
+      <% } %>
     </script>
   <% }else if(theme.tag_cloud.enable){ %>
     <div class="item">
