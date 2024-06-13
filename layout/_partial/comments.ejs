@@ -91,7 +91,7 @@
       <script>
         // 感谢imaegoo提供的解决方案
         var twikooJs = document.createElement('script')
-        twikooJs.src = 'https://cdn.staticfile.org/twikoo/1.6.25/twikoo.all.min.js'
+        twikooJs.src = '<%-theme.out_cdn.js.twikoo%>'
         twikooJs.onload = function () {
           twikoo.init({
             envId: '<%-theme.comments.twikoo.envid%>', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
