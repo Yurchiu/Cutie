@@ -14,16 +14,16 @@
       <% var classname = "list-group-item"; %>
       <% if(url_for(page.path)==url_for(theme.Menu[name])){classname = "list-group-item-current";} %>
   	  <a class="<%- classname %>" href="<%- url_for(theme.Menu[name]) %>"><div><i class="fa <%- theme.icon[name] %> fa-fw"></i>&nbsp; <%- __('Menu.' + name) %></div>
-      <div class="badge">
+        
         <% if(theme.sidebar_num){ %>
           <% if(name=="Archives"){ %>
-  	    	  <%- site.posts.length %>
+  	    	  <div class="badge"><%- site.posts.length %></div>
           <% }else if(name=="Tags"){ %>
-  	    	  <%- site.tags.length %>
+  	    	  <div class="badge"><%- site.tags.length %></div>
           <% }else if(name=="Categories"){ %>
-  	    	  <%- site.categories.length %>
+  	    	  <div class="badge"><%- site.categories.length %></div>
           <% }else{}} %>
-      </div></a>
+      </a>
     <% } %>
     <div style="height: 200px;"></div>
   </div>
