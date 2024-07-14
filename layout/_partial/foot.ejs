@@ -1,5 +1,8 @@
 <!-- It is not contained by Pjax. -->
 <% if(theme.meting.enable) { %>
+    <script rel="preload" src="<%- theme.out_cdn.js.aplayer %>" defer></script>
+    <script rel="preload" src="<%- theme.out_cdn.js.meting %>" defer></script>
+    <link rel="stylesheet" href="<%- theme.out_cdn.css.aplayer %>">
     <meting-js class="meting-js appear" fixed="ture" server="<%- theme.meting.server %>" type="<%- theme.meting.type %>" id="<%- theme.meting.id %>"></meting-js>
 <% } %>
 
