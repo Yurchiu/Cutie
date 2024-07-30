@@ -104,9 +104,10 @@ comments:
 
   # twikoo 评论系统
   # https://twikoo.js.org/
-  twikoo:
+  twikoo: # 填写参见 https://twikoo.js.org/quick-start.html
     enable: false
-    envid: 
+    envid:
+    region: ap-shanghai
     lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
 
 # IV 浏览量功能
