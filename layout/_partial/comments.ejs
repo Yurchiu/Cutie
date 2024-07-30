@@ -70,22 +70,15 @@
 
     <% }else if(theme.comments.waline.enable) { %>
       <div id="waline"></div>
-        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
-        <!-- Meta 图标 (可选) -->
-        <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css"/>
-        <script type="module">
-          import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
-          init({
-            el: '#waline',
-            serverURL: '<%-theme.comments.waline.serverurl%>',
-          });
-        </script>
+        <link rel="stylesheet" href="<%- theme.out_cdn.css.waline_comment %>"/>
       <script type="module">
-        import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+        import { init } from '<%- theme.out_cdn.js.waline_comment %>';
         init({
           el: '#waline',
           serverURL: '<%-theme.comments.waline.serverurl%>',
           reaction: <%-theme.comments.waline.reaction%> ,
+          emoji: <%-theme.comments.waline.emoji%>,
+          lang: "<%-theme.comments.waline.lang%>"
         });
       </script>
     <% }else if(theme.comments.twikoo.enable) { %>
