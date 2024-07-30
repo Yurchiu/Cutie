@@ -365,5 +365,5 @@ out_cdn:
     aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
     meting: https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js
     tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js
-    twikoo: https://cdn.staticfile.net/twikoo/1.6.36/twikoo.all.min.js
+    twikoo: https://cdn.staticfile.net/twikoo/1.6.38/twikoo.all.min.js
 
