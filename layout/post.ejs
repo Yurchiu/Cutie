@@ -27,6 +27,9 @@
         });
       </script>
       <span><i class="fa fa-user"></i><span i class="waline-pageview-count"/></span>
+    <% }else if(theme.pageview.busuanzi.enable){ %>
+      <script src="<%-theme.out_cdn.js.busuanzi%>"></script>
+      <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i><span id="busuanzi_value_site_pv"></span></span>
     <% }if(page.password){ %>
       <span><i class="fa fa-lock"></i> <%- __('Posts.Password') %></span>
     <% } %>

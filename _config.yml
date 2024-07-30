@@ -54,6 +54,7 @@ icon:
 
 comments:
   enable: true # 直接去掉评论的框体
+
   # LiveRe（来必力）评论系统
   # 从这里得到你的 uid。
   # https://livere.com/insight/myCode
@@ -110,7 +111,9 @@ comments:
     region: ap-shanghai
     lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
 
-# IV 浏览量功能
+
+
+# IV 浏览量
 #
 # 用于在顶栏添加浏览量查看。
 pageview: 
@@ -120,6 +123,10 @@ pageview:
   waline: # 参见https://waline.js.org/guide/features/pageview.html
     enable: false
     serverurl: 
+
+  # 不蒜子 浏览量功能
+  busuanzi: 
+    enable: true
 
 
 
@@ -386,4 +393,5 @@ out_cdn:
     twikoo: https://cdn.staticfile.net/twikoo/1.6.38/twikoo.all.min.js
     waline_comment: https://unpkg.com/@waline/client@v3/dist/waline.js
     waline_pageview: https://unpkg.com/@waline/client@v3/dist/pageview.js
+    busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
 
