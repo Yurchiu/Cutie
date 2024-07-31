@@ -7,25 +7,25 @@
 
 # I 侧边栏菜单
 #
-# 填写链接。例如，`http://test.com/path/to/pages`，你应当填写 `path/to/pages/index.html`。
-# 无 "/index.html" 后缀会阻止 Pjax。
+# 填写链接。例如，`http://test.com/path/to/pages`，你应当填写 `path/to/pages[/index.html]`。
+# "/index.html" 后缀的有无需要和跳转的链接一致，否则会阻止 Pjax。
 # 记得在 II 菜单图标 填写它的 fontawesome icon。
 # 菜单内容任意增删。如果要增，可以仿照格式继续填写，另外需要在 language 文件夹下增加菜单名称翻译。
 
 # Menu 内的内容会显示在侧边栏。
 Menu:
-  Home: index.html
-  Archives: archives/index.html
-  Tags: tags/index.html
-  Categories: categories/index.html
-  Mood: somepage/mood/index.html
-  About: somepage/about/index.html
-  Message_board: somepage/chat/index.html
-  Links: somepage/link/index.html
-  Settings: somepage/settings/index.html
+  Home: 
+  Archives: 
+  Tags: 
+  Categories: 
+  Mood: 
+  About: 
+  Message_board: 
+  Links: 
+  Settings: 
 
 # 搜索页面的链接。
-Search: somepage/search/index.html
+Search: 
 
 
 
@@ -167,7 +167,7 @@ site_info:
   enable: root   # 可以取这些值：none | root | all。默认值是 none。
                  # root：只会在博客首页显示；
                  # all：在所有页面显示。
-  text: <i class='fa fa-volume-up'></i> 本博客更改评论系统为 Giscus。 # "<i class='fa fa-volume-up'></i> 欢迎来到 Yurchiu 的博客！希望我们能相互交流，共同进步～"
+  text: 
   type: warning  # 可以取这些值：danger | warning | info | success。
 
 
@@ -207,7 +207,7 @@ excerpt:
                         # html: 仅当博文源文件中含有“<!--more-->”时，保留 html 标签。
                         # text: 任何情况下不保留 html 标签。
 
-  noexcerpt: '<i class="fa fa-warning"></i> Yurchiu 没有为本文章提供摘要 qwq。可能 Yurchiu 太懒了，或本文章没法做摘要。'
+  noexcerpt: '<i class="fa fa-warning"></i> 本文章无摘要。可能作者太懒了。'
 
   length: 150   # 当展示博文的一部分时，展示的文本字符数。默认是 30。
 
@@ -250,10 +250,10 @@ mono_font_family: "'Roboto Mono',sans-serif"
 #
 # enable 选择 false，访客无法在博客的“设置”页面开启。
 meting:
-  enable: true
+  enable: false
   server: netease
   type: playlist
-  id: 8524070964
+  id: 
 
 
 
@@ -325,7 +325,7 @@ stretch: false
 
 
 # 你的 GitHub 用户名，用于某些链接
-github_name: yz-hs
+github_name: 
 
 # 图片背景卡片的高度默认值
 imgcard_h: 30em
@@ -336,7 +336,7 @@ imgcard_h: 30em
 in_cdn: 
 
 # 自我简述
-short_des: "An AFO whker."
+short_des: ""
 
 # 背景图片地址
 bg_url: /img/new-bgp.png
