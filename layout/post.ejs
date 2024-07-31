@@ -18,22 +18,18 @@
     <span><i class="fa fa-font"></i> <%- wordcount(page.content) %></span>
     <% if(page.top){ %>
       <span><i class="fa fa-thumb-tack"></i> <%- __('Posts.Top') %></span>
-    <% }if(theme.Pageview_Counter.waline.enable){ %>
+    <% }if(theme.pageview.waline.enable){ %>
       <script type="module">
-        import { pageviewCount } from 'https://unpkg.com/@waline/client/dist/pageview.mjs';
-      
+        import { pageviewCount } from '<%-theme.out_cdn.css.waline_pageview%>';
         pageviewCount({
-          serverURL: '<%- theme.Pageview_Counter.waline.serverurl %>',
+          serverURL: '<%- theme.pageview.waline.serverurl %>',
           path: window.location.pathname,
-      
-          // 可选的，用于自定选择器，默认为 `'.waline-pageview-count'`
-          // selector: 'waline-pageview-count',
-      
-          // 可选的，是否在获取时增加访问量，默认为 `true`
-          // update: true,
         });
       </script>
-      <span><i class="fa fa-eye"></i><span i class="waline-pageview-count"/></span>
+      <span><i class="fa fa-user"></i><span i class="waline-pageview-count"/></span>
+    <% }else if(theme.pageview.busuanzi.enable){ %>
+      <script src="<%-theme.out_cdn.js.busuanzi%>"></script>
+      <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i><span id="busuanzi_value_site_pv"></span></span>
     <% }if(page.password){ %>
       <span><i class="fa fa-lock"></i> <%- __('Posts.Password') %></span>
     <% } %>

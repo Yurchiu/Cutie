@@ -50,10 +50,11 @@ icon:
 # III 评论
 #
 # 评论功能在不包含 "discomments: true" 的页面开启。
-# 支持三个评论系统。最多同时启用一个。
+# 支持多种评论系统。同时最多启用一个。
 
 comments:
   enable: true # 直接去掉评论的框体
+
   # LiveRe（来必力）评论系统
   # 从这里得到你的 uid。
   # https://livere.com/insight/myCode
@@ -92,22 +93,44 @@ comments:
     lang: zh-CN
     loading: lazy
     crossorigin: anonymous
+
+  # waline 评论系统
+  # https://waline.js.org/
   waline:
     enable: false
-    serverurl: 
-    reaction: false #文章反应，参见https://waline.js.org/guide/features/reaction.html
-  twikoo:
+    serverurl: http://tsxc-home.dns.army:8360
+    reaction: true # 文章反应，参见 https://waline.js.org/guide/features/reaction.html
+    emoji: false # 自定义评论输入框的表情，参见 https://waline.js.org/guide/features/emoji.html
+    lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://waline.js.org/guide/features/i18n.html
+
+  # twikoo 评论系统
+  # https://twikoo.js.org/
+  twikoo: # 填写参见 https://twikoo.js.org/quick-start.html
     enable: false
-    envid: 
+    envid:
+    region: ap-shanghai
     lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
 
-Pageview_Counter: #浏览量功能
+
+
+# IV 浏览量
+#
+# 用于在顶栏添加浏览量查看。
+pageview: 
+
+  # waline 浏览量功能
+  # https://waline.js.org/
   waline: # 参见https://waline.js.org/guide/features/pageview.html
     enable: false
     serverurl: 
 
+  # 不蒜子 浏览量功能
+  busuanzi: 
+    enable: true
 
-# IV 自适应
+
+
+# V 自适应
 #
 # 根据设定的屏幕宽度（单位都是 px）改变显示方式。
 
@@ -138,7 +161,7 @@ toolbar_width:
 
 
 
-# V 首页提示
+# VI 首页提示
 
 site_info:
   enable: root   # 可以取这些值：none | root | all。默认值是 none。
@@ -149,7 +172,7 @@ site_info:
 
 
 
-# VI 版权信息
+# VII 版权信息
 
 footer:          # 页脚版权信息。
   left: '©2019-2023 <a href="https://github.com/yz-hs">Yurchiu</a>. All rights reserved.'
@@ -167,7 +190,7 @@ copyright:       # 文末版权信息。
 
 
 
-# VII 博文摘要
+# VIII 博文摘要
 #
 # 在文章卡片中的摘要信息。
 
@@ -192,7 +215,7 @@ excerpt:
 
 
 
-# VIII 标签云
+# IX 标签云
 #
 # 位于工具栏。
 
@@ -207,7 +230,7 @@ tag_cloud:
 
 
 
-# IX 字体
+# X 字体
 #
 # https://fonts.googleapis.com/css?family=...
 
@@ -223,7 +246,7 @@ mono_font_family: "'Roboto Mono',sans-serif"
 
 
 
-# X Aplayer+Meting 底部播放器
+# XI Aplayer+Meting 底部播放器
 #
 # enable 选择 false，访客无法在博客的“设置”页面开启。
 meting:
@@ -234,7 +257,7 @@ meting:
 
 
 
-# XI 头像
+# XII 头像
 
 avatar:
   url: /img/new-avatar.jpg
@@ -243,7 +266,7 @@ avatar:
 
 
 
-# XII 博客彩蛋
+# XIII 博客彩蛋
 #
 # 本部分选择 false 者，访客均无法在博客的“设置”页面开启。
 colored_eggs:
@@ -261,7 +284,7 @@ colored_eggs:
 
 
 
-# XIII 杂项
+# XIV 杂项
 
 # 下面三个选项，博客的“设置”页面没有对应的选项。
 #
@@ -353,6 +376,8 @@ out_cdn:
     bootstrap: https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css
     aplayer: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
     tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css
+    waline_comment: https://unpkg.com/@waline/client@v3/dist/waline.css
+
   js:
     jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
     anime: https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js
@@ -366,4 +391,7 @@ out_cdn:
     meting: https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js
     tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js
     twikoo: https://cdn.staticfile.net/twikoo/1.6.38/twikoo.all.min.js
+    waline_comment: https://unpkg.com/@waline/client@v3/dist/waline.js
+    waline_pageview: https://unpkg.com/@waline/client@v3/dist/pageview.js
+    busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
 
