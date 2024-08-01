@@ -2,15 +2,13 @@
 
 ![](https://cdn.jsdelivr.net/gh/yz-hs/PicGo/intro4.png)
 
-**This topic is at the end of development, and new function suggestions are not accepted. If there are bugs, optimization requirements, etc., you can Issue, PR or leave a message in <https://yz-hs.github.io/somepage/chat/>.**
+**This theme is still under development and maintenance. If there are bugs, optimization requirements, etc., you can Issue, PR or leave a message in <https://Yurchiu.github.io/pages/chat/>.**
 
-中文版文档，本主题的完整说明：[Chinese version](https://yz-hs.github.io/39e4c172e542/)。
+中文版文档，本主题的完整说明：[Chinese version](https://Yurchiu.github.io/2020/08/22/Cutie%20使用文档/)。
 
 ## Background
 
 In order to learn relevant knowledge and make a good-looking theme, I made this. The layout of the theme is like [handsome](https://www.ihewro.com/archives/489/), a typecho theme. Most of the codes were originally programmed by me, while the rest were from the Internet, for instance, [mkBlog](https://mkblog.cn/).
-
-<!--more-->
 
 ## Install
 
@@ -26,19 +24,19 @@ Firstly, you need to set the value of `theme` in the blog configuration file (`/
 
 Then, you need to read documents to further configure the theme and learn more about this theme. Most of them are in Chinese.
 
-**This theme relies on some plug-ins. Please be sure to read the [Chinese version](https://yz-hs.github.io/39e4c172e542/) first.**
+**This theme relies on some plug-ins. Please be sure to read the [Chinese version](https://Yurchiu.github.io/2020/08/22/Cutie%20使用文档/) first.**
 
 ## Demo
 
-<https://yz-hs.github.io>
+<https://Yurchiu.github.io/>
 
 ## Maintainers
 
-@[Yurchiu](https://github.com/yz-hs)
+@[Yurchiu](https://github.com/Yurchiu)
 
 ## Contributors
 
-@[Yurchiu](https://github.com/yz-hs)
+@[Yurchiu](https://github.com/Yurchiu)
 
 @[tsxc](https://github.com/tsxc-github)
 
