@@ -18,7 +18,7 @@ Menu:
 Out_Search: Out-Site Search (Bing)
 Search: Search
 Search_text: Enter keywords to search for ...
-Search_pre: Wait a moment before you can In-Site Search.
+Search_pre: When there are a lot of blog articles, wait for a while before you can In-Site Search.
 
 Topbar: Complain
 
@@ -85,6 +85,8 @@ Show: Show sidebars
 NoTitie: 'No Title'
 
 Pageview: 'Pageview Count: '
+
+Pageview_: 'Pageview'
 
 Settings:
   Cookie: Using the settings page means that you have agreed to the use of Cookie in this blog.
