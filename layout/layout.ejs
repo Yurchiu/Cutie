@@ -14,7 +14,7 @@
     <%- partial('_partial/topbar') %>
     <div id="article-container">
       <%- partial('_partial/sidebar') %>
-      <div class="article">
+      <div class="article" id="hidearticle">
         <div class="vertical fake-sidebar"></div>
         <div class="vertical post">
           <% if( theme.site_info.enable=="all" || (theme.site_info.enable=="root" && url_for(path)==config.root) ){ %>

@@ -40,6 +40,7 @@ function hideBars()
   $(".showBars").show();
   $(".footer").css("margin-left","0");
   $(".article").css("width","100%");
+  $("#hidearticle").addClass("hidearticle");
   HideIt();
 }
 
@@ -52,6 +53,7 @@ function showBars()
   $(".showBars").hide();
   $(".footer").removeAttr("style","");
   $(".article").removeAttr("style","");
+  $("#hidearticle").removeClass("hidearticle");
   HideIt();
 }
 
