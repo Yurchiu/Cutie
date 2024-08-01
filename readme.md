@@ -15,7 +15,7 @@ In order to learn relevant knowledge and make a good-looking theme, I made this.
 You can install it by running this command:
 
 ```bash
-git clone https://github.com/yz-hs/cutie.git
+git clone https://github.com/Yurchiu/cutie.git
 ```
 
 ## Usage
