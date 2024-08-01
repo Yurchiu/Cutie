@@ -63,7 +63,8 @@ Toolbar:
 hitokoto: '%s said that everyone except her is strong!'
 
 Info:
-  name: Blog Information
+  name: Information
+  Pageview_: Views
   count: Posts
   update: Update
   words: Words
@@ -82,6 +83,10 @@ Hide: Hide sidebars
 Show: Show sidebars
 
 NoTitie: 'No Title'
+
+Pageview: 'Pageview Count: '
+
+Pageview_: 'Pageview'
 
 Settings:
   Cookie: Using the settings page means that you have agreed to the use of Cookie in this blog.

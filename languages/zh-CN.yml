@@ -64,6 +64,7 @@ hitokoto: '%s 说，除了她以外的人都很强！嘤嘤嘤~~'
 
 Info:
   name: 博客信息
+  Pageview_: 浏览次数
   count: 文章数目
   update: 最近更新
   words: 本站字数
@@ -82,6 +83,8 @@ Hide: 隐藏左右两栏
 Show: 展示左右两栏
 
 NoTitle: 无标题
+
+Pageview: 浏览量：
 
 Settings:
   Cookie: 使用设置页面，即意味着您已同意本博客 Cookie 的使用。 

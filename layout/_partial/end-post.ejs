@@ -12,10 +12,31 @@
   <br />
   <div class="end-post-meta">
     <% page.tags.each(function (tag) { %>
-		  <span><a href="/tags/<%- tag.name %>/index.html"><i class="fa fa-tag"></i> <%- tag.name %></a></span>
+		  <span><a href="/tags/<%- tag.name %>/index.html"><i class="fa fa-fw fa-tag"></i> <%- tag.name %></a></span>
 	 <% }) %>
   </div>
+
   <div class="end-post-meta">
-    <span><i class="fa fa-refresh"></i> <%- __('Posts.Refresh') %><%- date(page.updated, theme.time_format) %></span>
+    <% if(theme.pageview.waline.enable){ %>
+      <script type="module">
+        import { pageviewCount } from '<%-theme.out_cdn.css.waline_pageview %>';
+        pageviewCount({
+          serverURL: '<%- theme.pageview.waline.serverurl %>',
+          path: window.location.pathname,
+        });
+      </script>
+      <span><i class="fa fa-fw fa-user"></i>
+        <%- __('Pageview') %><span i class="waline-pageview-count"/>
+      </span>
+    <% }else if(theme.pageview.busuanzi.enable){ %>
+      <script src="<%- theme.out_cdn.js.busuanzi %>"></script>
+      <span id="busuanzi_container_site_pv"><i class="fa fa-fw fa-user"></i>
+        <%- __('Pageview') %><span id="busuanzi_value_site_pv"></span>
+      </span>
+    <% } %>
+  </div>
+
+  <div class="end-post-meta">
+    <span><i class="fa fa-fw fa-refresh"></i> <%- __('Posts.Refresh') %><%- date(page.updated, theme.time_format) %></span>
   </div>
 <% } %>

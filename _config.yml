@@ -50,7 +50,7 @@ icon:
 # III 评论
 #
 # 评论功能在不包含 "discomments: true" 的页面开启。
-# 支持多种评论系统。同时最多启用一个。
+# 支持多种评论系统。最多启用一个。
 
 comments:
   enable: true # 直接去掉评论的框体
@@ -98,7 +98,7 @@ comments:
   # https://waline.js.org/
   waline:
     enable: false
-    serverurl: http://tsxc-home.dns.army:8360
+    serverurl: 
     reaction: true # 文章反应，参见 https://waline.js.org/guide/features/reaction.html
     emoji: false # 自定义评论输入框的表情，参见 https://waline.js.org/guide/features/emoji.html
     lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://waline.js.org/guide/features/i18n.html
@@ -368,7 +368,7 @@ toolbar_amount: 7
 # 本主题使用的 CDN。
 out_cdn:
   css:
-    katex: https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.6/katex.min.css
+    katex: https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css
     gitalk: https://unpkg.com/gitalk/dist/gitalk.css
     googlefont: https://fonts.googleapis.com
     highlight: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/vs2015.min.css
@@ -394,4 +394,3 @@ out_cdn:
     waline_comment: https://unpkg.com/@waline/client@v3/dist/waline.js
     waline_pageview: https://unpkg.com/@waline/client@v3/dist/pageview.js
     busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
-
